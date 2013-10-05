@@ -1,0 +1,4 @@
+body{font:12px Helvetica,Arial,sans-serif;background:#fafafa;color:#333}
+.button{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:10px}
+.hero-unit{margin:50px auto 0 auto;width:300px;font-size:18px;font-weight:200;line-height:30px;background-color:#eee;border-radius:6px;padding:60px}
+.hero-unit h1{font-size:60px;line-height:1;letter-spacing:-1px}
