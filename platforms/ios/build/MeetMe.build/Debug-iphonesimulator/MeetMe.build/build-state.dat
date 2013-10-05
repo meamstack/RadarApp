@@ -1,0 +1,555 @@
+TMeetMe
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Info.plist MeetMe/MeetMe-Info.plist
+cPhaseScriptExecution "Copy www directory" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Script-304B58A110DAC018002A0835.sh
+cCpResource MeetMe/config.xml build/emulator/MeetMe.app/config.xml
+cCpResource MeetMe/Resources/icons/icon-72.png build/emulator/MeetMe.app/icon-72.png
+cCpResource MeetMe/Resources/icons/icon.png build/emulator/MeetMe.app/icon.png
+cCpResource MeetMe/Resources/icons/icon@2x.png build/emulator/MeetMe.app/icon@2x.png
+cCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/es.lproj/Localizable.strings MeetMe/Resources/es.lproj/Localizable.strings
+cCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/en.lproj/Localizable.strings MeetMe/Resources/en.lproj/Localizable.strings
+cCompileXIB /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib
+cCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/de.lproj/Localizable.strings MeetMe/Resources/de.lproj/Localizable.strings
+cCpResource MeetMe/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/MeetMe.app/Default-Landscape@2x~ipad.png
+cCpResource MeetMe/Resources/splash/Default-Landscape~ipad.png build/emulator/MeetMe.app/Default-Landscape~ipad.png
+cCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/se.lproj/Localizable.strings MeetMe/Resources/se.lproj/Localizable.strings
+cCpResource MeetMe/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/MeetMe.app/Default-Portrait@2x~ipad.png
+cCpResource MeetMe/Resources/splash/Default-Portrait~ipad.png build/emulator/MeetMe.app/Default-Portrait~ipad.png
+cCpResource MeetMe/Resources/splash/Default@2x~iphone.png build/emulator/MeetMe.app/Default@2x~iphone.png
+cCpResource MeetMe/Resources/splash/Default~iphone.png build/emulator/MeetMe.app/Default~iphone.png
+cCpResource MeetMe/Resources/splash/Default-568h@2x~iphone.png build/emulator/MeetMe.app/Default-568h@2x~iphone.png
+cCpResource MeetMe/Resources/icons/icon-72@2x.png build/emulator/MeetMe.app/icon-72@2x.png
+cProcessPCH /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.pth MeetMe/MeetMe-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe normal i386
+cGenerateDSYMFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe
+cTouch /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c0000000050F4CA7600000000000226E0
+t1358219894
+s141024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000050F4CA800000000000228FE0
+t1358219904
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c0000000050F4CA80000000000009C590
+t1358219904
+s640400
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000050F4CA8C00000000000015F7
+t1358219916
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c0000000050F4CAB600000000000BCC20
+t1358219958
+s773152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c0000000050D532860000000000000E8D
+t1356149382
+s3725
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.m
+c0000000052504C9000000000000013A3
+t1380994192
+s5027
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.m
+c0000000052504C900000000000001267
+t1380994192
+s4711
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib
+c0000000052504C8F0000000000001759
+t1380994191
+s5977
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/MeetMe-Prefix.pch
+c0000000052504C9000000000000003BD
+t1380994192
+s957
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/de.lproj/Localizable.strings
+c0000000052504C8F00000000000004BF
+t1380994191
+s1215
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/en.lproj/Localizable.strings
+c0000000052504C8F00000000000004AA
+t1380994191
+s1194
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/es.lproj/Localizable.strings
+c0000000052504C8F00000000000004B7
+t1380994191
+s1207
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon-72.png
+c0000000052504C8F0000000000001350
+t1380994191
+s4944
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon-72@2x.png
+c0000000052504C8F0000000000002DBA
+t1380994191
+s11706
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon.png
+c0000000052504C8F0000000000000F3E
+t1380994191
+s3902
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon@2x.png
+c0000000052504C8F0000000000001EBD
+t1380994191
+s7869
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/se.lproj/Localizable.strings
+c0000000052504C8F00000000000004AB
+t1380994191
+s1195
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-568h@2x~iphone.png
+c0000000052504C8F00000000000085B1
+t1380994191
+s34225
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Landscape@2x~ipad.png
+c0000000052504C8F0000000000012DF4
+t1380994191
+s77300
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Landscape~ipad.png
+c0000000052504C8F0000000000008877
+t1380994191
+s34935
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Portrait@2x~ipad.png
+c0000000052504C8F0000000000012B02
+t1380994191
+s76546
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Portrait~ipad.png
+c0000000052504C8F00000000000085E6
+t1380994191
+s34278
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default@2x~iphone.png
+c0000000052504C8F0000000000007323
+t1380994191
+s29475
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default~iphone.png
+c0000000052504C8F000000000000289A
+t1380994191
+s10394
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/config.xml
+c0000000052504C9200000000000008A3
+t1380994194
+s2211
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m
+c0000000052504C900000000000000458
+t1380994192
+s1112
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MeetMe.LinkFileList
+c0000000052504C9B00000000000001C8
+t1380994203
+s456
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Script-304B58A110DAC018002A0835.sh
+c0000000052504C9B000000000000002D
+t1380994203
+s45
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default~iphone.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Info.plist
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MainViewController.nib
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/PkgInfo
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/config.xml
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon-72.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon-72@2x.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon@2x.png
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a
+c0000000052504C9B0000000000111B30
+t1380994203
+s1121072
+
+N/var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.pth
+t1380937709
+s4680940
+
+NMeetMe/MeetMe-Info.plist
+c0000000052504C920000000000000746
+t1380994194
+s1862
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese5d30b1b8400b841^e7e2131b8400b841^---0#1#0#--18"Check dependencies36"7C9748F4-2507-47D3-88AA-9C64DE73DF0A-
+
+CCompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402687007.106945
+e402687007.176749
+r1
+xCompileC
+xbuild/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.o
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.mb18a1b1f8400b841^6c3f2d1f8400b841^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.m0000000000000000^3926"CompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.o MeetMe/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/UninstalledProducts/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/AppDelegate.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/AppDelegate.o36"E72021EE-94CA-4A5D-94DD-EA84F8D04E6D-
+
+CCompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402687007.106984
+e402687007.172716
+r1
+xCompileC
+xbuild/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.o
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.ma7941b1f8400b841^1e372c1f8400b841^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.m0000000000000000^3968"CompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.o MeetMe/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/UninstalledProducts/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MainViewController.o36"F1108FF7-5404-4531-A088-9AA9DD0A83B6-
+
+CCompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402687007.106981
+e402687007.134283
+r1
+xCompileC
+xbuild/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.o
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m14931b1f8400b841^c85f221f8400b841^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m0000000000000000^3868"CompileC build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.o MeetMe/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/UninstalledProducts/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/main.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/main.o36"296A412C-9694-4969-8C99-CDF4F9D7F4F2-
+
+CCompileXIB /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib
+s402687003.892862
+e402687006.834446
+r1
+xCompileXIB
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib
+o2013-10-05 10:30:06.431 Interface Builder Cocoa Touch Tool[34725:f07] CFPreferences: user home directory at file://localhost/Users/hackreactor/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compiling /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib2eabe41b8400b841^5cabd51e8400b841^-244"2013-10-05 10:30:06.431 Interface Builder Cocoa Touch Tool[34725:f07] CFPreferences: user home directory at file://localhost/Users/hackreactor/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib0000000000000000^1173"CompileXIB MeetMe/Classes/MainViewController.xib    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MainViewController.nib /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"C29C2FE5-09C2-49D2-97D2-609DD41D17CA-
+
+CCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/de.lproj/Localizable.strings MeetMe/Resources/de.lproj/Localizable.strings
+s402687003.893965
+e402687003.926595
+r1
+xCopyStringsFile
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/de.lproj/Localizable.strings
+xMeetMe/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy MeetMe/Resources/de.lproj/Localizable.stringsb3ede41b8400b841^433ded1b8400b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/de.lproj/Localizable.strings0000000000000000^820"CopyStringsFile build/emulator/MeetMe.app/de.lproj/Localizable.strings MeetMe/Resources/de.lproj/Localizable.strings    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/de.lproj -- MeetMe/Resources/de.lproj/Localizable.strings36"D1156890-D968-4A43-9668-4CC11BFBBEF3-
+
+CCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/en.lproj/Localizable.strings MeetMe/Resources/en.lproj/Localizable.strings
+s402687003.890849
+e402687003.926587
+r1
+xCopyStringsFile
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/en.lproj/Localizable.strings
+xMeetMe/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy MeetMe/Resources/en.lproj/Localizable.strings6423e41b8400b841^fc35ed1b8400b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/en.lproj/Localizable.strings0000000000000000^820"CopyStringsFile build/emulator/MeetMe.app/en.lproj/Localizable.strings MeetMe/Resources/en.lproj/Localizable.strings    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/en.lproj -- MeetMe/Resources/en.lproj/Localizable.strings36"CCC1B067-196F-4386-8613-B354DB6DBDA1-
+
+CCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/es.lproj/Localizable.strings MeetMe/Resources/es.lproj/Localizable.strings
+s402687003.890828
+e402687003.926620
+r1
+xCopyStringsFile
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/es.lproj/Localizable.strings
+xMeetMe/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy MeetMe/Resources/es.lproj/Localizable.stringsd923e41b8400b841^af3fed1b8400b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/es.lproj/Localizable.strings0000000000000000^820"CopyStringsFile build/emulator/MeetMe.app/es.lproj/Localizable.strings MeetMe/Resources/es.lproj/Localizable.strings    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/es.lproj -- MeetMe/Resources/es.lproj/Localizable.strings36"F8EC15DC-1180-4AD9-9493-C496F1D14234-
+
+CCopyStringsFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/se.lproj/Localizable.strings MeetMe/Resources/se.lproj/Localizable.strings
+s402687003.927903
+e402687003.993344
+r1
+xCopyStringsFile
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/se.lproj/Localizable.strings
+xMeetMe/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy MeetMe/Resources/se.lproj/Localizable.strings58aced1b8400b841^454bfe1b8400b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/se.lproj/Localizable.strings0000000000000000^820"CopyStringsFile build/emulator/MeetMe.app/se.lproj/Localizable.strings MeetMe/Resources/se.lproj/Localizable.strings    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/se.lproj -- MeetMe/Resources/se.lproj/Localizable.strings36"14BB83AA-5473-42D5-98EF-704E6A060EDE-
+
+CCpResource MeetMe/Resources/icons/icon-72.png build/emulator/MeetMe.app/icon-72.png
+s402687003.887052
+e402687003.892816
+r1
+xCpResource
+xMeetMe/Resources/icons/icon-72.png
+xbuild/emulator/MeetMe.app/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/emulator/MeetMe.app/icon-72.png7138e31b8400b841^da8fe41b8400b841^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon-72.png000000000080d041^850"CpResource MeetMe/Resources/icons/icon-72.png build/emulator/MeetMe.app/icon-72.png    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon-72.png /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"7EF45E1F-6225-4A90-8458-29E34729AB91-
+
+CCpResource MeetMe/Resources/icons/icon-72@2x.png build/emulator/MeetMe.app/icon-72@2x.png
+s402687003.949949
+e402687003.952336
+r1
+xCpResource
+xMeetMe/Resources/icons/icon-72@2x.png
+xbuild/emulator/MeetMe.app/icon-72@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Copy build/emulator/MeetMe.app/icon-72@2x.pngba4ef31b8400b841^d1ccf31b8400b841^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon-72@2x.png000000000080d041^865"CpResource "MeetMe/Resources/icons/icon-72@2x.png" "build/emulator/MeetMe.app/icon-72@2x.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon-72@2x.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"49D83BC8-2319-49C2-B16F-52430DEDAB82-
+
+CCpResource MeetMe/Resources/icons/icon.png build/emulator/MeetMe.app/icon.png
+s402687003.887065
+e402687003.891650
+r1
+xCpResource
+xMeetMe/Resources/icons/icon.png
+xbuild/emulator/MeetMe.app/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/emulator/MeetMe.app/icon.png7138e31b8400b841^4e43e41b8400b841^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon.png000000000080d041^841"CpResource MeetMe/Resources/icons/icon.png build/emulator/MeetMe.app/icon.png    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon.png /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"D1D04D3D-8644-44EA-B65E-6D158CAE3280-
+
+CCpResource MeetMe/Resources/icons/icon@2x.png build/emulator/MeetMe.app/icon@2x.png
+s402687003.887184
+e402687003.890554
+r1
+xCpResource
+xMeetMe/Resources/icons/icon@2x.png
+xbuild/emulator/MeetMe.app/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/emulator/MeetMe.app/icon@2x.png043ae31b8400b841^7afbe31b8400b841^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/icon@2x.png000000000080d041^856"CpResource "MeetMe/Resources/icons/icon@2x.png" "build/emulator/MeetMe.app/icon@2x.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/icons/icon@2x.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"F5978357-CDA8-411F-BCF1-ADDF015AF8EF-
+
+CCpResource MeetMe/Resources/splash/Default-568h@2x~iphone.png build/emulator/MeetMe.app/Default-568h@2x~iphone.png
+s402687003.949936
+e402687003.953317
+r1
+xCpResource
+xMeetMe/Resources/splash/Default-568h@2x~iphone.png
+xbuild/emulator/MeetMe.app/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/emulator/MeetMe.app/Default-568h@2x~iphone.pngf145f31b8400b841^b70cf41b8400b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-568h@2x~iphone.png000000000080d041^903"CpResource "MeetMe/Resources/splash/Default-568h@2x~iphone.png" "build/emulator/MeetMe.app/Default-568h@2x~iphone.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-568h@2x~iphone.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"B2589202-5401-4FFE-A1C0-0490767D2CC7-
+
+CCpResource MeetMe/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/MeetMe.app/Default-Landscape@2x~ipad.png
+s402687003.927886
+e402687003.930308
+r1
+xCpResource
+xMeetMe/Resources/splash/Default-Landscape@2x~ipad.png
+xbuild/emulator/MeetMe.app/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/emulator/MeetMe.app/Default-Landscape@2x~ipad.png08abed1b8400b841^aa28ee1b8400b841^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Landscape@2x~ipad.png000000000080d041^912"CpResource "MeetMe/Resources/splash/Default-Landscape@2x~ipad.png" "build/emulator/MeetMe.app/Default-Landscape@2x~ipad.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Landscape@2x~ipad.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"FA426309-D264-4BB7-863C-F0922C769FE0-
+
+CCpResource MeetMe/Resources/splash/Default-Landscape~ipad.png build/emulator/MeetMe.app/Default-Landscape~ipad.png
+s402687003.927896
+e402687003.931312
+r1
+xCpResource
+xMeetMe/Resources/splash/Default-Landscape~ipad.png
+xbuild/emulator/MeetMe.app/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/emulator/MeetMe.app/Default-Landscape~ipad.png26aced1b8400b841^776aee1b8400b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Landscape~ipad.png000000000080d041^903"CpResource "MeetMe/Resources/splash/Default-Landscape~ipad.png" "build/emulator/MeetMe.app/Default-Landscape~ipad.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Landscape~ipad.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"9C9FC63E-ED1F-449C-9D64-38207B8F82FC-
+
+CCpResource MeetMe/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/MeetMe.app/Default-Portrait@2x~ipad.png
+s402687003.931477
+e402687003.933570
+r1
+xCpResource
+xMeetMe/Resources/splash/Default-Portrait@2x~ipad.png
+xbuild/emulator/MeetMe.app/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/emulator/MeetMe.app/Default-Portrait@2x~ipad.png5d8bee1b8400b841^72feee1b8400b841^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Portrait@2x~ipad.png000000000080d041^909"CpResource "MeetMe/Resources/splash/Default-Portrait@2x~ipad.png" "build/emulator/MeetMe.app/Default-Portrait@2x~ipad.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Portrait@2x~ipad.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"F4313EC2-F1E3-4F02-9E36-347175A9189D-
+
+CCpResource MeetMe/Resources/splash/Default-Portrait~ipad.png build/emulator/MeetMe.app/Default-Portrait~ipad.png
+s402687003.931479
+e402687003.934657
+r1
+xCpResource
+xMeetMe/Resources/splash/Default-Portrait~ipad.png
+xbuild/emulator/MeetMe.app/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/emulator/MeetMe.app/Default-Portrait~ipad.pnga791ee1b8400b841^ae45ef1b8400b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default-Portrait~ipad.png000000000080d041^900"CpResource "MeetMe/Resources/splash/Default-Portrait~ipad.png" "build/emulator/MeetMe.app/Default-Portrait~ipad.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default-Portrait~ipad.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"3BB33FAD-BB4F-47F8-9D0E-C681117300D0-
+
+CCpResource MeetMe/Resources/splash/Default@2x~iphone.png build/emulator/MeetMe.app/Default@2x~iphone.png
+s402687003.934765
+e402687003.945238
+r1
+xCpResource
+xMeetMe/Resources/splash/Default@2x~iphone.png
+xbuild/emulator/MeetMe.app/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Copy build/emulator/MeetMe.app/Default@2x~iphone.pngb762ef1b8400b841^b1fcf11b8400b841^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default@2x~iphone.png000000000080d041^888"CpResource "MeetMe/Resources/splash/Default@2x~iphone.png" "build/emulator/MeetMe.app/Default@2x~iphone.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default@2x~iphone.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"0B832ED2-C109-45D7-8807-BC4D7005E557-
+
+CCpResource MeetMe/Resources/splash/Default~iphone.png build/emulator/MeetMe.app/Default~iphone.png
+s402687003.935854
+e402687003.945994
+r1
+xCpResource
+xMeetMe/Resources/splash/Default~iphone.png
+xbuild/emulator/MeetMe.app/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy build/emulator/MeetMe.app/Default~iphone.png65a7ef1b8400b841^0130f21b8400b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Default~iphone.png000000000080d041^879"CpResource "MeetMe/Resources/splash/Default~iphone.png" "build/emulator/MeetMe.app/Default~iphone.png"    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/Resources/splash/Default~iphone.png" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"769B1300-3E24-433C-9E71-E56F385B937D-
+
+CCpResource MeetMe/config.xml build/emulator/MeetMe.app/config.xml
+s402687003.887046
+e402687003.889632
+r1
+xCpResource
+xMeetMe/config.xml
+xbuild/emulator/MeetMe.app/config.xml
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy build/emulator/MeetMe.app/config.xmlf339e31b8400b841^0ebfe31b8400b841^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/config.xml000000000080d041^815"CpResource MeetMe/config.xml build/emulator/MeetMe.app/config.xml    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/config.xml /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"5E803154-5133-4E97-8230-D05DF2978403-
+
+CGenerateDSYMFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe
+s402687007.589390
+e402687007.683911
+r1
+xGenerateDSYMFile
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Generate /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM1101971f8400b841^6614af1f8400b841^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM000000000080d041^841"GenerateDSYMFile build/emulator/MeetMe.app.dSYM build/emulator/MeetMe.app/MeetMe    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app.dSYM36"94855596-FB9F-468E-B118-24A5C96EDC55-
+
+CLd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe normal i386
+s402687007.183784
+e402687007.582426
+r1
+xLd
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe52282f1f8400b841^971a951f8400b841^---0#0#0#--1776"Ld build/emulator/MeetMe.app/MeetMe normal i386    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -filelist /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MeetMe.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework AssetsLibrary /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a -framework CoreGraphics -framework MobileCoreServices -framework CoreLocation -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/MeetMe36"B11D1472-B77A-4FC1-93EA-603FB30B0AD3-
+
+CPhaseScriptExecution "Copy www directory" /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Script-304B58A110DAC018002A0835.sh
+s402687003.095485
+e402687003.878624
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.755s
+ouser	0m0.309s
+osys	0m0.375s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'e10d191b8400b841^ffebe01b8400b841^-42"real	0m0.755suser	0m0.309ssys	0m0.375s3(21%IDEActivityLogMessage2@14"real	0m0.755s-402687003#1#14#-0#-----2@14"user	0m0.309s-402687003#15#14#-0#-----2@13"sys	0m0.375s-402687003#29#13#-0#-----0#0#0#--21622"PhaseScriptExecution "Copy www directory" build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Script-304B58A110DAC018002A0835.sh    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER hackreactor    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build    setenv BUILD_ROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator    setenv CACHE_ROOT /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC YES    setenv CLANG_WARN_BOOL_CONVERSION YES    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_EMPTY_BODY YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator    setenv CONFIGURATION_TEMP_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH MeetMe.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH MeetMe.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/MeetMe.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME MeetMe.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH MeetMe.app/Executables    setenv EXECUTABLE_FOLDER_PATH MeetMe.app    setenv EXECUTABLE_NAME MeetMe    setenv EXECUTABLE_PATH MeetMe.app/MeetMe    setenv FILE_LIST /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH MeetMe.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME MeetMe.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER MeetMe/MeetMe-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNDECLARED_SELECTOR YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_FUNCTION YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include\" \"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/usr/local/lib/include\" \"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/UninstalledProducts/include\" \"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE MeetMe/MeetMe-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH MeetMe.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH MeetMe.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/MeetMe.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER hackreactor    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/MeetMe.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH MeetMe.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal/i386/MeetMe.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH MeetMe.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12D78    setenv MAC_OS_X_VERSION_ACTUAL 1083    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0803    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Objects-normal    setenv OBJROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build    setenv ONLY_ACTIVE_ARCH YES    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load \"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a\" -ObjC"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH MeetMe.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/PkgInfo    setenv PKGINFO_PATH MeetMe.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60100    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH MeetMe.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH MeetMe.app/PrivateHeaders    setenv PRODUCT_NAME MeetMe    setenv PRODUCT_SETTINGS_PATH /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/MeetMe-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT MeetMe    setenv PROJECT_DERIVED_FILE_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/DerivedSources    setenv PROJECT_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PROJECT_FILE_PATH /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe.xcodeproj    setenv PROJECT_NAME MeetMe    setenv PROJECT_TEMP_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build    setenv PROJECT_TEMP_ROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build    setenv PUBLIC_HEADERS_FOLDER_PATH MeetMe.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH MeetMe.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_NAME iphonesimulator6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH MeetMe.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH MeetMe.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv SRCROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME MeetMe    setenv TARGET_BUILD_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator    setenv TARGET_NAME MeetMe    setenv TARGET_TEMP_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build    setenv TEMP_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build    setenv TEMP_FILES_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build    setenv TEMP_FILE_DIR /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build    setenv TEMP_ROOT /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH MeetMe.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER hackreactor    setenv USER_APPS_DIR /Users/hackreactor/Applications    setenv USER_LIBRARY_DIR /Users/hackreactor/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH MeetMe.app/version.plist    setenv VERSION_INFO_BUILDER hackreactor    setenv VERSION_INFO_FILE MeetMe_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:MeetMe  PROJECT:MeetMe-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME MeetMe.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H127    setenv XCODE_VERSION_ACTUAL 0460    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/Script-304B58A110DAC018002A0835.sh36"9DB11E65-1759-4E9A-9DFE-8D9F0B1E4C5B-
+
+CProcessInfoPlistFile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Info.plist MeetMe/MeetMe-Info.plist
+s402687003.083388
+e402687003.086896
+r1
+xProcessInfoPlistFile
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Info.plist
+xMeetMe/MeetMe-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Process MeetMe/MeetMe-Info.plist2975151b8400b841^6c3e161b8400b841^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/MeetMe-Info.plist0000000000000000^878"ProcessInfoPlistFile build/emulator/MeetMe.app/Info.plist MeetMe/MeetMe-Info.plist    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-infoPlistUtility MeetMe/MeetMe-Info.plist -genpkginfo /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app/Info.plist36"A15A1ED8-8ED5-4B3D-85CB-C61082786499-
+
+CProcessPCH /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.pth MeetMe/MeetMe-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402687006.842461
+e402687007.099877
+r1
+xProcessPCH
+x/var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.pth
+xMeetMe/MeetMe-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile MeetMe/MeetMe-Prefix.pch18ccd71e8400b841^b090191f8400b841^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/MeetMe-Prefix.pch0000000000000000^3851"ProcessPCH /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.pth MeetMe/MeetMe-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/MeetMe-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/UninstalledProducts/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/MeetMe.build/Debug-iphonesimulator/MeetMe.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator --serialize-diagnostics /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/MeetMe/MeetMe-Prefix.pch -o /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MeetMe-Prefix-hakjituwkuhtveaksdnyuxsxyifk/MeetMe-Prefix.pch.d36"4DAE8494-5141-492D-BC05-E6648BE5C6AF-
+
+CTouch /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app
+s402687007.692445
+e402687007.718689
+r1
+xTouch
+x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Touch /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app4f5db11f8400b841^11fcb71f8400b841^---0#0#0#--609"Touch build/emulator/MeetMe.app    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /usr/bin/touch -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/MeetMe.app36"BE416719-F03B-4C2F-8914-A147FEF79D06-
+
