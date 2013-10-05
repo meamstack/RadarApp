@@ -1,4 +1,4 @@
-window.iPhoneApp = angular.module('meetMeApp', [
+var iPhoneApp = angular.module('meetMeApp', [
   'meetMeApp.controller.main',
   'meetMeApp.controller.map'
 ]);

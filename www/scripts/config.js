@@ -1,4 +1,4 @@
-window.iPhoneApp.config(['$routeProvider',
+iPhoneApp.config(['$routeProvider',
   function ($routeProvider) {
     $routeProvider
     .when('/', {
