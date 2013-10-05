@@ -1,13 +1,8 @@
-'use strict';
+window.iPhoneApp = angular.module('meetMeApp', [
+  'meetMeApp.controller.main',
+  'meetMeApp.controller.map'
+]);
 
-angular.module('meetmeApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+
+  angular.module('meetMeApp.controller.main', []);
+  angular.module('meetMeApp.controller.map', []);
