@@ -1,10 +1,8 @@
-'use strict';
-
-angular.module('meetmeApp')
-  .controller('MainCtrl', function ($scope) {
+angular.module('meetMeApp.controller.main', [])
+  .controller('MainCtrl', ['$scope', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);
