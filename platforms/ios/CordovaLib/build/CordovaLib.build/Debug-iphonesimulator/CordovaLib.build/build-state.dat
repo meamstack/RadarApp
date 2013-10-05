@@ -1,998 +1,0 @@
-TCordovaLib
-v5
-r1
-cCheck dependencies
-cCpHeader Classes/NSDictionary+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-cCpHeader Classes/NSData+Base64.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-cCpHeader Classes/CDVInvokedUrlCommand.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-cCpHeader Classes/CDVPluginResult.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-cCpHeader Classes/CDVDebug.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-cCpHeader Classes/CDVPlugin.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-cCpHeader Classes/CDVWhitelist.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-cCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-cCpHeader Classes/CDVURLProtocol.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-cCpHeader Classes/CDVViewController.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-cCpHeader Classes/CDV.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h
-cCpHeader Classes/CDVCommandDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-cCpHeader Classes/CDVLocalStorage.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-cCpHeader Classes/CDVAvailability.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-cCpHeader Classes/UIDevice+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-cCpHeader Classes/NSArray+Comparisons.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-cCpHeader Classes/CDVCommandQueue.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-cCpHeader Classes/CDVCommandDelegateImpl.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-cCpHeader Classes/CDVShared.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-cCpHeader Classes/CDVScreenOrientationDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-cCpHeader Classes/CDVJSON.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-cCpHeader Classes/CDVConfigParser.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-cCpHeader Classes/CDVWebViewDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-cCpHeader Classes/CDVUserAgentUtil.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-cCpHeader Classes/CDVTimer.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-cProcessPCH /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a normal i386
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
-c0000000050EDEAFB0000000000000110
-t1357769467
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c0000000050F4CA8C00000000000015F7
-t1358219916
-s5623
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDV.h
-c0000000052504C900000000000000516
-t1380994192
-s1302
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-c0000000052504C900000000000000C83
-t1380994192
-s3203
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-c0000000052504C9000000000000008BA
-t1380994192
-s2234
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
-c0000000052504C900000000000000473
-t1380994192
-s1139
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
-c0000000052504C90000000000000126E
-t1380994192
-s4718
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-c0000000052504C900000000000000501
-t1380994192
-s1281
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
-c0000000052504C90000000000000158B
-t1380994192
-s5515
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.h
-c0000000052504C9000000000000004CB
-t1380994192
-s1227
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
-c0000000052504C900000000000000EB2
-t1380994192
-s3762
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVDebug.h
-c0000000052504C900000000000000401
-t1380994192
-s1025
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-c0000000052504C9000000000000007E6
-t1380994192
-s2022
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
-c0000000052504C900000000000000DDE
-t1380994192
-s3550
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.h
-c0000000052504C9000000000000003DA
-t1380994192
-s986
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m
-c0000000052504C90000000000000098E
-t1380994192
-s2446
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
-c0000000052504C9000000000000006CF
-t1380994192
-s1743
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
-c0000000052504C900000000000004C7E
-t1380994192
-s19582
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-c0000000052504C900000000000000892
-t1380994192
-s2194
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m
-c0000000052504C9000000000000016AE
-t1380994192
-s5806
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-c0000000052504C900000000000000C13
-t1380994192
-s3091
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
-c0000000052504C900000000000001B29
-t1380994192
-s6953
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-c0000000052504C900000000000000408
-t1380994192
-s1032
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.h
-c0000000052504C9000000000000003E6
-t1380994192
-s998
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.m
-c0000000052504C9000000000000006B6
-t1380994192
-s1718
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.h
-c0000000052504C90000000000000038D
-t1380994192
-s909
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.m
-c0000000052504C900000000000000AA2
-t1380994192
-s2722
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
-c0000000052504C90000000000000041C
-t1380994192
-s1052
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
-c0000000052504C900000000000002514
-t1380994192
-s9492
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
-c0000000052504C900000000000000421
-t1380994192
-s1057
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
-c0000000052504C9000000000000012A2
-t1380994192
-s4770
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.h
-c0000000052504C900000000000000ACC
-t1380994192
-s2764
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m
-c0000000052504C900000000000009F3C
-t1380994192
-s40764
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
-c0000000052504C9000000000000005A2
-t1380994192
-s1442
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
-c0000000052504C9000000000000037C6
-t1380994192
-s14278
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-c0000000052504C9000000000000004B4
-t1380994192
-s1204
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
-c0000000052504C9000000000000027D3
-t1380994192
-s10195
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
-c0000000052504C900000000000000392
-t1380994192
-s914
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
-c0000000052504C9000000000000004D8
-t1380994192
-s1240
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-c0000000052504C90000000000000037D
-t1380994192
-s893
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m
-c0000000052504C9000000000000022CC
-t1380994192
-s8908
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
-c0000000052504C9000000000000005DA
-t1380994192
-s1498
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
-c0000000052504C900000000000001059
-t1380994192
-s4185
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-c0000000052504C9000000000000003A0
-t1380994192
-s928
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
-c0000000052504C900000000000000584
-t1380994192
-s1412
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
-c0000000052504C900000000000000476
-t1380994192
-s1142
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
-c0000000052504C900000000000000620
-t1380994192
-s1568
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/CordovaLib_Prefix.pch
-c0000000052504C900000000000000346
-t1380994192
-s838
-i<Foundation/Foundation.h>
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList
-c0000000052504C990000000000000DBB
-t1380994201
-s3515
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-t2
-s0
-
-N/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a
-t2
-s0
-
-N/var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.pth
-t1380937707
-s2841924
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese5b502198400b841^b98833198400b841^---0#1#0#--18"Check dependencies36"B556EA12-8E15-47E6-B6FF-C7A3F5E46DE0-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.563373
-e402687002.768424
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m666c901a8400b841^ccd0c41a8400b841^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m0000000000000000^4174"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o36"46BECD78-0D41-4CF4-8E79-EF6DF4740226-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687001.920260
-e402687002.298650
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.md2c4eb198400b841^23874c1a8400b841^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m0000000000000000^4132"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o36"2F7FB431-1F58-4B1B-9EAD-696BB7CEBEBD-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.564907
-e402687002.639765
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.me7c2901a8400b841^d4d7a31a8400b841^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.m0000000000000000^4132"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o36"8735531B-C180-4FCF-8BF0-3268C29F92EE-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.081215
-e402687002.124010
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.mfaec141a8400b841^4ad01f1a8400b841^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m0000000000000000^4162"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o36"480DACFF-643A-4A4D-90C8-AB2ADD8937F1-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.625572
-e402687002.667013
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m745da01a8400b841^ddd2aa1a8400b841^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m0000000000000000^4084"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o36"8DD5B47F-C1DE-49C4-8446-4076700BFA36-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.300234
-e402687002.562013
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m7f144d1a8400b841^68ec8f1a8400b841^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m0000000000000000^4132"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o36"D6D5E666-52B3-4523-A891-E8C0E47A8B16-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.155815
-e402687002.332697
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m931c281a8400b841^897a551a8400b841^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m0000000000000000^4096"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o36"9F71F4B3-E238-4733-966F-66AA82DCCA03-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.125323
-e402687002.190845
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m5b44201a8400b841^9f05311a8400b841^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m0000000000000000^4132"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o36"1C415B52-4C12-4C50-95FD-2B0328BDC70F-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.816020
-e402687002.879654
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.mb822d11a8400b841^e42fe11a8400b841^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.m0000000000000000^4096"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o36"A0433C5F-A13B-4AD2-9AB3-FC7834F39E9B-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.769742
-e402687002.840618
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.mfa45c51a8400b841^c843d71a8400b841^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.m0000000000000000^4090"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o36"89FF525C-B1DB-413C-9E2D-0555284EB9F5-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.192113
-e402687002.455503
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.mcc63311a8400b841^3acb741a8400b841^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m0000000000000000^4126"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o36"FE135EB5-71D9-482E-A41C-883F33378108-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.641106
-e402687002.814632
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.ma35aa41a8400b841^1496d01a8400b841^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m0000000000000000^4138"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o36"F711925F-3328-41C7-AE5C-8A2077B849D9-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687001.920238
-e402687003.004649
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m0dc7eb198400b841^0630011b8400b841^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m0000000000000000^4144"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o36"0D45A355-EF30-49D5-BDFD-988BA5B13360-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.668363
-e402687002.872753
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.mce51ab1a8400b841^2b6bdf1a8400b841^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m0000000000000000^4150"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o36"0F35DF49-4821-4598-BC7D-E2A108977BD3-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687001.920205
-e402687002.079880
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m54c6eb198400b841^d272141a8400b841^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m0000000000000000^4114"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o36"EBEF1034-9C23-4900-9145-3452B5BBFDF8-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.457044
-e402687002.563673
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.mcf6a751a8400b841^575c901a8400b841^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m0000000000000000^4156"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o36"29F4C19D-5FE5-47FF-B995-62B9C3B80980-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.107815
-e402687002.154498
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m52d21b1a8400b841^caa3271a8400b841^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m0000000000000000^4120"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o36"5EA585B1-995B-4568-9391-323409550706-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.069445
-e402687002.106454
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m0401121a8400b841^18411b1a8400b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m0000000000000000^4180"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o36"7595E3AC-3B6F-44DB-B6B0-DB57E851ED01-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687001.920229
-e402687002.066273
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.mdfc5eb198400b841^15fe101a8400b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m0000000000000000^4216"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o36"A59DF3E4-BB69-4C4F-B444-5822DD6D04AC-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687002.338626
-e402687002.624229
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.mabb2571a8400b841^94de9f1a8400b841^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m0000000000000000^4156"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG -include /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.d --serialize-diagnostics /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o36"570664E5-3DF9-404B-AFDA-AD67F5C25D23-
-
-CCpHeader Classes/CDV.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h
-s402687001.232284
-e402687001.236184
-r1
-xCpHeader
-xClasses/CDV.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h4a963b198400b841^b0763c198400b841^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h000000000080d041^896"CpHeader Classes/CDV.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDV.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDV.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"E7D8CDD1-5CC9-4555-A23D-A994CEA55A7E-
-
-CCpHeader Classes/CDVAvailability.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-s402687001.234207
-e402687001.237266
-r1
-xCpHeader
-xClasses/CDVAvailability.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.hc8083c198400b841^d7be3c198400b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h000000000080d041^932"CpHeader Classes/CDVAvailability.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVAvailability.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"5DDFF631-CE07-46A5-9857-58622EFC2B7A-
-
-CCpHeader Classes/CDVCommandDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-s402687001.232291
-e402687001.235027
-r1
-xCpHeader
-xClasses/CDVCommandDelegate.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.hb8943b198400b841^412b3c198400b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h000000000080d041^941"CpHeader Classes/CDVCommandDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"9EC4E281-F9B7-462D-81D6-5313D0EF7DF0-
-
-CCpHeader Classes/CDVCommandDelegateImpl.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-s402687001.239525
-e402687001.242846
-r1
-xCpHeader
-xClasses/CDVCommandDelegateImpl.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h876f3d198400b841^ae2b3e198400b841^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h000000000080d041^953"CpHeader Classes/CDVCommandDelegateImpl.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"7E385BF6-4DD7-4CE6-B5A0-B1435CE4F15B-
-
-CCpHeader Classes/CDVCommandQueue.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-s402687001.238464
-e402687001.241775
-r1
-xCpHeader
-xClasses/CDVCommandQueue.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h921f3d198400b841^d6e43d198400b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h000000000080d041^932"CpHeader Classes/CDVCommandQueue.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"09A5E39B-66AE-4F82-B771-04DBEEDCF6A6-
-
-CCpHeader Classes/CDVConfigParser.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-s402687001.242978
-e402687001.247246
-r1
-xCpHeader
-xClasses/CDVConfigParser.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.hcb473e198400b841^944b3f198400b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h000000000080d041^932"CpHeader Classes/CDVConfigParser.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVConfigParser.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"F55D90C1-29E8-4BEE-BFFB-29C09B9F56D3-
-
-CCpHeader Classes/CDVDebug.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-s402687001.225744
-e402687001.229510
-r1
-xCpHeader
-xClasses/CDVDebug.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h8ded39198400b841^2bc13a198400b841^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h000000000080d041^911"CpHeader Classes/CDVDebug.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVDebug.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"CB9587F2-BAD0-4D57-8821-4F81B739A124-
-
-CCpHeader Classes/CDVInvokedUrlCommand.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-s402687001.216774
-e402687001.226788
-r1
-xCpHeader
-xClasses/CDVInvokedUrlCommand.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.hc1c437198400b841^a60e3a198400b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h000000000080d041^947"CpHeader Classes/CDVInvokedUrlCommand.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"86EBA57E-86CF-4716-96F3-B534E7FAE06C-
-
-CCpHeader Classes/CDVJSON.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-s402687001.242955
-e402687001.246239
-r1
-xCpHeader
-xClasses/CDVJSON.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.hd0463e198400b841^ea093f198400b841^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h000000000080d041^908"CpHeader Classes/CDVJSON.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVJSON.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"22953FD2-3408-4402-BFB8-0E7881E34E2F-
-
-CCpHeader Classes/CDVLocalStorage.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-s402687001.234202
-e402687001.238358
-r1
-xCpHeader
-xClasses/CDVLocalStorage.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.hd9083c198400b841^f3053d198400b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h000000000080d041^932"CpHeader Classes/CDVLocalStorage.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"8DF8D6E3-6D2C-4A25-BE83-D3D1426C4ECB-
-
-CCpHeader Classes/CDVPlugin.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-s402687001.225808
-e402687001.228916
-r1
-xCpHeader
-xClasses/CDVPlugin.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.hf6ec39198400b841^2c9a3a198400b841^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h000000000080d041^914"CpHeader Classes/CDVPlugin.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPlugin.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"064E4D68-D0B0-4EC9-A5CC-33488838A5AC-
-
-CCpHeader Classes/CDVPluginResult.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-s402687001.218270
-e402687001.227333
-r1
-xCpHeader
-xClasses/CDVPluginResult.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h6ff637198400b841^a0323a198400b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h000000000080d041^932"CpHeader Classes/CDVPluginResult.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVPluginResult.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"30544242-1841-48A3-B428-0DF18BA6A4D6-
-
-CCpHeader Classes/CDVScreenOrientationDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-s402687001.241863
-e402687001.245076
-r1
-xCpHeader
-xClasses/CDVScreenOrientationDelegate.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.hd6ff3d198400b841^e8bc3e198400b841^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h000000000080d041^971"CpHeader Classes/CDVScreenOrientationDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"BAFC8159-5ECE-470A-9C81-F266F91D517E-
-
-CCpHeader Classes/CDVShared.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-s402687001.240759
-e402687001.243933
-r1
-xCpHeader
-xClasses/CDVShared.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h9dbb3d198400b841^eb723e198400b841^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h000000000080d041^914"CpHeader Classes/CDVShared.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVShared.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"11F0B2DA-C861-4144-BE82-7B7BB0121B18-
-
-CCpHeader Classes/CDVTimer.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-s402687001.247371
-e402687001.250948
-r1
-xCpHeader
-xClasses/CDVTimer.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h3c673f198400b841^4a4040198400b841^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h000000000080d041^911"CpHeader Classes/CDVTimer.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVTimer.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"3B859A57-DE2E-4309-9768-7F1BA96907FD-
-
-CCpHeader Classes/CDVURLProtocol.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-s402687001.230167
-e402687001.234029
-r1
-xCpHeader
-xClasses/CDVURLProtocol.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h4e0e3b198400b841^b8e93b198400b841^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h000000000080d041^929"CpHeader Classes/CDVURLProtocol.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"3ACA62E0-C869-4E27-855F-79E48EE71D69-
-
-CCpHeader Classes/CDVUserAgentUtil.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-s402687001.246252
-e402687001.249791
-r1
-xCpHeader
-xClasses/CDVUserAgentUtil.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h7d223f198400b841^0af23f198400b841^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h000000000080d041^935"CpHeader Classes/CDVUserAgentUtil.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"C9170AFF-562E-4FDF-BD2C-7736A5834BB7-
-
-CCpHeader Classes/CDVViewController.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-s402687001.230176
-e402687001.233066
-r1
-xCpHeader
-xClasses/CDVViewController.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.hfa0d3b198400b841^acaa3b198400b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h000000000080d041^938"CpHeader Classes/CDVViewController.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVViewController.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"A21A45F4-4E74-41B2-8BCA-5A7CC61CB94B-
-
-CCpHeader Classes/CDVWebViewDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-s402687001.245085
-e402687001.248388
-r1
-xCpHeader
-xClasses/CDVWebViewDelegate.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.hf1d53e198400b841^e1963f198400b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h000000000080d041^941"CpHeader Classes/CDVWebViewDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"25A20C3B-B4A5-4F3C-B271-1DFEB161DCBD-
-
-CCpHeader Classes/CDVWhitelist.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-s402687001.228042
-e402687001.231804
-r1
-xCpHeader
-xClasses/CDVWhitelist.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h0b7f3a198400b841^4f573b198400b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h000000000080d041^923"CpHeader Classes/CDVWhitelist.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/CDVWhitelist.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"759FF1A3-5AA6-4A63-88CB-1CFD8CD0EE6E-
-
-CCpHeader Classes/NSArray+Comparisons.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-s402687001.237364
-e402687001.240712
-r1
-xCpHeader
-xClasses/NSArray+Comparisons.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.hc2da3c198400b841^2c9f3d198400b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h000000000080d041^944"CpHeader Classes/NSArray+Comparisons.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"0B12DFD1-2824-4947-B1F3-CCB1EB3FB414-
-
-CCpHeader Classes/NSData+Base64.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-s402687001.216766
-e402687001.220325
-r1
-xCpHeader
-xClasses/NSData+Base64.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h8bc537198400b841^906638198400b841^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h000080e279001042^926"CpHeader Classes/NSData+Base64.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSData+Base64.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"845F16CD-AC77-45F8-B485-F1547723B172-
-
-CCpHeader Classes/NSDictionary+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-s402687001.216752
-e402687001.221173
-r1
-xCpHeader
-xClasses/NSDictionary+Extensions.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.hc1c437198400b841^239e38198400b841^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h000080e279001042^956"CpHeader Classes/NSDictionary+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"6D564107-C9E8-4969-BADE-7AF6E0F0405F-
-
-CCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-s402687001.228055
-e402687001.231049
-r1
-xCpHeader
-xClasses/NSMutableArray+QueueAdditions.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection131"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h6f7f3a198400b841^5b263b198400b841^---0#0#0#-19%DVTDocumentLocation2@142"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h000000000080d041^974"CpHeader Classes/NSMutableArray+QueueAdditions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"6D832022-0FCC-48C0-8906-5099DE131F92-
-
-CCpHeader Classes/UIDevice+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-s402687001.236166
-e402687001.239586
-r1
-xCpHeader
-xClasses/UIDevice+Extensions.h
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Copy /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h2a8d3c198400b841^315c3d198400b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h000000000080d041^944"CpHeader Classes/UIDevice+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include/Cordova36"6C4B7CDF-B231-4D3F-8027-358507D222C7-
-
-CLibtool /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a normal i386
-s402687003.011566
-e402687003.028357
-r1
-xLibtool
-x/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Libtool /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a normal i386a31d031b8400b841^1442071b8400b841^---0#0#0#--1245"Libtool /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a normal i386    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -filelist /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/libCordova.a36"EA04D48C-4C58-46E5-B793-2F27CA55BCA7-
-
-CProcessPCH /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s402687001.259458
-e402687001.913252
-r1
-xProcessPCH
-x/var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.pth
-xCordovaLib_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile CordovaLib_Prefix.pch319542198400b841^8ecae9198400b841^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/CordovaLib_Prefix.pch0000000000000000^4000"ProcessPCH /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/hackreactor/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/hackreactor/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/build/emulator -DDEBUG --serialize-diagnostics /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.dia -c /Users/hackreactor/code/eddyfh/groupapp/meetmeapp/platforms/ios/CordovaLib/CordovaLib_Prefix.pch -o /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/v4/ybxv2j0n6mb1_xlctbf4nr0r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-exwyhacavpbntzboxhrjoafirxas/CordovaLib_Prefix.pch.d36"058F637E-757E-4276-A51D-5E698394CAB2-
-
