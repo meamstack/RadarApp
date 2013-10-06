@@ -1,10 +1,14 @@
 <div class="hero-unit" ng-controller="MapCtrl">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <button class="topcoat-button--cta">MeetMe</button>
+  <h1>Map page</h1>
+  <a href='#/createActivity'>
+  	<button class='topcoat-button'>Create Activity</button>
+  </a>
+  <br>
+  <br>
+  <a href='#/viewActivity'>
+	  <button class='topcoat-button'>View Activity</button>
+	</a>
+	<p>(View activity will be pins on a map not a button)</p>
   <button class="">Mapssss</button>
   <div id="map"></div>
 </div>

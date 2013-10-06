@@ -9,6 +9,18 @@ iPhoneApp.config(['$routeProvider',
       templateUrl: 'views/map.html',
       controller: 'MapCtrl'
     })
+    .when('/createActivity', {
+      templateUrl: 'views/createActivity.html',
+      controller: 'CreateActivityCtrl'
+    })
+    .when('/viewActivity', {
+      templateUrl: 'views/viewActivity.html',
+      controller: 'ViewActivityCtrl'
+    })
+    .when('/chat', {
+      templateUrl: 'views/chat.html',
+      controller: 'ChatCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
