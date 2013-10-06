@@ -1,4 +1,3 @@
 platforms
 *.DS_STORE
-.cordova
 node_modules
