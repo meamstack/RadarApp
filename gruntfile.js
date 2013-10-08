@@ -9,11 +9,11 @@ module.exports = function(grunt) {
       },
       stylus: {
         files: ['www/styles/stylus/*'],
-        tasks: ['stylus']
+        tasks: ['stylus', 'phonegap:build']
       },
       phonegap: {
-        files: ['www/js/*', 'www/img/*', '/www/views/*'],
-        tasks: ['phonegap:build', 'phonegap:run']
+        files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
+        tasks: ['phonegap:build']
       }
     },
     stylus: {
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         },
         files: {
           'www/styles/css/main.css': ['www/styles/stylus/meetme.styl',
-          'www/styles/stylus/leaflet.styl']
+          'www/styles/stylus/leaflet.styl', 'www/styles/stylus/createActivity.styl']
         }
       }
     },

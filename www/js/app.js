@@ -1,9 +1,7 @@
 var iPhoneApp = angular.module('meetMeApp', [
   'meetMeApp.controller.main',
   'meetMeApp.controller.map',
-  'leaflet-directive'
+  'meetMeApp.controller.createActivity',
+  'leaflet-directive',
+  'meetMeApp.directive.createActivity'
 ]);
-
-
-  angular.module('meetMeApp.controller.main', []);
-  angular.module('meetMeApp.controller.map', []);
