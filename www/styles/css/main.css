@@ -1,4 +1,4 @@
-/*! meetMeApp - v0.0.1 - 2013-10-07
+/*! meetMeApp - v0.0.1 - 2013-10-08
 * https://github.com/meamstack/meetmeApp.git//
 * Copyright (c) 2013 Matt Goo <email>; Licensed BSD */
 html,body{width:640px;height:960px}
@@ -14,3 +14,4 @@ body{height:1136px;width:641px;z-index:-1}
 .map-page{padding:0;margin:0}
 .map{width:300px;height:600px}
 h1{margin:0}
+#carrier-date-battery{width:100%;height:20px}
