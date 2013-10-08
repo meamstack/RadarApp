@@ -30,18 +30,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    concat: {
-      options: {
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            '* <%= pkg.homepage %>/\n' +
-            '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>; Licensed <%= pkg.license %> */\n'
-      },
-      iocss: {
-        files: {
-          'www/styles/css/main.css': 'www/styles/css/main.css'
-        }
-      }
-    },
     copy: {
       examples: {
         expand: true,
@@ -64,9 +52,8 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'concat', 'copy', 'phonegap:build', 'phonegap:run', 'watch']);
+  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'phonegap:run:ios:emulator', 'watch']);
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
