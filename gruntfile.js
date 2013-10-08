@@ -3,6 +3,19 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    watch: {
+      options: {
+        livereload: true
+      },
+      stylus: {
+        files: ['www/styles/stylus/*'],
+        tasks: ['stylus']
+      },
+      phonegap: {
+        files: ['www/js/*', 'www/img/*', '/www/views/*'],
+        tasks: ['phonegap:build', 'phonegap:run']
+      }
+    },
     stylus: {
       compile: {
         options: {
@@ -37,19 +50,25 @@ module.exports = function(grunt) {
         dest: 'www/styles/exa/maines/'
       }
     },
-    watch: {
-      stylus: {
-        files: ['www/styles/stylus/*'],
-        tasks: 'stylus'
+    phonegap: {
+      config: {
+        root: 'www',
+        config: 'www/config.xml',
+        cordova: '/.cordova',
+        path: 'phonegap_grunt',
+        plugins: [],
+        platforms: ['ios'],
+        verbose: false
       }
     }
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'concat', 'copy']);
+  grunt.registerTask('default', ['stylus', 'concat', 'copy', 'phonegap:build', 'phonegap:run', 'watch']);
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-phonegap');
 };
