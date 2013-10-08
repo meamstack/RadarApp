@@ -12,7 +12,8 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          'www/styles/css/main.css': 'www/styles/stylus/meetme.styl'
+          'www/styles/css/main.css': ['www/styles/stylus/meetme.styl',
+          'www/styles/stylus/leaflet.styl']
         }
       }
     },
