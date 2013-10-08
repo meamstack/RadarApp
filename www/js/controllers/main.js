@@ -1,10 +1,20 @@
 angular.module('meetMeApp.controller.main', [])
   .controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.test = 'default';
+    
+    $scope.login = function() {
+      $scope.ref = window.open('http://meetme123.com:3000/auth/facebook/', '_blank', 'location=no,toolbar=no');
+      $scope.ref.addEventListener('loadstart', function(event){
+        if (event.url === 'http://meetme123.com:3000/') {
+          $scope.test = 'asdf';
+          $scope.ref.close();
+        }
+      });
+    }; 
+
+
+
+
 
       // $scope.onGeoSuccess = function(position) {
       //   $scope.latitude = position.coords.latitude;
