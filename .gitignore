@@ -1,5 +1,6 @@
 platforms/ios
 *.DS_STORE
 node_modules
-
 www/styles/css/main.css
+phonegap_grunt
+
