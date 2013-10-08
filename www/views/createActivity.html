@@ -1,8 +1,9 @@
-<div class="hero-unit" ng-controller="CreateActivityCtrl">
+<div class="hero-unit radial-background" ng-controller="CreateActivityCtrl">
   <h1>Create activity page</h1>
   <p>Activity options stuff here</p>
-  <a href='#/map'>
-  	<button class='topcoat-button'>Save Activity</button>
+  <a href={{server+'/api/createEvent'}}>
+    <button class='topcoat-button'>Save Activity</button>
   </a>
-</div>
 
+  <activity-button></activity-button>
+</div>

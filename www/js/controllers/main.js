@@ -1,7 +1,7 @@
 angular.module('meetMeApp.controller.main', [])
   .controller('MainCtrl', ['$scope', function ($scope) {
     $scope.test = 'default';
-    
+
     $scope.login = function() {
       $scope.ref = window.open('http://meetme123.com:3000/auth/facebook/', '_blank', 'location=no,toolbar=no');
       $scope.ref.addEventListener('loadstart', function(event){
@@ -10,7 +10,7 @@ angular.module('meetMeApp.controller.main', [])
           $scope.ref.close();
         }
       });
-    }; 
+    };
 
 
 
