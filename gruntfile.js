@@ -9,11 +9,11 @@ module.exports = function(grunt) {
       },
       stylus: {
         files: ['www/styles/stylus/*'],
-        tasks: ['stylus']
+        tasks: ['stylus', 'phonegap:build']
       },
       phonegap: {
-        files: ['www/js/*', 'www/img/*', '/www/views/*'],
-        tasks: ['phonegap:build', 'phonegap:run']
+        files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
+        tasks: ['phonegap:build']
       }
     },
     stylus: {
@@ -26,19 +26,7 @@ module.exports = function(grunt) {
         },
         files: {
           'www/styles/css/main.css': ['www/styles/stylus/meetme.styl',
-          'www/styles/stylus/leaflet.styl', 'www/styles/css/index.css']
-        }
-      }
-    },
-    concat: {
-      options: {
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            '* <%= pkg.homepage %>/\n' +
-            '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>; Licensed <%= pkg.license %> */\n'
-      },
-      iocss: {
-        files: {
-          'www/styles/css/main.css': 'www/styles/css/main.css'
+          'www/styles/stylus/leaflet.styl', 'www/styles/stylus/createActivity.styl']
         }
       }
     },
@@ -64,11 +52,11 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'concat', 'copy', 'phonegap:build', 'phonegap:run', 'watch']);
+  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'phonegap:run:ios:emulator', 'watch']);
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-phonegap');
 };
+

@@ -1,0 +1,33 @@
+.activityButton
+  border: black 1px solid
+  height: 35px
+  width: 35px
+  opacity: 0.5
+
+border-radius()
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+
+radial()
+  /* fallback */
+  background-color: #2F2727;
+  background-image: url(images/radial_fancy.png);
+  background-position: 80% 20%;
+  background-repeat: no-repeat;
+
+  // /* Safari 4-5, Chrome 1-9 */
+  // background: -webkit-gradient(radial, arguments, 0, 80% 40%, 100, from(#1a82f7), to(#2F2727));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(arguments);
+
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(arguments);
+
+  /* IE 10 */
+  background: -ms-radial-gradient(arguments);
+
+
+.radial-background
+  radial 50% 50%, closest-corner, #1a82f7, #3d41a8
