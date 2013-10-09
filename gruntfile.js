@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       options: {
-        livereload: true
+        livereload: 35728
       },
       stylus: {
         files: ['www/styles/stylus/*'],
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'phonegap:run:ios:emulator', 'watch']);
+  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'watch']);
 
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
