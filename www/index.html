@@ -33,13 +33,19 @@
         <div class="container" ng-view=""></div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-          g.src='//www.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        <script src="lib/jquery-2.0.3.min.js"></script>
+         <script>
+        //   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        //   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        //   g.src='//www.google-analytics.com/ga.js';
+        //   s.parentNode.insertBefore(g,s)}(document,'script'));
+         </script>
+        <!-- phonegap helper files -->
+        <script src="js/cordova-ios/CordovaLib/cordova.js"></script>
+        <script src="js/inobounce.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+        <script src="js/DatePicker.js"></script>
+        <!-- libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <script src="bower_components/angular/angular.js"></script>
 
@@ -57,10 +63,6 @@
         <!-- directives -->
         <script src="js/directives/angular-leaflet-directive.js"></script>
         <script src="js/directives/activityButton.js"></script>
-        <!-- phonegap helper files -->
-        <script src="js/inobounce.js"></script>
-        <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
-        <script src="cordova-2.7.0.js"></script>
 
         <!-- main angular js files -->
         <script src="js/index.js"></script>
