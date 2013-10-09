@@ -1,16 +1,22 @@
 angular.module('meetMeApp.controller.main', [])
-  .controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.test = 'default';
+  .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
 
     $scope.login = function() {
-      $scope.ref = window.open('http://meetme123.com:3000/auth/facebook/', '_blank', 'location=no,toolbar=no');
-      $scope.ref.addEventListener('loadstart', function(event){
+      var ref = window.open('http://meetme123.com:3000/auth/facebook/', '_blank', 'location=no,toolbar=no');
+      ref.addEventListener('loadstart', function(event){
         if (event.url === 'http://meetme123.com:3000/') {
-          $scope.test = 'asdf';
-          $scope.ref.close();
+          ref.close();
+          $scope.changepage();
         }
       });
     };
+
+    $scope.changepage = function() {
+      location.assign($location.path('/map'));
+    };
+
+
+
 
 
 
