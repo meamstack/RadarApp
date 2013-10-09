@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         tasks: ['stylus', 'phonegap:build']
       },
       phonegap: {
-        files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
+        files: ['www/js/*', 'www/img/*', 'www/views/*'],
         tasks: ['phonegap:build']
       }
     },

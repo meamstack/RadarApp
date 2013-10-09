@@ -1,4 +1,4 @@
-<!-- <div class="hero-unit radial-background" ng-controller="CreateActivityCtrl">
+<div class="hero-unit radial-background">
   <h1>Create activity page</h1>
   <p>Activity options stuff here</p>
 
@@ -7,116 +7,7 @@
     <button class='topcoat-button'>Save Activity</button>
   </a>
 
-  <button onclick='openDate()'>Show</button>
+   <input id="datepicker-value" type="text" value="" placeholder="Date value" disabled="disabled" />
+
+  <button ng-click='showDatePicker()'>Show</button>
 </div>
-
- -->
-
-
-<div class="app">
-    <h1>DatePicker Plugin Test</h1>
-    <br />
-    <div id="datepicker-form" style="display: none;">
-        <input id="datepicker-value" type="text" value="" placeholder="Date value" disabled="disabled" />
-        <br />
-        <ul>
-            <li><label><input id="options-change" type="checkbox" /> Change event</label></li>
-            <li><label><input id="options-prev" type="checkbox" /> Prev event</label></li>
-            <li><label><input id="options-next" type="checkbox" /> Next event</label></li>
-        </ul>
-        <label>Visibility</label>
-        <select id="options-visibility">
-            <option value="auto">Auto</option>
-            <option value="visible">Visible</option>
-            <option value="visible">Hidden</option>
-        </select>
-        <br /><br />
-        <button onclick="app.showDatePicker()">Show</button>
-    </div>
-</div>
-
-<script type="text/javascript">
-
-app.initialize();
-
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        console.log('Received Event: ' + id);
-        document.getElementById('datepicker-form').setAttribute("style", "display: block;");
-    },
-
-    //--------------------------------------------------------------------------
-    //
-    //  Date Picker test
-    //
-    //-------------------------------------------------------------------------
-    showDatePicker: function () {
-        try {
-        var datePicker = cordova.require("cordova/plugin/datepicker");
-        var options = {
-            date: new Date(),
-            mode: 'date'
-        };
-
-        if (document.getElementById("options-change").checked) {
-            options.onChange = this.onDatePickerChange;
-        }
-        if (document.getElementById("options-prev").checked) {
-            options.onPrev = this.onDatePickerPrev;
-        }
-        if (document.getElementById("options-next").checked) {
-            options.onNext = this.onDatePickerNext;
-        }
-
-        options.visibility = document.getElementById("options-visibility").value;
-        options.onDismiss  = this.onDatePickerDismiss;
-        datePicker.show(options);
-        }
-        catch(error) {
-            console.log(error);
-        }
-    },
-
-
-    onDatePickerChange: function (date) {
-        console.log("onChange:", date);
-        document.getElementById("datepicker-value").value = date.toString();
-    },
-
-    onDatePickerDismiss: function (date) {
-        console.log("onDismiss:", date);
-        document.getElementById("datepicker-value").value = date.toString();
-    },
-
-    onDatePickerPrev: function () {
-        alert("Dismiss and prev");
-    },
-
-    onDatePickerNext: function () {
-        alert("Dismiss and next");
-    }
-};
-
-</script>

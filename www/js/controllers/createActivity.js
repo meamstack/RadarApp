@@ -37,4 +37,36 @@ angular.module('meetMeApp.controller.createActivity', [])
       }
     };
 
+
+    $scope.showDatePicker = function () {
+        try {
+          debugger;
+        var datePicker = cordova.require("cordova/plugin/datepicker");
+        var options = {
+            date: new Date(),
+            mode: 'date',
+            visibility: 'auto',
+            onDismiss: function(date) {
+              console.log("onDismiss:", date);
+              document.getElementById("datepicker-value").value = date.toString();
+            },
+            onPrev: function() {
+              alert('Dismiss and prev');
+            },
+            onNext: function() {
+              alert('dissmiss and next');
+            },
+            onChange: function(date) {
+              console.log("onChange:", date);
+              document.getElementById("datepicker-value").value = date.toString();
+            }
+        };
+
+        datePicker.show(options);
+        }
+        catch(error) {
+            console.log(error);
+        }
+    };
+
   }]);
