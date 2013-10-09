@@ -1,7 +1,14 @@
 <div class="hero-unit map-page" ng-controller="MapCtrl">
-  <h1>Map page</h1>
-  <leaflet class="map" center="center"></leaflet>
+  <h1>Map</h1>
+  <a ng-click="createEvent()">Create Event</a>
+  <img id="centerMarker" src="http://cdn.leafletjs.com/leaflet-0.6.4/images/marker-icon-2x.png">
+  <leaflet class="map" markers="markers" center="center" layers="layers"></leaflet>
   <div class='scrollBar'></div>
+  {{markers.CurrentLocation}}
   <p>(View activity will be pins on a map not a button)</p>
+  <form>
+        Lat : <input type="number" step="any" ng-model="center.lat"><br />
+        Lon : <input type="number" step="any" ng-model="center.lng">
+    </form>
 </div>
 

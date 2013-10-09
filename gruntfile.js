@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         tasks: ['stylus', 'phonegap:build']
       },
       phonegap: {
-        files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
+        files: ['www/js/*', 'www/img/*', 'www/views/*'],
         tasks: ['phonegap:build']
       }
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'phonegap:run:ios:emulator', 'watch']);
+  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'watch']);
 
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
