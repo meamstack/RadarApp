@@ -2,7 +2,7 @@ var center = {lat:37.7879,lon:-122.4006,zoom:5}
 angular.module('meetMeApp.controller.map', [])
   .controller('MapCtrl', ['$scope', function ($scope) {
     $scope.createEvent = function(){
-      console.log(this)
+      console.log(this.center)
     },
     angular.extend($scope, {
          center: {
@@ -10,14 +10,14 @@ angular.module('meetMeApp.controller.map', [])
              lng: -122.400,
              zoom: 15
          },
-         // markers: {
-         //    CurrentLocation: {
-         //      lat: 37.787,
-         //      lng: -122.400,
-         //      // focus: true,
-         //      draggable: false
-         //    }
-         // },
+         markers: {
+            CurrentLocation: {
+              lat: 37.787,
+              lng: -122.400,
+              // focus: true,
+              draggable: false
+            }
+         },
          layers: {
             baselayers: {
                 // googleTerrain: {
