@@ -9,14 +9,15 @@ angular.module('meetMeApp.controller.map', [])
       googleMapInit.addMarker(map,37.789984,-122.40523, "Goo time!");
     }
     var request = {
-      location: ['37.800305','-122.409239'],
+      location: [37.800305,-122.409239],
       date: {
-        year: "2013",
-        month: "10",
-        day: "06"
+        year: 2013,
+        month: 10,
+        day: 06
       },
       maxD: 1
     };
+    request = JSON.stringify(request);
     var url = 'http://54.200.135.103:9000/api/findEvents';
     // $http({
     //   method: 'POST',
@@ -38,12 +39,14 @@ angular.module('meetMeApp.controller.map', [])
     // .success(function(data){
     //   console.log(data);
     // })
-  $http.post('/api', request)
+  $http.post(url, request)
   .success(function(data) {
     console.log('data success, ', data);
+    $scope.newEvents = data;
   })
   .error(function(error){
     console.log('this is the error',error)
+    $scope.newEvents = error;
   });
 
     googleMapInit.initializeGoogleMap();
