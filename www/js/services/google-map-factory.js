@@ -1,10 +1,9 @@
 var googleMapFactory = angular.module("google-map-service", []);
 
 googleMapFactory.factory('googleMapInit', function () {
-    // initialize the google Maps   
-  
- 
-   
+    // initialize the google Maps
+   var localMap;
+
    var initializeGoogleMap = function() {
     // set latitude and longitude to center the map around
     var latlng = new google.maps.LatLng(37.79,-122.4);
@@ -43,8 +42,13 @@ googleMapFactory.factory('googleMapInit', function () {
     if (true) {
       addMarker(map,37.7954,-122.3942,"San Francisco Ferry Building");
     }
+    localMap = map; // reference map for future use
+    console.log('my map',map)
   };
 
+  var fetchMap = function(){
+    return localMap;
+  };
     // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
@@ -54,12 +58,13 @@ googleMapFactory.factory('googleMapInit', function () {
           position: markerLatlng, 
           map: map, 
           title:"San Francisco Ferry Building",
-      icon: "http://code.google.com/apis/maps/documentation/javascript/examples/images/beachflag.png"});   
+      icon: "images/beachflag.png"});   
    };
 
   return {
     initializeGoogleMap: initializeGoogleMap,
-    addMarker: addMarker
+    addMarker: addMarker,
+    fetchMap: fetchMap
   }
 
 });
