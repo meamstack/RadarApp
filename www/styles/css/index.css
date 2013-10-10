@@ -145,9 +145,9 @@ img, object, embed, video {
 /* Mobile Layout: 480px and below. */
 
 .gridContainer {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90.5666%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
     padding-left: 0.2166%;
     padding-right: 0.2166%;
     height:100%;
@@ -243,7 +243,7 @@ img, object, embed, video {
     max-width: 1232px;
     padding-left: 0.1071%;
     padding-right: 0.1071%;
-    margin: auto;
+    margin: 0; 
 }
 #LayoutDiv1 {
     clear: both;
