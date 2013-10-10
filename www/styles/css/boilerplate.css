@@ -74,7 +74,7 @@ abbr[title] { border-bottom: 1px dotted; }
 
 b, strong { font-weight: bold; }
 
-blockquote { margin: 1em 40px; }
+blockquote { margin: 0; }
 
 dfn { font-style: italic; }
 
@@ -219,20 +219,6 @@ td { vertical-align: top; }
    ========================================================================== */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
@@ -256,6 +242,9 @@ td { vertical-align: top; }
 /* Contain floats: h5bp.com/q */ 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
+.clearfix { 
+   zoom: 1;
+   height: 100%;
+ }
 
 

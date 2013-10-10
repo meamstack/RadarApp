@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         files: ['www/styles/stylus/*'],
         tasks: ['stylus']
       },
-      // phonegap: {
+      //, phonegap: {
       //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
       //   tasks: ['phonegap:build']
       // }
@@ -26,7 +26,8 @@ module.exports = function(grunt) {
         },
         files: {
           'www/styles/css/main.css': ['www/styles/stylus/meetme.styl',
-          'www/styles/stylus/map.styl', 'www/styles/stylus/createActivity.styl', 'www/styles/css/boilerplate.css','www/styles/css/map.css']
+          'www/styles/stylus/map.styl', 'www/styles/stylus/createActivity.styl', 'www/styles/css/boilerplate.css','www/styles/css/map.css','www/styles/css/index.css']
+
         }
       }
     },
@@ -37,18 +38,18 @@ module.exports = function(grunt) {
         src: ['**'],
         dest: 'www/styles/exa/maines/'
       }
-    },
-    phonegap: {
-      config: {
-        root: 'www',
-        config: 'www/config.xml',
-        cordova: '/.cordova',
-        path: 'phonegap_grunt',
-        plugins: [],
-        platforms: ['ios'],
-        verbose: false
-      }
     }
+    // phonegap: {
+    //   config: {
+    //     root: 'www',
+    //     config: 'www/config.xml',
+    //     cordova: '/.cordova',
+    //     path: 'phonegap_grunt',
+    //     plugins: [],
+    //     platforms: ['ios'],
+    //     verbose: false
+    //   }
+    // }
   });
 
   // Default task
@@ -57,6 +58,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-phonegap');
+    // grunt.loadNpmTasks('grunt-phonegap');
 };
 
