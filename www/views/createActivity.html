@@ -1,21 +1,25 @@
-<div class="hero-unit radial-background">
+<div class="hero-unit createActivity">
   <h1>Create activity page</h1>
   <p>Activity options stuff here</p>
 
-  <activity-button ng-repeat="activity in activities"></activity-button>
-  <a href={{server+'/api/createEvent'}}>
+<!--   <a href={{server+'/api/createEvent'}}>
     <button class='topcoat-button'>Save Activity</button>
-  </a>
+  </a> -->
 
   <form ng-click='saveDate()'>
-    <input id='eventDate' type='datetime-local' value="date">
+    <input id='eventDate' type='datetime-local' placeholder='date'>
   </form>
+  <br>
 
-  <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
-  <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
+  <div>
+    <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
+    <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
+  </div>
 
-  <div ng-show="picData">
+  <div ng-show="picData" class="pictureSaved">
     <img ng-src="{{picData}}" />
   </div>
+
+  <activity-button ng-repeat="activity in activities"></activity-button>
 </div>
 <ng-include src="'partials/settingsOverlay.html'"></ng-include>
