@@ -145,9 +145,9 @@ img, object, embed, video {
 /* Mobile Layout: 480px and below. */
 
 .gridContainer {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90.5666%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
     padding-left: 0.2166%;
     padding-right: 0.2166%;
     height:100%;
@@ -165,30 +165,31 @@ img, object, embed, video {
 }
 #LayoutDiv2 {
     clear: both;
-    float: left;
+    float: right;
     margin-left: 0;
     width: 89.9521%;
     display: block;
     height: 100%;
 }
 #hourSlider {
+    text-align: center;
+    position: fixed;
     clear: none;
-    float: left;
+    float: right;
     margin-left: 0.4784%;
     width: 9.5693%;
+    min-width: 20px;
     display: block;
     height: 100%;
-    background-color: #9F0;
     min-height: 300px;
 }
-#LayoutDiv3 {
+#daySlider {
+    position: fixed
     clear: both;
     float: left;
     margin-left: 0;
     width: 100%;
-    height: 100%;
     display: block;
-    background-color: #97F652;
 }
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
@@ -224,7 +225,7 @@ img, object, embed, video {
     height:100%;
     display: block;
 }
-#LayoutDiv3 {
+#daySlider {
     clear: both;
     float: left;
     margin-left: 0;
@@ -243,7 +244,7 @@ img, object, embed, video {
     max-width: 1232px;
     padding-left: 0.1071%;
     padding-right: 0.1071%;
-    margin: auto;
+    margin: 0; 
 }
 #LayoutDiv1 {
     clear: both;
@@ -268,7 +269,7 @@ img, object, embed, video {
     width: 100%;
     display: block;
 }
-#LayoutDiv3 {
+#daySlider {
     clear: both;
     float: left;
     margin-left: 0;
