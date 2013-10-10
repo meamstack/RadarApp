@@ -1,12 +1,11 @@
-var googleMapDirective = angular.module("google-map-service", []);
+var googleMapService = angular.module("google-map-service", []);
 
-googleMapDirective.factory('googleMapInit', function () {
+googleMapService.factory('googleMapInit', function () {
     // initialize the google Maps   
   
  
    
    var initializeGoogleMap = function() {
-    console.log('its working im in initializeGoogleMap')
     // set latitude and longitude to center the map around
     var latlng = new google.maps.LatLng(37.79, 
                       -122.4);
@@ -15,16 +14,16 @@ googleMapDirective.factory('googleMapInit', function () {
     var myOptions = {
       zoom: 14,
       center: latlng,
-      navigationControl: true,
+      navigationControl: false,
       navigationControlOptions: 
         {style: google.maps.NavigationControlStyle.DEFAULT,
        position: google.maps.ControlPosition.TOP_LEFT },
-      mapTypeControl: true,
+      mapTypeControl: false,
       mapTypeControlOptions: 
         {style: google.maps.MapTypeControlStyle.DEFAULT,
        position: google.maps.ControlPosition.TOP_RIGHT },
 
-      scaleControl: true,
+      scaleControl: false,
        scaleControlOptions: {
             position: google.maps.ControlPosition.BOTTOM_LEFT
         }, 
@@ -52,7 +51,7 @@ googleMapDirective.factory('googleMapInit', function () {
    // Add a marker to the map at specified latitude and longitude with tooltip
    function addMarker(map,lat,long,titleText) {
       var markerLatlng = new google.maps.LatLng(lat,long);
-    var marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
           position: markerLatlng, 
           map: map, 
           title:"San Francisco Ferry Building",
@@ -61,6 +60,7 @@ googleMapDirective.factory('googleMapInit', function () {
 
   return {
     initializeGoogleMap: initializeGoogleMap
+    addMarker: addMarker
   }
 
 });
