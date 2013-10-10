@@ -113,3 +113,155 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+    max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+    width:100%;
+}
+
+/*
+    Dreamweaver Fluid Grid Properties
+    ----------------------------------
+    dw-num-cols-mobile:     10;
+    dw-num-cols-tablet:     10;
+    dw-num-cols-desktop:    20;
+    dw-gutter-percentage:   5;
+    
+    Inspiration from "Responsive Web Design" by Ethan Marcotte 
+    http://www.alistapart.com/articles/responsive-web-design
+    
+    and Golden Grid System by Joni Korpi
+    http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90.5666%;
+    padding-left: 0.2166%;
+    padding-right: 0.2166%;
+}
+#LayoutDiv1 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 100%;
+    min-width: 10px;
+    z-index: 2;
+}
+#LayoutDiv2 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 89.9521%;
+    display: block;
+    height: 100%;
+}
+#hourSlider {
+    clear: none;
+    float: left;
+    margin-left: 0.4784%;
+    width: 9.5693%;
+    display: block;
+    height: 100%;
+    background-color: #9F0;
+    min-height: 300px;
+}
+#LayoutDiv3 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+    background-color: #97F652;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+    width: 92.5571%;
+    padding-left: 0.2214%;
+    padding-right: 0.2214%;
+}
+#LayoutDiv1 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+}
+#LayoutDiv2 {
+    clear: none;
+    float: left;
+    margin-left: 0.4784%;
+    width: 100%;
+    display: block;
+}
+#hourSlider {
+    clear: none;
+    float: left;
+    margin-left: 0.4784%;
+    width: 100%;
+    display: block;
+}
+#LayoutDiv3 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+    width: 89.7857%;
+    max-width: 1232px;
+    padding-left: 0.1071%;
+    padding-right: 0.1071%;
+    margin: auto;
+}
+#LayoutDiv1 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+}
+#LayoutDiv2 {
+    clear: none;
+    float: left;
+    margin-left: 0.2386%;
+    width: 100%;
+    display: block;
+}
+#hourSlider {
+    clear: none;
+    float: left;
+    margin-left: 0.2386%;
+    width: 100%;
+    display: block;
+}
+#LayoutDiv3 {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+}
+}
