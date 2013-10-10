@@ -9,7 +9,8 @@ module.exports = function(grunt) {
       },
       stylus: {
         files: ['www/styles/stylus/*'],
-        tasks: ['stylus', 'phonegap:build']
+        tasks: ['stylus']
+        // tasks: ['stylus', 'phonegap:build']
       },
       // phonegap: {
       //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
@@ -37,18 +38,18 @@ module.exports = function(grunt) {
         src: ['**'],
         dest: 'www/styles/exa/maines/'
       }
-    },
-    phonegap: {
-      config: {
-        root: 'www',
-        config: 'www/config.xml',
-        cordova: '/.cordova',
-        path: 'phonegap_grunt',
-        plugins: [],
-        platforms: ['ios'],
-        verbose: false
-      }
-    }
+    // },
+    // phonegap: {
+    //   config: {
+    //     root: 'www',
+    //     config: 'www/config.xml',
+    //     cordova: '/.cordova',
+    //     path: 'phonegap_grunt',
+    //     plugins: [],
+    //     platforms: ['ios'],
+    //     verbose: false
+    //   }
+    // }
   });
 
   // Default task
@@ -57,6 +58,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-phonegap');
+    // grunt.loadNpmTasks('grunt-phonegap');
 };
 
