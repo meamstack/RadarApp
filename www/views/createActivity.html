@@ -6,21 +6,18 @@
     <button class='topcoat-button'>Save Activity</button>
   </a> -->
 
-  <button ng-click="saveDate()" class="topcoat-icon-button">
-    {{date || "Pick a Time"}}
-    <input id='eventDate' type='datetime-local' placeholder='date'>
-  </button>
+  <!-- <button ng-click="saveDate()" class="topcoat-icon-button"> -->
+    <input id='eventDate' type='datetime-local' ng-click="saveDate()">Date</input>
+  <!-- </button> -->
+  <!-- <a ng-click="rotate('-45')">Rotate Left</a> -->
+  <!-- <a ng-click="rotate('45')">Rotate Right</a> -->
   <br>
 
+  <div picture-thumb></div>
   <div class="photos">
     <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
     <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
   </div>
 
-  <div ng-show="picData" class="pictureSaved">
-    <img ng-src="{{picData}}" />
-  </div>
-
   <activity-button ng-repeat="activity in activities"></activity-button>
 </div>
-<ng-include src="'partials/settingsOverlay.html'"></ng-include>

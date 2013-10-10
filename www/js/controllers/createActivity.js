@@ -17,8 +17,6 @@ angular.module('meetMeApp.controller.createActivity', [])
       $scope.date = date[0].value;
     };
 
-
-
     $scope.takePic = function() {
       var options = {
           quality: 50,
