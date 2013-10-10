@@ -6,7 +6,7 @@ angular.module('meetMeApp.controller.map', [])
       googleMapInit.addMarker(map,37.785427,-122.40572, "Hi")
     }
     var request = {
-      location: [37.800305,-122.409239],
+      location: ['37.800305','-122.409239'],
       date: {
         year: "2013",
         month: "10",
@@ -14,13 +14,35 @@ angular.module('meetMeApp.controller.map', [])
       },
       maxD: 1
     };
-    $http.post('http://54.200.135.103:9000/api/findEvents',request).success(function(data){
-      console.log(data)
-      alert(data.name)
-    })
-    $http.get('http://padshacker.com/api/getUser').success(function(data){
-      console.log(data)
-    })
+    var url = 'http://54.200.135.103:9000/api/findEvents';
+    // $http({
+    //   method: 'POST',
+    //   url: url,
+    //   dataType: 'json',
+    //   data: request,
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // }).success(function(data) {
+    //   console.log(data);
+    // })
+    // $http.post(url,request)
+    // .success(function(data){
+    //   console.log(data);
+    //   alert(data.name);
+    // });
+    // $http.get('http://padshacker.com/api/getUser')
+    // .success(function(data){
+    //   console.log(data);
+    // })
+  $http.post('/api', request)
+  .success(function(data) {
+    console.log('data success, ', data);
+  })
+  .error(function(error){
+    console.log('this is the error',error)
+  });
+
     googleMapInit.initializeGoogleMap();
   }]
 );
