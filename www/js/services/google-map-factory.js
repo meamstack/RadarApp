@@ -1,10 +1,9 @@
 var googleMapFactory = angular.module("google-map-service", []);
 
 googleMapFactory.factory('googleMapInit', function () {
-    // initialize the google Maps   
-  
- 
-   
+    // initialize the google Maps
+   var localMap; // refer to map for events
+
    var initializeGoogleMap = function() {
     // set latitude and longitude to center the map around
     var latlng = new google.maps.LatLng(37.79,-122.4);
@@ -25,7 +24,8 @@ googleMapFactory.factory('googleMapInit', function () {
       scaleControl: false,
        scaleControlOptions: {
             position: google.maps.ControlPosition.BOTTOM_LEFT
-        }, 
+        },
+      streetViewControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable: true,
       disableDoubleClickZoom: false,
@@ -40,26 +40,37 @@ googleMapFactory.factory('googleMapInit', function () {
       var bikeLayer = new google.maps.BicyclingLayer();
       bikeLayer.setMap(map);
     }
-    if (true) {
-      addMarker(map,37.7954,-122.3942,"San Francisco Ferry Building");
-    }
+    // if (true) {
+    //   addMarker(map,37.7954,-122.3942,"San Francisco Ferry Building");
+    // }
+    localMap = map; // reference map for future use
   };
 
+  var fetchMap = function(){
+    return localMap;
+  };
     // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
-   function addMarker(map,lat,long,titleText) {
+   function addMarker(map,lat,long,contentString) {
+      var infowindow = new google.maps.InfoWindow({content:contentString,
+        maxWidth:400});
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 
           map: map, 
-          title:"San Francisco Ferry Building",
-      icon: "http://code.google.com/apis/maps/documentation/javascript/examples/images/beachflag.png"});   
+          title:"San Francisco Ferry Building"});
+      // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
    };
+
 
   return {
     initializeGoogleMap: initializeGoogleMap,
-    addMarker: addMarker
+    addMarker: addMarker,
+    fetchMap: fetchMap
   }
 
 });
