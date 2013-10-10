@@ -15,7 +15,7 @@ angular.module('meetMeApp.controller.main', [])
     };
 
     $scope.clickdemo = function(){
-      $scope.$navigate.go('/map', 'slide');
+      $scope.$navigate.go('/viewActivity', 'slide');
     };
 
   }]);

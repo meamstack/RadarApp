@@ -1,10 +1,10 @@
 var iPhoneApp = angular.module('meetMeApp', [
   'meetMeApp.controller.main',
   'meetMeApp.controller.map',
+  'meetMeApp.controller.chat',
   'ajoslin.mobile-navigate',
   'meetMeApp.controller.createActivity',
   'meetMeApp.controller.viewActivity',
-  'meetMeApp.controller.chat',
-  'leaflet-directive',
+  'google-map-service',
   'meetMeApp.directive.createActivity'
 ]);

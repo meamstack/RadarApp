@@ -21,11 +21,11 @@ iPhoneApp.config(['$routeProvider',
 
     $routeProvider
     .when('/', {
-      templateUrl: 'views/maps.html',
-      controller: 'MapsCtrl',
-      resolve: {
-        loggedin: checkLoggedin
-      }
+      templateUrl: 'views/main.html',
+      controller: 'MainCtrl'
+      // , resolve: {
+      //   loggedin: checkLoggedin
+      // }
     })
     .when('/main', {
       templateUrl: 'views/main.html',
