@@ -11,8 +11,8 @@ module.exports = function(grunt) {
         files: ['www/styles/stylus/*'],
         tasks: ['stylus']
         // tasks: ['stylus', 'phonegap:build']
-      },
-      // phonegap: {
+      }
+      //, phonegap: {
       //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
       //   tasks: ['phonegap:build']
       // }
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         src: ['**'],
         dest: 'www/styles/exa/maines/'
       }
-    // },
+    }
     // phonegap: {
     //   config: {
     //     root: 'www',
