@@ -10,8 +10,7 @@ module.exports = function(grunt) {
       stylus: {
         files: ['www/styles/stylus/*'],
         tasks: ['stylus']
-        // tasks: ['stylus', 'phonegap:build']
-      }
+      },
       //, phonegap: {
       //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
       //   tasks: ['phonegap:build']
