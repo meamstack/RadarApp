@@ -9,6 +9,9 @@
     "url": "https://github.com/meamstack/meetmeApp.git/"
   },
   "bugs": {},
+  "dependencies": {
+    "cordova": "latest"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4",

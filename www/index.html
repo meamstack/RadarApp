@@ -43,13 +43,18 @@
         </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-          g.src='//www.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        <script src="lib/jquery-2.0.3.min.js"></script>
+         <script>
+        //   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        //   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        //   g.src='//www.google-analytics.com/ga.js';
+        //   s.parentNode.insertBefore(g,s)}(document,'script'));
+         </script>
+        <!-- phonegap helper files -->
+        <script src="js/cordova-ios/CordovaLib/cordova.js"></script>
+        <script src="cordova-2.7.0.js"></script>
+        <script src="js/inobounce.js"></script>
+        <!-- libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <script src="bower_components/angular/angular.js"></script>
 
@@ -71,12 +76,11 @@
         <script src="js/controllers/viewActivity.js"></script>
         <script src="js/controllers/chat.js"></script>
         <!-- directives -->
-        <script src="js/directives/google-map-directive.js"></script>
+        <script src="js/services/google-map-factory.js"></script>
         <script src="js/directives/activityButton.js"></script>
         <!-- phonegap helper files -->
         <script src="js/lib/inobounce.js"></script>
         <script src="js/lib/respond.min.js"></script>
-        <script src="cordova-2.7.0.js"></script>
 
         <!-- main angular js files -->
         <script src="js/index.js"></script>
