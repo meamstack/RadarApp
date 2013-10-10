@@ -3,6 +3,5 @@ var iPhoneApp = angular.module('meetMeApp', [
   'meetMeApp.controller.map',
   'meetMeApp.controller.createActivity',
   'meetMeApp.directive.createActivity',
-  'meetMeApp.controller.camera',
-  'google-map-service',
+  'google-map-service'
 ]);
