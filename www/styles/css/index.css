@@ -172,6 +172,7 @@ img, object, embed, video {
     height: 100%;
 }
 #hourSlider {
+    text-align: center;
     position: fixed;
     clear: none;
     float: right;
@@ -183,11 +184,11 @@ img, object, embed, video {
     min-height: 300px;
 }
 #daySlider {
+    position: fixed
     clear: both;
     float: left;
     margin-left: 0;
     width: 100%;
-    height: 100%;
     display: block;
 }
 
