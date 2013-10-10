@@ -52,11 +52,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-<<<<<<< HEAD
-  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'watch']);
-=======
   grunt.registerTask('default', ['stylus', 'copy', 'watch']);
->>>>>>> ee78366311a1f889033c48c1fca3a399ef5dab72
 
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');

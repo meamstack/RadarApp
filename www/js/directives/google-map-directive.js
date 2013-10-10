@@ -6,7 +6,7 @@ googleMapDirective.factory('googleMapInit', function () {
  
    
    var initializeGoogleMap = function() {
-    console.log('its working')
+    console.log('its working im in initializeGoogleMap')
     // set latitude and longitude to center the map around
     var latlng = new google.maps.LatLng(37.79, 
                       -122.4);
