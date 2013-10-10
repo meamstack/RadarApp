@@ -8,10 +8,13 @@
   </a>
 
   <form ng-click='saveDate()'>
-    <input id='eventDate' type='datetime-local'>
+    <input id='eventDate' type='datetime-local' value="date">
   </form>
 
-   <!-- <input id="datepicker-value" type="text" value="" placeholder="Date value" disabled="disabled" />
+  <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
 
-  <button ng-click='showDatePicker()'>Show</button> -->
+  <div ng-show="picData">
+    <img ng-src="{{picData}}" />
+  </div>
 </div>
+<ng-include src="'partials/settingsOverlay.html'"></ng-include>

@@ -20,6 +20,10 @@ iPhoneApp.config(['$routeProvider',
     .when('/chat', {
       templateUrl: 'views/chat.html',
       controller: 'ChatCtrl'
+    }).
+    when('/camera', {
+      templateUrl: '/views/camera.html',
+      controller: 'CameraCtrl'
     })
     .otherwise({
       redirectTo: '/'

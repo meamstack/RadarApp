@@ -6,67 +6,38 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.saveActivity = function(activity) {
       $scope.activity = activity;
       console.log($scope.activity);
+      alert($scope.activity);
     };
 
-    $scope.openDate = function() {
-      alert('dating');
-      try {
-        var datePicker = cordova.require("cordova/plugin/datepicker");
-        var options =  {
-          date: new Date(),
-          mode: 'date',
-          allowOldValues:    true,
-          allowFutureValues: true,
-          visibility: 'auto',
-          onChange: function (date) {
-            // on datepicker value change
-          },
-          onDismiss: function (date) {
-            // on datepicker dismiss
-          },
-          onPrev: function () {
-            // on datepicker action sheet previous button clicked
-          },
-          onNext: function () {
-            // on datepicker action sheet next button clicked
-          }
-        };
-        datePicker.show(options);
-      } catch(error) {
-        console.log(error);
-      }
+    $scope.saveDate = function() {
+      var date = angular.element('#eventDate');
+      console.log(date[0].value);
+      alert(date[0].value);
     };
 
 
-    $scope.showDatePicker = function () {
-        try {
-          debugger;
-        var datePicker = cordova.require("cordova/plugin/datepicker");
-        var options = {
-            date: new Date(),
-            mode: 'date',
-            visibility: 'auto',
-            onDismiss: function(date) {
-              console.log("onDismiss:", date);
-              document.getElementById("datepicker-value").value = date.toString();
-            },
-            onPrev: function() {
-              alert('Dismiss and prev');
-            },
-            onNext: function() {
-              alert('dissmiss and next');
-            },
-            onChange: function(date) {
-              console.log("onChange:", date);
-              document.getElementById("datepicker-value").value = date.toString();
-            }
-        };
 
-        datePicker.show(options);
-        }
-        catch(error) {
-            console.log(error);
-        }
+    $scope.takePic = function() {
+      alert('PHOTO');
+      var options =   {
+          quality: 50,
+          destinationType: Camera.DestinationType.DATA_URL,
+          sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+          encodingType: 0     // 0=JPG 1=PNG
+      };
+      // Take picture using device camera and retrieve image as base64-encoded string
+      console.log(navigator);
+      navigator.camera.getPicture(onSuccess,onFail,options);
+    };
+
+    var onSuccess = function(imageData) {
+      alert("On Success! ");
+      $scope.picData = "  data:image/jpeg;base64," +imageData;
+      $scope.$apply();
+    };
+    var onFail = function(e) {
+      console.log("On fail " + e);
+      alert('err', e);
     };
 
   }]);
