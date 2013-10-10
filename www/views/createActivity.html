@@ -6,12 +6,13 @@
     <button class='topcoat-button'>Save Activity</button>
   </a> -->
 
-  <button ng-click="saveDate()">
+  <button ng-click="saveDate()" class="topcoat-icon-button">
+    {{date || "Pick a Time"}}
     <input id='eventDate' type='datetime-local' placeholder='date'>
-  <button>
+  </button>
   <br>
 
-  <div>
+  <div class="photos">
     <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
     <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
   </div>
