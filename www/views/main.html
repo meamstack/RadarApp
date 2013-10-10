@@ -1,16 +1,11 @@
 <div class="hero-unit">
   <h1>MeetMe</h1>
+  <p>Splash image</p>
 
-  <a href='#/map'>
-    <button class='topcoat-button'>Log in with Facebook</button>
-  </a>
+  <button class='topcoat-button' ng-click='login()'>Log in with Facebook</button>
 
-  <a href='#/createActivity'>
-    <button class='topcoat-button'>Create Event</button>
-  </a>
-  <p>(this should be a fb button)</p>
+  <button ng-click='$navigate.go("/chat", "slide")'>Fake instruction page</button>
+  <button ng-click='clickdemo()'>slide demo</button>
 
-  <button class='topcoat-button' ng-click='login()'>Facebook Test</button>
-  {{test}}
 
 </div>

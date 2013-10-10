@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="styles/css/leaflet.css">
         <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+        <link rel="stylesheet" href="lib/mobile-nav.css">
         <!-- endbuild -->
     </head>
     <body ng-app="meetMeApp">
@@ -30,7 +31,9 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container" ng-view=""></div>
+        <div class="container">
+          <mobile-view></mobile-view>
+        </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -50,10 +53,17 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <!-- main angular js files -->
+        <script src="js/index.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/config.js"></script>
+        <script src="lib/mobile-nav.js"></script>
         <!-- controllers -->
         <script src="js/controllers/main.js"></script>
         <script src="js/controllers/map.js"></script>
         <script src="js/controllers/createActivity.js"></script>
+        <script src="js/controllers/viewActivity.js"></script>
+        <script src="js/controllers/chat.js"></script>
         <!-- directives -->
         <script src="js/directives/angular-leaflet-directive.js"></script>
         <script src="js/directives/activityButton.js"></script>
@@ -64,10 +74,6 @@
         <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&amp;sensor=false"></script>
         <script src="plugins/leaflet-plugins/layer/tile/Google.js"></script>
 
-        <!-- main angular js files -->
-        <script src="js/index.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/config.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
               angular.bootstrap(document, ['meetMeApp']);
