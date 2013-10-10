@@ -3,7 +3,10 @@ angular.module('meetMeApp.controller.map', [])
     console.log('its working')
     $scope.addMarker = function() {
       map = googleMapInit.fetchMap();
-      googleMapInit.addMarker(map,37.785427,-122.40572, "Hi")
+      googleMapInit.addMarker(map,37.785427,-122.40572, "Basketball with Shawn");
+      googleMapInit.addMarker(map,37.784221,-122.40213, "Free pizza @ Hack reactor!");
+      googleMapInit.addMarker(map,37.783842,-122.40898, "Goo time!");
+      googleMapInit.addMarker(map,37.789984,-122.40523, "Goo time!");
     }
     var request = {
       location: ['37.800305','-122.409239'],
