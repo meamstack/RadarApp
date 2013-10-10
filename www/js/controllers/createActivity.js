@@ -18,8 +18,7 @@ angular.module('meetMeApp.controller.createActivity', [])
 
 
     $scope.takePic = function() {
-      alert('PHOTO');
-      var options =   {
+      var options = {
           quality: 50,
           destinationType: Camera.DestinationType.DATA_URL,
           sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
@@ -30,14 +29,25 @@ angular.module('meetMeApp.controller.createActivity', [])
       navigator.camera.getPicture(onSuccess,onFail,options);
     };
 
+    $scope.openPhotoLib = function() {
+      var options = {
+          quality: 50,
+          destinationType: Camera.DestinationType.DATA_URL,
+          sourceType: 0,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+          encodingType: 0     // 0=JPG 1=PNG
+      };
+      // Take picture using device camera and retrieve image as base64-encoded string
+      console.log(navigator);
+      navigator.camera.getPicture(onSuccess,onFail,options);
+    };
+
     var onSuccess = function(imageData) {
-      alert("On Success! ");
       $scope.picData = "  data:image/jpeg;base64," +imageData;
       $scope.$apply();
     };
     var onFail = function(e) {
       console.log("On fail " + e);
-      alert('err', e);
+      // alert('err', e);
     };
 
   }]);
