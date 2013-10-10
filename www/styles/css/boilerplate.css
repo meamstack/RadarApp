@@ -74,7 +74,7 @@ abbr[title] { border-bottom: 1px dotted; }
 
 b, strong { font-weight: bold; }
 
-blockquote { margin: 1em 40px; }
+blockquote { margin: 0; }
 
 dfn { font-style: italic; }
 
