@@ -11,10 +11,10 @@ module.exports = function(grunt) {
         files: ['www/styles/stylus/*'],
         tasks: ['stylus', 'phonegap:build']
       },
-      phonegap: {
-        files: ['www/js/*', 'www/img/*', 'www/views/*'],
-        tasks: ['phonegap:build']
-      }
+      // phonegap: {
+      //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
+      //   tasks: ['phonegap:build']
+      // }
     },
     stylus: {
       compile: {
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         },
         files: {
           'www/styles/css/main.css': ['www/styles/stylus/meetme.styl',
-          'www/styles/stylus/leaflet.styl', 'www/styles/stylus/createActivity.styl']
+          'www/styles/stylus/leaflet.styl', 'www/styles/stylus/createActivity.styl', 'www/styles/css/boilerplate.css','www/styles/css/leaflet.css']
         }
       }
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'watch']);
+  grunt.registerTask('default', ['stylus', 'copy', 'watch']);
 
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
