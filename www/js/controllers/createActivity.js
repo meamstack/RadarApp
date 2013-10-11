@@ -1,8 +1,11 @@
 angular.module('meetMeApp.controller.createActivity', [])
-  .controller('CreateActivityCtrl', ['$scope', function ($scope) {
+  .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', function ($scope,googleMapLatLon) {
     $scope.server = 'http://54.200';
     $scope.activities = ['coffee', 'dog walk', 'holding baby'];
     $scope.picData = '../../img/test_img.jpg';
+    $scope.get = function(){
+      $scope.googleMapData = googleMapLatLon.get();
+    }
 
     $scope.saveActivity = function(activity) {
       $scope.activity = activity;
