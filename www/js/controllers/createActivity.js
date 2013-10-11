@@ -1,13 +1,23 @@
 angular.module('meetMeApp.controller.createActivity', [])
-  .controller('CreateActivityCtrl', ['$scope', function ($scope) {
+  .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope,googleMapLatLon, postToServer) {
     $scope.server = 'http://54.200';
     $scope.activities = ['coffee', 'dog walk', 'holding baby'];
     $scope.picData = '../../img/test_img.jpg';
 
     $scope.saveActivity = function(activity) {
       $scope.activity = activity;
-      console.log($scope.activity);
-      alert($scope.activity);
+    };
+
+    $scope.saveToServer = function() {
+      var date = angular.element('#eventDate');
+      postToServer({
+        name: $scope.eventName,
+        description: $scope.description,
+        time: date[0].value,
+        photo: $scope.picData,
+        activity: $scope.activity,
+        location: googleMapLatLon.get()
+      });
     };
 
     $scope.saveDate = function() {
