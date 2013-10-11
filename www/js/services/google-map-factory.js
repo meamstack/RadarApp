@@ -41,7 +41,7 @@ googleMapFactory.factory('googleMapInit', function () {
       bikeLayer.setMap(map);
     }
     // if (true) {
-    //   addMarker(map,37.7954,-122.3942,"San Francisco Ferry Building");
+    //   addMarker();
     // }
     localMap = map; // reference map for future use
   };
@@ -49,12 +49,14 @@ googleMapFactory.factory('googleMapInit', function () {
   var fetchMap = function(){
     return localMap;
   };
+
+  
     // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
    function addMarker(map,lat,long,contentString) {
-      var infowindow = new google.maps.InfoWindow({content:contentString,
-        maxWidth:400});
+      var infowindow = new google.maps.InfoWindow({content:el, 
+        maxWidth:400, maxHeight: 400});
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 

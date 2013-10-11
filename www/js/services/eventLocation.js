@@ -1,6 +1,5 @@
 angular.module("meetMeApp.service.eventLocation", [])
   .factory('googleMapLatLon', function () {
-    alert('googlemap nullify lat and long');
     console.log('googlemap nullify lat and long');
     var lat = null;
     var lon = null;
@@ -11,7 +10,6 @@ angular.module("meetMeApp.service.eventLocation", [])
     };
 
     var get = function() {
-      alert('lat and long: ',lat, lon);
       return [lat,lon];
     };
 

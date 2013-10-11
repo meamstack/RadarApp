@@ -3,7 +3,8 @@ angular.module('meetMeApp.controller.map', [])
     window.console.log('its working');
     $scope.addMarker = function() {
       map = googleMapInit.fetchMap();
-      googleMapInit.addMarker(map,37.785427,-122.40572, "Basketball with Shawn");
+      el = '<div><p>Basketball was fun guys!</p><img src="img/meamteam.jpg" height="40px, width="40px"></img></div>';
+      googleMapInit.addMarker(map,37.785427,-122.40572, el);
       googleMapInit.addMarker(map,37.784221,-122.40213, "Free pizza @ Hack reactor!");
       googleMapInit.addMarker(map,37.783842,-122.40898, "Goo time!");
       googleMapInit.addMarker(map,37.789984,-122.40523, "Goo time!");
@@ -58,6 +59,8 @@ angular.module('meetMeApp.controller.map', [])
 
 
     googleMapInit.initializeGoogleMap();
+    $scope.addMarker();
+
     $scope.slide = function () {
       var element = document.getElementById('hourSlider');
       // alert('test');
@@ -67,7 +70,7 @@ angular.module('meetMeApp.controller.map', [])
       //     alert('touched');
       // });
       var hammertime = Hammer(element).on("tap", function(event, time) {
-        var date = new Date().toString();
+      var date = new Date().toString();
       var time = date.split(" ")[4].split(':')[0];
       console.log(time);
         alert(time);
