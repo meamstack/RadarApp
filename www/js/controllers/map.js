@@ -17,13 +17,13 @@ angular.module('meetMeApp.controller.map', [])
       },
       maxD: 1
     };
-    $http.post('http://54.200.135.103:9000/api/findEvents',request).success(function(data){
-      console.log(data)
-      alert(data.name)
-    })
-    $http.get('http://padshacker.com/api/getUser').success(function(data){
-      console.log(data)
-    })
+    // $http.post('http://54.200.135.103:9000/api/findEvents',request).success(function(data){
+    //   console.log(data)
+    //   alert(data.name)
+    // })
+    // $http.get('http://padshacker.com/api/getUser').success(function(data){
+    //   console.log(data)
+    // })
     googleMapInit.initializeGoogleMap();
   }]
 );
