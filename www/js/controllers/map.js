@@ -11,19 +11,44 @@ angular.module('meetMeApp.controller.map', [])
     var request = {
       location: [37.800305,-122.409239],
       date: {
-        year: "2013",
-        month: "10",
-        day: "06"
+        year: 2013,
+        month: 10,
+        day: 06
       },
       maxD: 1
     };
-    // $http.post('http://54.200.135.103:9000/api/findEvents',request).success(function(data){
-    //   console.log(data)
-    //   alert(data.name)
+    request = JSON.stringify(request);
+    var url = 'http://54.200.135.103:9000/api/findEvents';
+    // $http({
+    //   method: 'POST',
+    //   url: url,
+    //   dataType: 'json',
+    //   data: request,
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // }).success(function(data) {
+    //   console.log(data);
     // })
-    // $http.get('http://padshacker.com/api/getUser').success(function(data){
-    //   console.log(data)
+    // $http.post(url,request)
+    // .success(function(data){
+    //   console.log(data);
+    //   alert(data.name);
+    // });
+    // $http.get('http://padshacker.com/api/getUser')
+    // .success(function(data){
+    //   console.log(data);
     // })
+  $http.post(url, request)
+  .success(function(data) {
+    console.log('data success, ', data);
+    $scope.newEvents = data;
+  })
+  .error(function(error){
+    console.log('this is the error',error)
+    $scope.newEvents = error;
+  });
+
     googleMapInit.initializeGoogleMap();
   }]
 );
