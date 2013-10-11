@@ -1,12 +1,15 @@
 angular.module('meetMeApp.controller.main', [])
-  .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
+  .controller('MainCtrl', ['$scope', '$navigate', '$timeout', function ($scope, $navigate, $timeout) {
 
+    $scope.$navigate = $navigate;
     $scope.login = function() {
-      var ref = window.open('http://meetme123.com:3000/auth/facebook/', '_blank', 'location=no,toolbar=no');
+      var ref = window.open('http://meetme123.com:3000/auth/facebook', '_blank', 'location=no,toolbar=no');
       ref.addEventListener('loadstart', function(event){
         if (event.url === 'http://meetme123.com:3000/') {
           ref.close();
-          $scope.changepage();
+          $timeout(function(){
+            $scope.$navigate.go('/map', 'slide');
+          }, 0);
         }
       });
     };
@@ -14,13 +17,6 @@ angular.module('meetMeApp.controller.main', [])
     $scope.changepage = function() {
       location.assign($location.path('/map'));
     };
-
-
-    
-
-
-
-
       // $scope.onGeoSuccess = function(position) {
       //   $scope.latitude = position.coords.latitude;
       //   $scope.longitude = position.coords.longitude;
@@ -41,5 +37,9 @@ angular.module('meetMeApp.controller.main', [])
       // $scope.runLocate = function() {
       //   navigator.geolocation.getCurrentPosition($scope.onGeoSuccess, $scope.onError);
       // };
+    // Example for angular.mobile.nav - however currently not working with Google Maps
+    // $scope.clickdemo = function(){
+    //   $scope.$navigate.go('/viewActivity', 'slide');
+    // };
 
-  }]);
+}]);

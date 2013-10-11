@@ -1,21 +1,24 @@
-<div class="hero-unit radial-background">
+<div class="hero-unit createActivity">
   <h1>Create activity page</h1>
   <p>Activity options stuff here</p>
 
-  <activity-button ng-repeat="activity in activities"></activity-button>
-  <a href={{server+'/api/createEvent'}}>
+<!--   <a href={{server+'/api/createEvent'}}>
     <button class='topcoat-button'>Save Activity</button>
-  </a>
+  </a> -->
 
-  <form ng-click='saveDate()'>
-    <input id='eventDate' type='datetime-local' value="date">
-  </form>
+  <!-- <button ng-click="saveDate()" class="topcoat-icon-button"> -->
+    <input id='eventDate' type='datetime-local' ng-click="saveDate()">Date</input>
+  <!-- </button> -->
+  <!-- <a ng-click="rotate('-45')">Rotate Left</a> -->
+  <!-- <a ng-click="rotate('45')">Rotate Right</a> -->
+  <br>
 
-  <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
-  <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
-
-  <div ng-show="picData">
-    <img ng-src="{{picData}}" />
+  <div picture-thumb></div>
+  <div class="photos">
+    <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
+    <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
   </div>
+
+  <activity-button ng-repeat="activity in activities"></activity-button>
 </div>
-<ng-include src="'partials/settingsOverlay.html'"></ng-include>
+

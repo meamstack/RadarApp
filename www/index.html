@@ -1,9 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js"> <!--<![endif]-->
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,43 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css({.tmp,app}) styles/main.css -->
+        <!-- CSS Files -->
         <link rel="stylesheet" href="styles/css/main.css">
         <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
-        <!-- endbuild -->
+        <link rel="stylesheet" href="lib/mobile-nav.css">
     <script type="text/xml">
-        <!--
         <oa:widgets>
         <oa:widget wid="2187524" binding="#mapCanvas" />
         </oa:widgets>
-        -->
+
     </script>
     </head>
     <body ng-app="meetMeApp">
 
-        <!-- <div id="carrier-date-battery"></div> -->
-        <!--[if lt IE 7]>
-          <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
-
-        <!--[if lt IE 9]>
-          <script src="bower_components/es5-shim/es5-shim.js"></script>
-          <script src="bower_components/json3/lib/json3.min.js"></script>
-        <![endif]-->
-
         <!-- Add your site or application content here -->
-        <div class="gridContainer clearfix" ng-view=""></div>
+        <div class="gridContainer clearfix">
+          <mobile-view ng-view=""></mobile-view>
+        </div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-         <script>
-        //   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        //   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        //   g.src='//www.google-analytics.com/ga.js';
-        //   s.parentNode.insertBefore(g,s)}(document,'script'));
-         </script>
         <!-- phonegap helper files -->
-        <script src="js/cordova-ios/CordovaLib/cordova.js"></script>
-        <script src="cordova-2.7.0.js"></script>
         <script src="js/inobounce.js"></script>
         <script src="lib/jquery-2.0.3.min.js"></script>
         <!-- libraries -->
@@ -63,13 +41,17 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <!-- controllers -->
+
+       <!-- controllers -->
         <script src="js/controllers/main.js"></script>
         <script src="js/controllers/map.js"></script>
         <script src="js/controllers/createActivity.js"></script>
+        <script src="js/controllers/viewActivity.js"></script>
+        <script src="js/controllers/chat.js"></script>
         <!-- directives -->
         <script src="js/services/google-map-factory.js"></script>
         <script src="js/directives/activityButton.js"></script>
+
         <!-- phonegap helper files -->
         <script src="js/lib/inobounce.js"></script>
         <script src="js/lib/respond.min.js"></script>
@@ -83,20 +65,16 @@
         <script src="lib/hammer.min.js"></script>
         <script src="lib/jquery.hammer.min.js"></script>
 
-
+        <!-- other library files -->
         <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
+        <script src="cordova-2.7.0.js"></script>
+        <script src="lib/mobile-nav.js"></script>
         <script type="text/javascript">
-        
-        //<!-- EndOAWidget_Shared_2187524 -->
-
             $(document).ready(function(){
               angular.bootstrap(document, ['meetMeApp']);
             });
             app.initialize();
     </script>
-        <!-- endbuild -->
-
     </body>
 </html>
+
