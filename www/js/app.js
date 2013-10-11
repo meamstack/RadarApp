@@ -7,5 +7,6 @@ var iPhoneApp = angular.module('meetMeApp', [
   'meetMeApp.controller.viewActivity',
   'meetMeApp.directive.createActivity',
   'google-map-service',
-  'meetMeApp.service.eventLocation'
+  'meetMeApp.service.eventLocation',
+  'meetMeApp.service.postToServer'
 ]);

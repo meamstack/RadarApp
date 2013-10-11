@@ -1,23 +1,17 @@
 <div class="hero-unit createActivity">
-  <h1>Create activity page</h1>
+  <h2>activ</h2>
+  <button ng-click="saveToServer()">Create Event</button>
+  <a href="#/map"><button>Choose location</button></a>
   <p>Activity options stuff here</p>
   {{googleMapData}}
-  <button ng-click="get()">Get location</button>
-<!--   <a href={{server+'/api/createEvent'}}>
-    <button class='topcoat-button'>Save Activity</button>
-  </a> -->
-
-  <!-- <button ng-click="saveDate()" class="topcoat-icon-button"> -->
-    <input id='eventDate' type='datetime-local' ng-click="saveDate()">Date</input>
-  <!-- </button> -->
-  <!-- <a ng-click="rotate('-45')">Rotate Left</a> -->
-  <!-- <a ng-click="rotate('45')">Rotate Right</a> -->
+  <input id='eventDate' type='datetime-local' ng-click="saveDate()">Date</input>
   <br>
-
+  <input type="text" placeholder="Name" ng-model="eventName">
+  <input type="text" placeholder="Description" ng-model="description">
   <div picture-thumb></div>
   <div class="photos">
-    <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
-    <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
+    <a class="topcoat-icon-button" ng-click="takePic()">Take Pic</a>
+    <a class="topcoat-icon-button" ng-click="openPhotoLib()">From Lib</a>
   </div>
 
   <activity-button ng-repeat="activity in activities"></activity-button>

@@ -37,8 +37,8 @@ angular.module('meetMeApp.controller.map', [])
     });
 
     var createEvent = {
-      name: 'Thursday night football!!',
-      description: 'Chips and dip',
+      name: 'Thursday night footbal!!',
+      description: 'Chips and tacos',
       location: [37.7836,-122.408904],
       time: new Date(2013, 10,01),
       photo: 'http://i.imgur.com/QTITt2D.jpg',
