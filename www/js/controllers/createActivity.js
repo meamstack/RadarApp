@@ -1,5 +1,5 @@
 angular.module('meetMeApp.controller.createActivity', [])
-  .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope,googleMapLatLon, postToServer) {
+  .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope, googleMapLatLon, postToServer) {
     $scope.server = 'http://54.200';
     $scope.activities = ['coffee', 'dog walk', 'holding baby'];
     $scope.picData = '../../img/test_img.jpg';
@@ -9,6 +9,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
 
     $scope.saveToServer = function() {
+      $scope.isDisabled = true;
       var date = angular.element('#eventDate');
       postToServer({
         name: $scope.eventName,
@@ -23,7 +24,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.saveDate = function() {
       var date = angular.element('#eventDate');
       console.log(date[0].value);
-      alert(date[0].value);
       $scope.date = date[0].value;
     };
 
@@ -36,7 +36,6 @@ angular.module('meetMeApp.controller.createActivity', [])
           allowEdit: true,
           mediaType: 0,        // 0: picture, 1: video, 2: all media,
           saveToPhotoAlbum: true
-
       };
       // Take picture using device camera and retrieve image as base64-encoded string
       console.log(navigator);

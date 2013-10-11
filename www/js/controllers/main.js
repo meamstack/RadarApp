@@ -13,4 +13,9 @@ angular.module('meetMeApp.controller.main', [])
         }
       });
     };
-  }]);
+
+    $scope.changepage = function() {
+      location.assign($location.path('/map'));
+    };
+}]);
+
