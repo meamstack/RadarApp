@@ -1,6 +1,6 @@
 <div class="hero-unit createActivity">
   <h2>activ</h2>
-  <button ng-click="saveToServer()">Create Event</button>
+  <button ng-click="saveToServer()" disable="{{isDisabled}}">Create Event</button>
   <a href="#/map"><button>Choose location</button></a>
   <p>Activity options stuff here</p>
   {{googleMapData}}

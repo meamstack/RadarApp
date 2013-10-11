@@ -9,6 +9,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
 
     $scope.saveToServer = function() {
+      $scope.isDisabled = true;
       var date = angular.element('#eventDate');
       postToServer({
         name: $scope.eventName,
@@ -17,13 +18,12 @@ angular.module('meetMeApp.controller.createActivity', [])
         photo: $scope.picData,
         activity: $scope.activity,
         location: googleMapLatLon.get()
-      });
+      })
     };
 
     $scope.saveDate = function() {
       var date = angular.element('#eventDate');
       console.log(date[0].value);
-      alert(date[0].value);
       $scope.date = date[0].value;
     };
 
