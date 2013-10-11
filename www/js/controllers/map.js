@@ -1,5 +1,5 @@
 angular.module('meetMeApp.controller.map', [])
-  .controller('MapCtrl', ['$scope', 'googleMapInit', function ($scope, googleMapInit) {
+  .controller('MapCtrl', ['$rootScope', '$scope', 'googleMapInit', function ($rootScope, $scope, googleMapInit) {
     $scope.addMarker = function() {
       googleMapInit.addMarker(map,37.785427,-122.40572, "Hi")
     }
@@ -12,9 +12,14 @@ angular.module('meetMeApp.controller.map', [])
       //     var touch = event.targetTouches[0];
       //     alert('touched');
       // });
-      var hour = 1;
-      var hammertime = Hammer(element).on("swipeup", function(event, hour) {
-        hour++;
+      
+      
+      var hammertime = Hammer(element).on("tap", function(event, time) {
+        var date = new Date().toString();
+      var time = date.split(" ")[4].split(':')[0];
+      console.log(time);
+        alert(time);
+        time++;
     });
 
   };
