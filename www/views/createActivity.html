@@ -4,7 +4,9 @@
   <a href="#/map"><button>Choose location</button></a>
   <p>Activity options stuff here</p>
   {{googleMapData}}
-  <input id='eventDate' type='datetime-local' ng-click="saveDate()">Date</input>
+
+  <input id='eventDate' type='datetime-local' ng-click="saveDate()">
+  <i class="icon-calendar-empty calendarIcon"></i>
   <br>
   <input type="text" placeholder="Name" ng-model="eventName">
   <input type="text" placeholder="Description" ng-model="description">

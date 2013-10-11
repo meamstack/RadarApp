@@ -8,22 +8,21 @@
 .activityButton:hover
   background-color: #3b68da
   cursor: pointer
-
 border-radius()
-  -webkit-border-radius: arguments
-  -moz-border-radius: arguments
+  -webkit-border-radius: argument
+  -moz-border-radius: argument
   border-radius: arguments
 
 radial()
   /* fallback */
-  background-color: #2f2727;
-  background-image: url(images/radial_fancy.png);
-  background-position: 80% 20%;
-  background-repeat: no-repeat;
+  background-color: #2f2727
+  background-image: url(images/radial_fancy.png)
+  background-position: 80% 20%
+  background-repeat: no-repeat
 
-  background: -webkit-radial-gradient(arguments);
-  background: -moz-radial-gradient(arguments);
-  background: -ms-radial-gradient(arguments);
+  background: -webkit-radial-gradient(arguments)
+  background: -moz-radial-gradient(arguments)
+  background: -ms-radial-gradient(arguments)
 
 
 
@@ -39,6 +38,11 @@ radial()
   height: 80px
 
 #eventDate
-  opacity: 0
+  opacity: 0.1
   width: 70px
   border: 1px solid black
+
+.iconCalendar
+  pointer-events: none
+  position: relative
+  left: -71px
