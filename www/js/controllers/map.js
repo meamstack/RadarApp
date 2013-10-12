@@ -1,6 +1,17 @@
 angular.module('meetMeApp.controller.map', [])
-  .controller('MapCtrl', ['$scope', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $http, googleMapInit, googleMapLatLon) {
+  .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, userData, $http, googleMapInit, googleMapLatLon) {
+    
+    var initialize = function() {
+      var promise = userData.init();
+      promise.then(function(retrievedUserData) {
+        $scope.user = retrievedUserData;
+      });
+    };
+
+    initialize();
+
     window.console.log('its working');
+
     $scope.addMarker = function() {
       map = googleMapInit.fetchMap();
       googleMapInit.addMarker(map,37.785427,-122.40572, "Basketball with Shawn");
