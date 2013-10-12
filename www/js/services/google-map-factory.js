@@ -68,9 +68,9 @@ googleMapFactory.factory('googleMapInit', function () {
       // e.preventDefault();
       infowindow.open(map,marker);
     });
-    // google.maps.event.addListener(marker, 'mouseout', function() {
-    //   infowindow.close(map,marker);
-    // });
+    google.maps.event.addListener(marker, 'mouseout', function() {
+      infowindow.close(map,marker);
+    });
    };
 
 
