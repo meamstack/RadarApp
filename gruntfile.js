@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       options: {
-        livereload: 35728
+        livereload: true
       },
       stylus: {
         files: ['www/styles/stylus/*'],
