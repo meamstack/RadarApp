@@ -9,8 +9,8 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
 
     $scope.saveToServer = function() {
-      $scope.isDisabled = true;
       var date = angular.element('#eventDate');
+      $scope.isDisabled = true;
       postToServer({
         name: $scope.eventName,
         description: $scope.description,
@@ -28,6 +28,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
 
     $scope.takePic = function() {
+      alert('take a pic');
       var options = {
           quality: 50,
           destinationType: 0, // 0: Data_URL, 1: File_URI

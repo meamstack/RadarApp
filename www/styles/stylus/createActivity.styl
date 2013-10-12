@@ -8,6 +8,7 @@
 .activityButton:hover
   background-color: #3b68da
   cursor: pointer
+
 border-radius()
   -webkit-border-radius: argument
   -moz-border-radius: argument
@@ -24,7 +25,8 @@ radial()
   background: -moz-radial-gradient(arguments)
   background: -ms-radial-gradient(arguments)
 
-
+.photoSource
+  font: black
 
 .createActivity
   radial 50% 50%, closest-corner, #1a82f7, #3d41a8
@@ -34,15 +36,62 @@ radial()
   margin-top: 20px
 
 .pictureSaved img
-  width: 80px
-  height: 80px
+  width: 250px
+  height: 250px
 
 #eventDate
-  opacity: 0.1
+  position: absolute
+  top: 78px
+  left: -32px
+  opacity: 0
   width: 70px
   border: 1px solid black
 
-.iconCalendar
+.calendarIcon
   pointer-events: none
   position: relative
   left: -71px
+
+.icon, .icon:visited
+  display: inline
+  color: black
+  text-decoration: none
+
+.icon-film
+  position: relative
+  top: -47px
+  left: 110px
+
+.icon-camera-retro
+  position: relative
+  top: -47px
+  left: 14px
+
+.photo
+  float: right
+
+.createEvent
+  position: absolute
+  left: 200px
+  bottom: 59px
+
+.icon-calendar-empty
+  position:absolute
+  top: 70px
+  left: 10px
+  text-rendering: auto
+
+.icon-map-marker
+  position:absolute
+  top: 25px
+  left: 15px
+
+#eventDesc
+  width:90%
+  display: block
+  margin: 5px auto
+
+#eventName
+  width:90%
+  display: block
+  margin: 0 auto
