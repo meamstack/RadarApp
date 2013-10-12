@@ -8,20 +8,81 @@
   <!-- <p>Activity options stuff here</p> -->
   {{googleMapData}}
 
+<!--
+    <span class="error" ng-show="myForm.input.$error.required"><i class="icon-warning-sign"></i> </span><br>
+  <form name="eventForm" novalidate ng-submit="saveToServer();">
+    <input type="text" placeholder="Name" name="name" ng-model="eventName" id="eventName" ng-blur="saveName()" required>
+    <!-- <input type="text" placeholder="Description" ng-model="description" id="eventDesc" ng-blur="saveDesc()" required> -->
 
-  <br>
-  <input type="text" placeholder="Name" ng-model="eventName" id="eventName" ng-blur="saveName()">
-  <input type="text" placeholder="Description" ng-model="description" id="eventDesc" ng-blur="saveDesc()">
+    <!-- <activity-button ng-repeat="activity in activities"></activity-button> -->
+    <!-- <div class="submitNav"> -->
+      <!-- <input type="submit" class="createEvent topcoat-button" value="Create"> -->
+      <!-- <a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a> -->
+      <!-- <div class="calendarDateSetter"> -->
+        <!-- <input id='eventDate' type='datetime-local' ng-click="saveDate()"> -->
+        <!-- <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a> -->
+        <!-- <span class="dateSet" ng-bind="date"></span> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </form> -->
 
-  <activity-button ng-repeat="activity in activities"></activity-button>
-  <div class="submitNav">
-    <button class="createEvent topcoat-button" ng-click="saveToServer()" disable="{{isDisabled}}">Create</button>
-    <a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
-    <div class="calendarDateSetter">
-      <input id='eventDate' type='datetime-local' ng-click="saveDate()">
-      <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
-      <span class="dateSet" ng-bind="date"></span>
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+   <form name="myForm" novalidate ng-submit="submitForm();">
+             <h3>Basic example</h3>
+
+            <div class="form-section">
+                <p>Username:</p>
+                <input type="text" name="username1" ng-model="username1"
+                required />
+                <input type="submit" ng-disabled="myForm.username1.$pristine || myForm.username1.$dirty && myForm.username1.$invalid">
+                <div class="custom-error" ng-show="myForm.username1.$dirty && myForm.username1.$invalid">Invalid:
+<span ng-show="myForm.username1.$error.required">Username is required.</span>
+
+                </div>
+                <p>Email:</p>
+                <input type="email" name="email1" ng-model="email1" required
+                />
+                <input type="submit" ng-disabled="myForm.email1.$pristine || myForm.email1.$dirty && myForm.email1.$invalid"
+                />
+                <div class="custom-error" ng-show="myForm.email1.$dirty && myForm.email1.$invalid">Invalid:
+<span ng-show="myForm.email1.$error.required">Email is required.</span>
+
+                    <span
+                    ng-show="myForm.email1.$error.email">Please, write a valid email address.</span>
+                </div>
+            </div>
+        </form>
 </div>
 
+<style>
+.form-section {
+    font-size:14px;
+    margin:10px 0;
+}
+.form-section p {
+    margin:5px 0;
+}
+.form-section input:not([type='submit']) {
+    height:18px;
+    padding:2px 4px;
+    width:220px;
+}
+.form-section .custom-error {
+    color:#FF0000;
+}
+[type='submit'] {
+    background:@EEEEEE;
+    border:1px solid #666666;
+    height:26px;
+    padding:4px 5px 3px;
+    vertical-align:-1px;
+    width:50px;
+}
+</style>

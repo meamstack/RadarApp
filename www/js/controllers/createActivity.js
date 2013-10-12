@@ -1,6 +1,13 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope, googleMapLatLon, postToServer) {
 
+    $scope.username1 = 'Peter Parker';
+    $scope.email1 = 'pparker@gmail.com';
+
+    $scope.submitForm = function () {
+        alert("Here I should implement the logic to send a request to the server.");
+    };
+
     var initializeInfo = function() {   // initialize information, called at bottom of page
       $scope.activities = [ ['coffee','a.png'],
                             ['park','b.png'],
@@ -32,7 +39,9 @@ angular.module('meetMeApp.controller.createActivity', [])
       postToServer.saveDesc($scope.description);
     };
 
-    $scope.saveToServer = function() {
+    $scope.saveToServer = function(e) {
+      e.preventDefault();
+      alert('hi');
       var date = angular.element('#eventDate');
       $scope.isDisabled = true;
       postToServer.send({
