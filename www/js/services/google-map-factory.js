@@ -54,9 +54,9 @@ googleMapFactory.factory('googleMapInit', function () {
     // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
-   var addMarker = function(map,lat,long,contentString) {
+  var addMarker = function(map,lat,long,contentString) {
       var infowindow = new google.maps.InfoWindow({content:el, 
-        maxWidth:400, maxHeight: 500, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
+        maxWidth:50, maxHeight: 150, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 
@@ -68,11 +68,31 @@ googleMapFactory.factory('googleMapInit', function () {
       // e.preventDefault();
       infowindow.open(map,marker);
     });
+    //mouseout works when you click on something else on the phone, which is what we want
     google.maps.event.addListener(marker, 'mouseout', function() {
       infowindow.close(map,marker);
     });
    };
 
+  // var addLocationMarker = function(map,lat,long,contentString) {
+  //     var infowindow = new google.maps.InfoWindow({content:el, 
+  //       maxWidth:50, maxHeight: 150, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
+  //     var markerLatlng = new google.maps.LatLng(lat,long);
+  //     var marker = new google.maps.Marker({
+  //         position: markerLatlng, 
+  //         map: map,
+  //         animation: google.maps.Animation.DROP,
+  //         title:"San Francisco Ferry Building"});
+  //     // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
+  //   google.maps.event.addListener(marker, 'click', function() {
+  //     // e.preventDefault();
+  //     infowindow.open(map,marker);
+  //   });
+  //   //mouseout works when you click on something else on the phone, which is what we want
+  //   google.maps.event.addListener(marker, 'mouseout', function() {
+  //     infowindow.close(map,marker);
+  //   });
+  // };
 
   return {
     initializeGoogleMap: initializeGoogleMap,
