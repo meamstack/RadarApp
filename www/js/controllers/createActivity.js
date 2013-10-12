@@ -2,7 +2,14 @@ angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope, googleMapLatLon, postToServer) {
 
     var initializeInfo = function() {   // initialize information, called at bottom of page
-      $scope.activities = [['coffee','a.png'], ['dog walk','b.png'], ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png']];
+      $scope.activities = [ ['coffee','a.png'],
+                            ['park','b.png'],
+                            ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
+                            ['bar', 'c.png'],
+                            ['reading', 'd.png'],
+                            ['sports', 'e.png'],
+                            ['music', 'f.png'],
+                            ['...', 'more.png']];
       $scope.picData = postToServer.getPic();
       $scope.eventName = postToServer.getName();
       $scope.description = postToServer.getDesc();
