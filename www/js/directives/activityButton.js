@@ -9,17 +9,17 @@ angular.module("meetMeApp.directive.createActivity", [])
     return {
       restrict: 'A',
       template: "<div ng-show='picData' class='pictureSaved'><img ng-src='{{picData}}' /></div>",
-      link: function (scope, element, attrs) {
-        scope.$watch(attrs.degrees, function (rotateDegrees) {
-          console.log(rotateDegrees);
-          var r = 'rotate(' + rotateDegrees + 'deg)';
-          element.css({
-            '-moz-transform': r,
-            '-webkit-transform': r,
-            '-o-transform': r,
-            '-ms-transform': r
-         });
-        });
-      }
+      // link: function (scope, element, attrs) {
+      //   scope.$watch(attrs.degrees, function (rotateDegrees) {
+      //     console.log(rotateDegrees);
+      //     var r = 'rotate(' + rotateDegrees + 'deg)';
+      //     element.css({
+      //       '-moz-transform': r,
+      //       '-webkit-transform': r,
+      //       '-o-transform': r,
+      //       '-ms-transform': r
+      //    });
+      //   });
+      // }
     };
   });
