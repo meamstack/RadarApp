@@ -35,23 +35,33 @@ h1
 
 
 #mapCanvas
-  width: 100%
+  float: right
+  width: 90%
   height: 100%
   min-width: 300px
   min-height: 300px
   z-index: 0
 
 #daySlider
-  bottom: 0
+  position: fixed
+  float:left
+  margin-left: 0
+  width: 90%
   height: 20px
+  bottom:0
+
 
 #hourSlider, #daySlider
   background: pink
   overflow: hidden
 
-#hourSlider p
-  position: relative
-  padding: 200, 0
+#hourSlider 
+  float: left
+  margin-left: 0
+  width: 10%
+  height: 100%
+  z-index:1
+
   vertical-allign: middle
   color: off-white
 
