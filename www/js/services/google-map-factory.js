@@ -60,7 +60,8 @@ googleMapFactory.factory('googleMapInit', function () {
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 
-          map: map, 
+          map: map,
+          animation: google.maps.Animation.DROP,
           title:"San Francisco Ferry Building"});
       // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
     google.maps.event.addListener(marker, 'click', function() {
