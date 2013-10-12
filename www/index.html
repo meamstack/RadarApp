@@ -23,9 +23,7 @@
         <body ng-app="meetMeApp">
 
         <!-- Add your site or application content here -->
-        <div class="gridContainer clearfix">
           <mobile-view ng-view=""></mobile-view>
-        </div>
 
         <!-- phonegap helper files -->
         <script src="js/inobounce.js"></script>
@@ -42,7 +40,6 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <!-- // <script src="js/cordova-ios/CordovaLib/cordova.js"></script> -->
         <script src="cordova-2.7.0.js"></script>
 
        <!-- controllers -->
@@ -69,6 +66,8 @@
         <script src="js/config.js"></script>
         <script src="lib/hammer.min.js"></script>
         <script src="lib/jquery.hammer.min.js"></script>
+        <script src="js/lib/gestures.js"></script>
+
 
         <!-- other library files -->
         <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>

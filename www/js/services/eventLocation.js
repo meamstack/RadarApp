@@ -10,7 +10,6 @@ angular.module("meetMeApp.service.eventLocation", [])
     };
 
     var get = function() {
-      alert('lat and long: ',lat, lon);
       return [lat,lon];
     };
 
