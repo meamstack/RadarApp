@@ -3,10 +3,13 @@ angular.module('meetMeApp.controller.map', [])
     window.console.log('its working');
     $scope.addMarker = function() {
       map = googleMapInit.fetchMap();
-      el = '<div><p>{{name}}</p><img src={{img}} height="40px, width="40px"></img></div>';
+    
       //attaches the data to markers and renders el
       for (var i = 0; i < events.length; i++) {
-        var name = events[i].name;
+        var name =  events[i].name;
+        var  img = events[i].photo;
+        el = '<div><p>'+ name + '</p><img src="' + img + '" height="100px" width="100px"></img></div>';
+        console.log (el)
         googleMapInit.addMarker(map, events[i].location[0], events[i].location[1], el);
       }
     };

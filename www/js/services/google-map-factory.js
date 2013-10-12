@@ -50,7 +50,7 @@ googleMapFactory.factory('googleMapInit', function () {
     return localMap;
   };
 
-  
+
     // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
