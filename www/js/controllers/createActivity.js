@@ -1,7 +1,8 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope, googleMapLatLon, postToServer) {
     $scope.server = 'http://54.200';
-    $scope.activities = ['coffee', 'dog walk', 'holding baby'];
+    $scope.activities = [['coffee','a.png'], ['dog walk','b.png'], ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png']];
+    // $scope.activities = [, 'dog walk', 'holding baby'];
     $scope.picData = '../../img/test_img.jpg';
 
     $scope.saveActivity = function(activity) {
