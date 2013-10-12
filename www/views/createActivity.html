@@ -13,8 +13,8 @@
   <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
 
   <br>
-  <input type="text" placeholder="Name" ng-model="eventName" id="eventName">
-  <input type="text" placeholder="Description" ng-model="description" id="eventDesc">
+  <input type="text" placeholder="Name" ng-model="eventName" id="eventName" ng-blur="saveName()">
+  <input type="text" placeholder="Description" ng-model="description" id="eventDesc" ng-blur="saveDesc()">
 
   <activity-button ng-repeat="activity in activities"></activity-button>
   <button class="createEvent" ng-click="saveToServer()" disable="{{isDisabled}}">Create Event</button>
