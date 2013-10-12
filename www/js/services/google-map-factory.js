@@ -56,7 +56,7 @@ googleMapFactory.factory('googleMapInit', function () {
    // Add a marker to the map at specified latitude and longitude with tooltip
    var addMarker = function(map,lat,long,contentString) {
       var infowindow = new google.maps.InfoWindow({content:el, 
-        maxWidth:400, maxHeight: 500});
+        maxWidth:400, maxHeight: 500, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 
@@ -65,11 +65,12 @@ googleMapFactory.factory('googleMapInit', function () {
           title:"San Francisco Ferry Building"});
       // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
     google.maps.event.addListener(marker, 'click', function() {
+      // e.preventDefault();
       infowindow.open(map,marker);
     });
-    google.maps.event.addListener(marker, 'mouseout', function() {
-      infowindow.close(map,marker);
-    });
+    // google.maps.event.addListener(marker, 'mouseout', function() {
+    //   infowindow.close(map,marker);
+    // });
    };
 
 
