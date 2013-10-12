@@ -15,9 +15,8 @@ angular.module('meetMeApp.controller.main', [])
       });
     };
 
-    // Example for angular.mobile.nav - however currently not working with Google Maps
-    // $scope.clickdemo = function(){
-    //   $scope.$navigate.go('/viewActivity', 'slide');
-    // };
+    $scope.changepage = function() {
+      location.assign($location.path('/map'));
+    };
+}]);
 
-  }]);

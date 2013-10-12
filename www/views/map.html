@@ -2,14 +2,17 @@
   <div id='statusBar'></div>
   <div id="LayoutDiv1">
     <h1>Map View</h1>
-    <a href='#/createActivity'>Create Activity</a>
+    9{{newEvents}}9
+    <a href='#/createActivity' ng-click="setLocation()">Create Activity</a>
     <a ng-click="addMarker()">View data</a>
-    
+
     <a href="addMarker()">View data</a>
     <div id="LayoutDiv2">
       <div id="mapCanvas" ></div>
     </div>
-    <div id="hourSlider">"1 pm"</div>
+    <div id="hourSlider" class="slider" ng-click='slide()'>{{time}}
+    </div>
     <div id="daySlider">Today</div>
   </div>
 </div>
+

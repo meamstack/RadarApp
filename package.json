@@ -10,7 +10,8 @@
   },
   "bugs": {},
   "dependencies": {
-    "cordova": "latest"
+    "cordova": "latest",
+    "hammerjs": "~1.0.5"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -1,21 +1,21 @@
-<div class="hero-unit radial-background">
-  <h1>Create activity page</h1>
+<div class="hero-unit createActivity">
+  <h2>activ</h2>
+  <button ng-click="saveToServer()" disable="{{isDisabled}}">Create Event</button>
+  <a href="#/map"><button>Choose location</button></a>
   <p>Activity options stuff here</p>
+  {{googleMapData}}
+
+  <input id='eventDate' type='datetime-local' ng-click="saveDate()">
+  <i class="icon-calendar-empty calendarIcon"></i>
+  <br>
+  <input type="text" placeholder="Name" ng-model="eventName">
+  <input type="text" placeholder="Description" ng-model="description">
+  <div picture-thumb></div>
+  <div class="photos">
+    <a class="topcoat-icon-button" ng-click="takePic()">Take Pic</a>
+    <a class="topcoat-icon-button" ng-click="openPhotoLib()">From Lib</a>
+  </div>
 
   <activity-button ng-repeat="activity in activities"></activity-button>
-  <a href={{server+'/api/createEvent'}}>
-    <button class='topcoat-button'>Save Activity</button>
-  </a>
-
-  <form ng-click='saveDate()'>
-    <input id='eventDate' type='datetime-local' value="date">
-  </form>
-
-  <a class="topcoat-icon-button"  ng-click="takePic()">Take Pic</a>
-  <a class="topcoat-icon-button"  ng-click="openPhotoLib()">From Lib</a>
-
-  <div ng-show="picData">
-    <img ng-src="{{picData}}" />
-  </div>
 </div>
-<ng-include src="'partials/settingsOverlay.html'"></ng-include>
+

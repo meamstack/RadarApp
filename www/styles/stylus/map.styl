@@ -1,5 +1,6 @@
 blue = #accecd
 pink = #bc6367
+off-white = #fafffc
 
 body
   height: 100%
@@ -46,3 +47,24 @@ h1
 
 #hourSlider, #daySlider
   background: pink
+  overflow: hidden
+
+#hourSlider p
+  position: relative
+  padding: 200, 0
+  vertical-allign: middle
+  color: off-white
+
+.focus
+  color: off-white
+
+.blur 
+   color: transparent
+   text-shadow: 0 0 5px rgba(0,0,0,0.5)
+
+.slider
+  owerflow: auto
+  -webkit-overflow-scrolling:touch
+  position: absolute
+  
+
