@@ -1,21 +1,22 @@
 angular.module('meetMeApp.controller.map', [])
   .controller('MapCtrl', ['$scope', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $http, googleMapInit, googleMapLatLon) {
-    window.console.log('its working');
     $scope.addMarker = function() {
       map = googleMapInit.fetchMap();
       
       //attaches the data to markers and renders el
-      for (var i = 0; i < events.length; i++) {
-        var name =  events[i].name;
-        var  img = events[i].photo;
-        el = '<div><p>'+ name + '</p><img src="' + img + '" height="100px" width="100px"></img></div>';
+      for (var i = 0; i < $scope.newEvents.length; i++) {
+        var name =  $scope.newEvents[i].name;
+        var  img = $scope.newEvents[i].photo;
+        var description = $scope.newEvents[i].description;
+        var total = 5;//add this to the database
+        el = '<div><p>' + name + '</p><img src="' + img + '" height="100px" width="100px"></img><text id="description">' + description + '</text><text>Number of cool people in this event is ' + total + '</text><button>Add Me</button></div>';
         console.log (el)
-        googleMapInit.addMarker(map, events[i].location[0], events[i].location[1], el);
+        googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
       }
     };
 
     //dummy data for $scope.newEvents
-    var events = [
+    $scope.newEvents = [
         {
           name: "Free pizza @ Hack reactor!",
           description: 'awesomeness!',
@@ -44,17 +45,17 @@ angular.module('meetMeApp.controller.map', [])
       googleMapLatLon.set(37.705427,-122.39572);
     };
 
-    var request = {
-      location: [37.800305,-122.409239],
-      date: {
-        year: 2013,
-        month: 10,
-        day: 06
-      },
-      maxD: 1
-    };
-    request = JSON.stringify(request);
-    var url = 'http://54.200.135.103:9000/api';
+    // var request = {
+    //   location: [37.800305,-122.409239],
+    //   date: {
+    //     year: 2013,
+    //     month: 10,
+    //     day: 06
+    //   },
+    //   maxD: 1
+    // };
+    // request = JSON.stringify(request);
+    // var url = 'http://54.200.135.103:9000/api';
 
 
     // $http.post(url + '/findEvents', request)
@@ -67,15 +68,15 @@ angular.module('meetMeApp.controller.map', [])
     //   $scope.newEvents = error;
     // });
 
-    var createEvent = {
-      name: 'Thursday night footbal!!',
-      description: 'Chips and tacos',
-      location: [37.7836,-122.408904],
-      time: new Date(2013, 10,01),
-      photo: 'http://i.imgur.com/QTITt2D.jpg',
-      activity: 'pizza'
-    }
-    createEvent = JSON.stringify(createEvent);
+    // var createEvent = {
+    //   name: 'Thursday night footbal!!',
+    //   description: 'Chips and tacos',
+    //   location: [37.7836,-122.408904],
+    //   time: new Date(2013, 10,01),
+    //   photo: 'http://i.imgur.com/QTITt2D.jpg',
+    //   activity: 'pizza'
+    // }
+    // createEvent = JSON.stringify(createEvent);
 
     // $http.post(url + '/createEvent', createEvent)
     // .success(function(data) {

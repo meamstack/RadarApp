@@ -56,7 +56,7 @@ googleMapFactory.factory('googleMapInit', function () {
    // Add a marker to the map at specified latitude and longitude with tooltip
    var addMarker = function(map,lat,long,contentString) {
       var infowindow = new google.maps.InfoWindow({content:el, 
-        maxWidth:400, maxHeight: 400});
+        maxWidth:400, maxHeight: 500});
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 
