@@ -14,7 +14,7 @@ angular.module('meetMeApp.controller.map', [])
 
     $scope.addMarker = function() {
       map = googleMapInit.fetchMap();
-    
+      
       //attaches the data to markers and renders el
       for (var i = 0; i < events.length; i++) {
         var name =  events[i].name;

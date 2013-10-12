@@ -1,22 +1,72 @@
 <div class="hero-unit createActivity">
   <div class="photo">
     <div picture-thumb></div>
-    <a class="icon" ng-click="takePic()"><i class="icon-camera-retro icon-2x"></i></a>
-    <a class="icon" ng-click="openPhotoLib()"><i class="icon-film icon-2x"></i></a>
+    <i ng-click="takePic()" class="icon-camera-retro icon-2x block"></i>
+    <i ng-click="openPhotoLib()" class="icon-film icon-2x block"></i>
   </div>
 
-  <a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
   <!-- <p>Activity options stuff here</p> -->
   {{googleMapData}}
 
-  <input id='eventDate' type='datetime-local' ng-click="saveDate()">
-  <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
 
-  <br>
-  <input type="text" placeholder="Name" ng-model="eventName" id="eventName">
-  <input type="text" placeholder="Description" ng-model="description" id="eventDesc">
+    <!-- <span class="error" ng-show="myForm.input.$error.required"><i class="icon-warning-sign"></i> </span><br> -->
+  <!-- <form name="eventForm" novalidate ng-submit="saveToServer();"> -->
 
-  <activity-button ng-repeat="activity in activities"></activity-button>
-  <button class="createEvent" ng-click="saveToServer()" disable="{{isDisabled}}">Create Event</button>
+    <!-- <input type="text" placeholder="Name" name="name" ng-model="eventName" id="eventName" ng-blur="saveName()" required> -->
+    <!-- <input type="text" placeholder="Description" ng-model="description" id="eventDesc" ng-blur="saveDesc()" required>  -->
+
+  </form>
+
+
+
+
+
+
+
+
+
+   <form name="myForm" novalidate ng-submit="submitForm();">
+      <input type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
+        <i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i>
+      <input type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
+      <i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
+      <activity-button ng-repeat="activity in activities"></activity-button>
+
+      <div class="submitNav">
+      <input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
+        <a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
+        <div class="calendarDateSetter">
+          <input id='eventDate' type='datetime-local' ng-click="saveDate()">
+          <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
+          <span class="dateSet" ng-bind="date"></span>
+        </div>
+      </div>
+
+  </form>
 </div>
 
+<style>
+.form-section {
+    font-size:14px;
+    margin:10px 0;
+}
+.form-section p {
+    margin:5px 0;
+}
+.form-section input:not([type='submit']) {
+    height:18px;
+    padding:2px 4px;
+    width:220px;
+}
+.form-section .custom-error {
+    color:#FF0000;
+}
+[type='submit'] {
+    background:@EEEEEE;
+    border:1px solid #666666;
+    height:26px;
+    padding:4px 5px 3px;
+    vertical-align:-1px;
+    width:50px;
+}
+</style>

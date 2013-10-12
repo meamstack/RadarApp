@@ -1,17 +1,50 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope, googleMapLatLon, postToServer) {
-    $scope.server = 'http://54.200';
-    $scope.activities = ['coffee', 'dog walk', 'holding baby'];
-    $scope.picData = '../../img/test_img.jpg';
+
+    $scope.username1 = 'Peter Parker';
+    $scope.email1 = 'pparker@gmail.com';
+
+    $scope.submitForm = function () {
+        alert("Here I should implement the logic to send a request to the server.");
+    };
+
+    var initializeInfo = function() {   // initialize information, called at bottom of page
+      $scope.activities = [ ['coffee','a.png'],
+                            ['park','b.png'],
+                            ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
+                            ['bar', 'c.png'],
+                            ['reading', 'd.png'],
+                            ['sports', 'e.png'],
+                            ['music', 'f.png'],
+                            ['...', 'more.png']];
+      $scope.picData = postToServer.getPic();
+      $scope.eventName = postToServer.getName();
+      $scope.description = postToServer.getDesc();
+
+      $scope.date = '10/12/13 12:10:20';
+      $scope.picData = 'img/test_img.jpg';
+    };
 
     $scope.saveActivity = function(activity) {
       $scope.activity = activity;
     };
 
-    $scope.saveToServer = function() {
+    $scope.saveName = function() {
+      alert('save name');
+      postToServer.saveName($scope.eventName);
+    };
+
+    $scope.saveDesc = function() {
+      alert('saved desc');
+      postToServer.saveDesc($scope.description);
+    };
+
+    $scope.saveToServer = function(e) {
+      e.preventDefault();
+      alert('hi');
       var date = angular.element('#eventDate');
       $scope.isDisabled = true;
-      postToServer({
+      postToServer.send({
         name: $scope.eventName,
         description: $scope.description,
         time: date[0].value,
@@ -28,7 +61,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
 
     $scope.takePic = function() {
-      alert('take a pic');
       var options = {
           quality: 50,
           destinationType: 0, // 0: Data_URL, 1: File_URI
@@ -58,10 +90,13 @@ angular.module('meetMeApp.controller.createActivity', [])
     var onSuccess = function(imageData) {
       $scope.picData = "  data:image/jpeg;base64," +imageData;
       $scope.$apply();
+      postToServer.savePic($scope.picData);
     };
     var onFail = function(e) {
       console.log("On fail " + e);
       // alert('err', e);
     };
+
+    initializeInfo();
 
   }]);

@@ -1,8 +1,9 @@
 .activityButton
-  border: black 1px solid
-  height: 50px
-  width: 50px
-  opacity: 0.5
+  border-top: #3750B3 1px solid
+  border-left: #3750B3 1px solid
+  height: 78px
+  width: 78px
+  opacity: .5
   float: left
 
 .activityButton:hover
@@ -31,21 +32,20 @@ radial()
 .createActivity
   radial 50% 50%, closest-corner, #1a82f7, #3d41a8
   width: 320px
-  height: 500px
+  height: 549px
   padding: 0px
   margin-top: 20px
 
 .pictureSaved img
-  width: 250px
-  height: 250px
+  max-width: 320px
+  min-height: 250px
 
 #eventDate
   position: absolute
-  top: 78px
-  left: -32px
+  z-index: 1
   opacity: 0
-  width: 70px
-  border: 1px solid black
+  width: 140px
+  height: 37px
 
 .calendarIcon
   pointer-events: none
@@ -58,40 +58,77 @@ radial()
   text-decoration: none
 
 .icon-film
-  position: relative
-  top: -47px
-  left: 110px
+  position: absolute
+  top: 227px
+  left: 273px
+  color: white
+  z-index: 1
 
 .icon-camera-retro
-  position: relative
-  top: -47px
-  left: 14px
+  position: absolute
+  top: 227px
+  left: 10px
+  color: white
+  z-index: 1
 
-.photo
+.photo, .photo div
   float: right
+  min-height: 250px
+  min-width: 250px
 
 .createEvent
   position: absolute
-  left: 200px
-  bottom: 59px
+  left: 46px
+  line-height: 2rem
+  border-radius: 0px
 
 .icon-calendar-empty
   position:absolute
-  top: 70px
-  left: 10px
+  left: 3px
   text-rendering: auto
+  pointer-events: none
 
 .icon-map-marker
   position:absolute
-  top: 25px
+  // bottom: 25px
   left: 15px
 
 #eventDesc
-  width:90%
-  display: block
-  margin: 5px auto
+  width: 80%
+  display: inline
+  margin: 0px 0px 3px 5px
+  background-color: transparent
+  border: none
+
+::-webkit-input-placeholder
+  color: grey
 
 #eventName
-  width:90%
+  width: 80%
+  display: inline
+  position: relative
+  top: 5px
+  margin: 0px 0px 3px 5px
+  background-color: transparent
+  border: none
+
+.submitNav
+  margin-top: 192px
+  width: 320px
+  height:49px
+  // bottom: 0px
+
+.dateSet
   display: block
-  margin: 0 auto
+  position: absolute
+  left: 46px
+  font-size: 13px
+  pointer-events: none
+  width: 113px
+
+.calendarDateSetter
+  position: absolute
+  left: 150px
+
+.block
+  display:block
