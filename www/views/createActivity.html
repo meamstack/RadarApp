@@ -8,23 +8,14 @@
   <!-- <p>Activity options stuff here</p> -->
   {{googleMapData}}
 
-<!--
-    <span class="error" ng-show="myForm.input.$error.required"><i class="icon-warning-sign"></i> </span><br>
-  <form name="eventForm" novalidate ng-submit="saveToServer();">
-    <input type="text" placeholder="Name" name="name" ng-model="eventName" id="eventName" ng-blur="saveName()" required>
-    <!-- <input type="text" placeholder="Description" ng-model="description" id="eventDesc" ng-blur="saveDesc()" required> -->
 
-    <!-- <activity-button ng-repeat="activity in activities"></activity-button> -->
-    <!-- <div class="submitNav"> -->
-      <!-- <input type="submit" class="createEvent topcoat-button" value="Create"> -->
-      <!-- <a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a> -->
-      <!-- <div class="calendarDateSetter"> -->
-        <!-- <input id='eventDate' type='datetime-local' ng-click="saveDate()"> -->
-        <!-- <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a> -->
-        <!-- <span class="dateSet" ng-bind="date"></span> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </form> -->
+    <!-- <span class="error" ng-show="myForm.input.$error.required"><i class="icon-warning-sign"></i> </span><br> -->
+  <!-- <form name="eventForm" novalidate ng-submit="saveToServer();"> -->
+
+    <!-- <input type="text" placeholder="Name" name="name" ng-model="eventName" id="eventName" ng-blur="saveName()" required> -->
+    <!-- <input type="text" placeholder="Description" ng-model="description" id="eventDesc" ng-blur="saveDesc()" required>  -->
+
+  </form>
 
 
 
@@ -35,26 +26,23 @@
 
 
    <form name="myForm" novalidate ng-submit="submitForm();">
-             <h3>Basic example</h3>
+      <input type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
+        <i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i>
+      <input type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
+      <i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
+      <activity-button ng-repeat="activity in activities"></activity-button>
 
-            <div class="form-section">
-                <p>Username:</p>
-                <input type="text" name="eventName" ng-model="eventName"
-                required />
-                <input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid">
-                <div class="custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid">
-                  <i class="icon-warning-sign"></i>
-                </div>
-                <p>Email:</p>
-                <input type="email" name="description" ng-model="description" required
-                />
-                <!-- <input type="submit" ng-disabled="myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" -->
-                <!-- /> -->
-                <div class="custom-error" ng-show="myForm.description.$dirty && myForm.description.$invalid">
-                  <i class="icon-warning-sign"></i>
-                </div>
-            </div>
-        </form>
+      <div class="submitNav">
+      <input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
+        <a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
+        <div class="calendarDateSetter">
+          <input id='eventDate' type='datetime-local' ng-click="saveDate()">
+          <a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
+          <span class="dateSet" ng-bind="date"></span>
+        </div>
+      </div>
+
+  </form>
 </div>
 
 <style>
