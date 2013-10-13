@@ -55,9 +55,9 @@ angular.module('meetMeApp.controller.map', [])
     //     }
     // ];
 
-    $scope.setLocation = function(){
-      googleMapLatLon.set(37.705427,-122.39572);
-    };
+    // $scope.setLocation = function(){
+      // googleMapLatLon.set(37.705427,-122.39572);
+    // };
 
     var request = {
       location: [37.800305,-122.409239],

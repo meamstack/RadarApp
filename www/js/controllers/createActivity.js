@@ -24,6 +24,7 @@ angular.module('meetMeApp.controller.createActivity', [])
 
     $scope.saveToServer = function() {
       var date = angular.element('#eventDate');
+      alert('location '+googleMapLatLon.get());
       $scope.isDisabled = true;
       postToServer.send({
         name: $scope.eventName,
