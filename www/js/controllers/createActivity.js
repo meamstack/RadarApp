@@ -49,6 +49,19 @@ angular.module('meetMeApp.controller.createActivity', [])
       postToServer.saveDesc($scope.description);
     };
 
+    $scope.saveToServer = function() {
+      var date = angular.element('#eventDate');
+      $scope.isDisabled = true;
+      postToServer.send({
+        name: $scope.eventName,
+        description: $scope.description,
+        time: date[0].value,
+        photo: $scope.picData,
+        activity: $scope.activity,
+        location: googleMapLatLon.get()
+      });
+    };
+
     $scope.saveDate = function() {
       var date = angular.element('#eventDate');
       console.log(date[0].value);
