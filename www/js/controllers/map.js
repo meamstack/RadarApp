@@ -82,29 +82,7 @@ angular.module('meetMeApp.controller.map', [])
       $scope.newEvents = error;
     });
 
-    // var createEvent = {
-    //   name: 'Thursday night footbal!!',
-    //   description: 'Chips and tacos',
-    //   location: [37.7836,-122.408904],
-    //   time: new Date(2013, 10,01),
-    //   photo: 'http://i.imgur.com/QTITt2D.jpg',
-    //   activity: 'pizza'
-    // }
-    // createEvent = JSON.stringify(createEvent);
-
-    // $http.post(url + '/createEvent', createEvent)
-    // .success(function(data) {
-    //   console.log('event successfully created, ', data);
-    // })
-    // .error(function(error){
-    //   console.log('this is the error on creating an event',error)
-    //   $scope.newEvents = error;
-    // });
-
-
-
     googleMapInit.initializeGoogleMap();
-    
 
     $scope.slide = function () {
       var element = document.getElementById('hourSlider');
