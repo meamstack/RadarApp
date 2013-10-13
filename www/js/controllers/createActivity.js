@@ -1,11 +1,24 @@
 angular.module('meetMeApp.controller.createActivity', [])
-  .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', function ($scope, googleMapLatLon, postToServer) {
+  .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
 
-    $scope.username1 = 'Peter Parker';
-    $scope.email1 = 'pparker@gmail.com';
-
+    $scope.createActivityUser = userData.getUser();
+    $scope.$navigate = $navigate;
     $scope.submitForm = function () {
-        alert("Here I should implement the logic to send a request to the server.");
+      var date = angular.element('#eventDate');
+      alert(googleMapLatLon.get());
+      // alert($scope.eventName,$scope.description, date[0].value,$scope.picData,$scope.activity, googleMapLatLon.get(),$scope.createActivityUser._id);
+
+      postToServer.send({
+        name: $scope.eventName,
+        description: $scope.description,
+        time: date[0].value,
+        photo: $scope.picData,
+        activity: $scope.activity,
+        location: googleMapLatLon.get(),
+        userId: $scope.createActivityUser._id
+      });
+      // redirect to map page
+      $scope.$navigate.go('/map', 'slide');
     };
 
     var initializeInfo = function() {   // initialize information, called at bottom of page
@@ -37,21 +50,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.saveDesc = function() {
       alert('saved desc');
       postToServer.saveDesc($scope.description);
-    };
-
-    $scope.saveToServer = function(e) {
-      e.preventDefault();
-      alert('hi');
-      var date = angular.element('#eventDate');
-      $scope.isDisabled = true;
-      postToServer.send({
-        name: $scope.eventName,
-        description: $scope.description,
-        time: date[0].value,
-        photo: $scope.picData,
-        activity: $scope.activity,
-        location: googleMapLatLon.get()
-      });
     };
 
     $scope.saveDate = function() {
