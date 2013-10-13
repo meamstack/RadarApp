@@ -20,7 +20,6 @@ angular.module('meetMeApp.controller.map', [])
         var name =  events[i].name;
         var  img = events[i].photo;
         el = '<div><p>'+ name + '</p><img src="' + img + '" height="100px" width="100px"></img></div>';
-        console.log (el)
         googleMapInit.addMarker(map, events[i].location[0], events[i].location[1], el);
       }
     };
