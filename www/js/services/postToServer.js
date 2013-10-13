@@ -4,15 +4,15 @@ angular.module("meetMeApp.service.postToServer", [])
     var eventName = null;
     var description = null;
     var urlPath = 'http://52.200.135.103:9000';
+    // var urlPath = 'http://localhost:3000';
 
 
-    var send = function(options) {
-      alert('in send');
+    var send = function(options, cb) {
       options = JSON.stringify(options);
       $http.post(urlPath + '/api/createEvent', options)
         .success(function(data) {
-          alert('success', data);
           console.log('successful creating to server',data);
+          cb();
       }).error(function(error){
         alert('error',error);
       });

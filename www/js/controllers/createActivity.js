@@ -5,9 +5,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.$navigate = $navigate;
     $scope.submitForm = function () {
       var date = angular.element('#eventDate');
-      alert(googleMapLatLon.get());
-      // alert($scope.eventName,$scope.description, date[0].value,$scope.picData,$scope.activity, googleMapLatLon.get(),$scope.createActivityUser._id);
-
       postToServer.send({
         name: $scope.eventName,
         description: $scope.description,
@@ -16,9 +13,9 @@ angular.module('meetMeApp.controller.createActivity', [])
         activity: $scope.activity,
         location: googleMapLatLon.get(),
         userId: $scope.createActivityUser._id
+      }, function(){
+        $scope.$navigate.go('/map', 'slide');
       });
-      // redirect to map page
-      $scope.$navigate.go('/map', 'slide');
     };
 
     var initializeInfo = function() {   // initialize information, called at bottom of page
