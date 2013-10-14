@@ -11,7 +11,7 @@ angular.module("meetMeApp.service.postToServer", [])
       options = JSON.stringify(options);
       $http.post(urlPath + '/api/createEvent', options)
         .success(function(data) {
-          console.log('successful creating to server',data);
+          alert('successful creating to server',data);
           cb();
       }).error(function(error){
         alert('error',error);
