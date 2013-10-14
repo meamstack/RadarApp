@@ -55,18 +55,12 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
       var bikeLayer = new google.maps.BicyclingLayer();
       bikeLayer.setMap(map);
     }
-    // if (true) {
-    //   addMarker();
-    // }
     localMap = map; // reference map for future use
   };
 
   var fetchMap = function(){
     return localMap;
   };
-
-
-    // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
   var addMarker = function(map,lat,long,contentString) {
@@ -78,33 +72,14 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
           map: map,
           animation: google.maps.Animation.DROP,
           title:"San Francisco Ferry Building"});
-      // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
-    
-    //mouseout works when you click on something else on the phone, which is what we want
-    // google.maps.event.addListener(marker, 'mouseout', function() {
-    //   infowindow.close(map,marker);
-    // });
-   };
-
-  // var addLocationMarker = function(map,lat,long,contentString) {
-  //     var infowindow = new google.maps.InfoWindow({content:el, 
-  //       maxWidth:50, maxHeight: 150, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
-  //     var markerLatlng = new google.maps.LatLng(lat,long);
-  //     var marker = new google.maps.Marker({
-  //         position: markerLatlng, 
-  //         map: map,
-  //         animation: google.maps.Animation.DROP,
-  //         title:"San Francisco Ferry Building"});
-  //     // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
-  //   google.maps.event.addListener(marker, 'click', function() {
-  //     // e.preventDefault();
-  //     infowindow.open(map,marker);
-  //   });
-  //   //mouseout works when you click on something else on the phone, which is what we want
-  //   google.maps.event.addListener(marker, 'mouseout', function() {
-  //     infowindow.close(map,marker);
-  //   });
-  // };
+  google.maps.event.addListener(marker, 'mouseout', function() {
+    infowindow.open(map,marker);
+  });
+  //mouseout works when you click on something else on the phone, which is what we want
+  google.maps.event.addListener(marker, 'mouseout', function() {
+    infowindow.close(map,marker);
+  });
+ };
 
   return {
     initializeGoogleMap: initializeGoogleMap,
