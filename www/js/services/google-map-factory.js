@@ -1,6 +1,6 @@
 var googleMapFactory = angular.module("google-map-service", []);
 
-googleMapFactory.factory('googleMapInit', function () {
+googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMapLatLon) {
     // initialize the google Maps
    var localMap; // refer to map for events
 
@@ -32,6 +32,21 @@ googleMapFactory.factory('googleMapInit', function () {
       keyboardShortcuts: true
     };
     var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
+    var centerMarker = new google.maps.Marker({
+      map: map,
+      position: map.getCenter(),
+      draggable:true,
+      animation: google.maps.Animation.DROP,
+      title: 'Create an Event',
+      url:'#/createActivity',
+      icon: "http://library.csun.edu/images/google_maps/marker-blue.png"
+    });
+    google.maps.event.addListener(centerMarker, 'click', function() {
+      var lat = centerMarker.getPosition().lat();
+      var lng = centerMarker.getPosition().lng();
+      googleMapLatLon.set(lat, lng);
+      window.location.href = centerMarker.url;
+    });
     if (false) {
       var trafficLayer = new google.maps.TrafficLayer();
       trafficLayer.setMap(map);
@@ -54,9 +69,9 @@ googleMapFactory.factory('googleMapInit', function () {
     // window.onload = initializeGoogleMap();
 
    // Add a marker to the map at specified latitude and longitude with tooltip
-   var addMarker = function(map,lat,long,contentString) {
+  var addMarker = function(map,lat,long,contentString) {
       var infowindow = new google.maps.InfoWindow({content:el, 
-        maxWidth:400, maxHeight: 400});
+        maxWidth:50, maxHeight: 150, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
           position: markerLatlng, 
@@ -64,14 +79,32 @@ googleMapFactory.factory('googleMapInit', function () {
           animation: google.maps.Animation.DROP,
           title:"San Francisco Ferry Building"});
       // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map,marker);
-    });
-    google.maps.event.addListener(marker, 'mouseout', function() {
-      infowindow.close(map,marker);
-    });
+    
+    //mouseout works when you click on something else on the phone, which is what we want
+    // google.maps.event.addListener(marker, 'mouseout', function() {
+    //   infowindow.close(map,marker);
+    // });
    };
 
+  // var addLocationMarker = function(map,lat,long,contentString) {
+  //     var infowindow = new google.maps.InfoWindow({content:el, 
+  //       maxWidth:50, maxHeight: 150, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
+  //     var markerLatlng = new google.maps.LatLng(lat,long);
+  //     var marker = new google.maps.Marker({
+  //         position: markerLatlng, 
+  //         map: map,
+  //         animation: google.maps.Animation.DROP,
+  //         title:"San Francisco Ferry Building"});
+  //     // icon: "http://library.csun.edu/images/google_maps/marker-blue.png"});   
+  //   google.maps.event.addListener(marker, 'click', function() {
+  //     // e.preventDefault();
+  //     infowindow.open(map,marker);
+  //   });
+  //   //mouseout works when you click on something else on the phone, which is what we want
+  //   google.maps.event.addListener(marker, 'mouseout', function() {
+  //     infowindow.close(map,marker);
+  //   });
+  // };
 
   return {
     initializeGoogleMap: initializeGoogleMap,
@@ -79,6 +112,6 @@ googleMapFactory.factory('googleMapInit', function () {
     fetchMap: fetchMap
   }
 
-});
+}]);
   
 // EndOAWidget_Instance_2187524
