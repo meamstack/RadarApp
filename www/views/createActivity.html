@@ -19,12 +19,7 @@
 
 
 
-
-
-
-
-
-   <form name="myForm" novalidate ng-submit="submitForm();">
+   <form name="myForm" novalidate ng-submit="submitForm()">
       <input type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
         <i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i>
       <input type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
