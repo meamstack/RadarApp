@@ -3,7 +3,7 @@ angular.module("meetMeApp.service.postToServer", [])
     var picData = null;
     var eventName = null;
     var description = null;
-    var urlPath = 'http://52.200.135.103:9000';
+    var urlPath = 'http://54.200.135.103:9000';
     // var urlPath = 'http://localhost:3000';
 
 
@@ -11,7 +11,7 @@ angular.module("meetMeApp.service.postToServer", [])
       options = JSON.stringify(options);
       $http.post(urlPath + '/api/createEvent', options)
         .success(function(data) {
-          console.log('successful creating to server',data);
+          alert('successful creating to server',data);
           cb();
       }).error(function(error){
         alert('error',error);
@@ -19,7 +19,13 @@ angular.module("meetMeApp.service.postToServer", [])
     };
 
     var savePic = function(pic) {
-      picData = pic;
+      $http.post(urlPath + '/api/addPhoto', pic)
+        .success(function(data) {
+          console.log('successful photo save to server');
+      }).error(function(error){
+        alert('error',error);
+        console.log('errrrrr', error);
+      });
     };
 
     var getPic = function() {
