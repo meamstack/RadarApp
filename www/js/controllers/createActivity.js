@@ -60,6 +60,7 @@ angular.module('meetMeApp.controller.createActivity', [])
         activity: $scope.activity,
         location: googleMapLatLon.get()
       });
+      postToServer.savePic($scope.picData);
     };
 
     $scope.saveDate = function() {
@@ -98,7 +99,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     var onSuccess = function(imageData) {
       $scope.picData = "  data:image/jpeg;base64," +imageData;
       $scope.$apply();
-      postToServer.savePic($scope.picData);
     };
     var onFail = function(e) {
       console.log("On fail " + e);
