@@ -51,7 +51,7 @@ iPhoneApp.config(['$routeProvider',
     })
     .when('/walkthrough', {
       templateUrl: 'views/walkthrough.html',
-      controller: 'WalkthroughCtrl'
+      controller: 'MainCtrl'
     })
     .otherwise({
       redirectTo: '/'
