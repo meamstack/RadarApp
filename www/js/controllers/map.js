@@ -19,7 +19,7 @@ angular.module('meetMeApp.controller.map', [])
         var img = $scope.newEvents[i].photo;
         var description = $scope.newEvents[i].description;
         var total = $scope.total || 1;//add this to the database
-        el = '<div><p>' + name + ' : ' + description + '</p><img src="' + img + '" height="100%" width="300px"></img><text>Number of cool people in this event is ' + total + '</text><button ng-click="addPerson(event)">+</button></div>';
+        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><text>Number of cool people in this event is ' + total + '</text><button ng-click="addPerson(event)">+</button></div>';
         googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
       }
     };

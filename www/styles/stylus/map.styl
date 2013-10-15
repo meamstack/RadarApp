@@ -2,6 +2,9 @@ blue = #accecd
 pink = #bc6367
 off-white = #fafffc
 
+@import 'reset.css'
+@import url(http://fonts.googleapis.com/css?family=Josefin\+Sans:400,700)
+
 body
   height: 100%
   width: 100%
@@ -10,29 +13,8 @@ body
   height:100%
   display:block
 
-.hero-unit
-  height: 100%
-  margin: 0px
-  float: left
-  width: 90%
-
 text
   clear: both
-
-#description
-  float: right
-
-p
-  position: center
-  top: 200px
-  left: 0
-
-img
-  display: block
-  width: 100%
-
-button
-  float: right
 
 h1
   margin: 0px
@@ -107,3 +89,33 @@ h1
    text-shadow: -1px -1px #aa3030
    font-weight: normal
 
+#infoWindow
+  width: 310px
+  height: 300px
+  position: relative
+  overflow: hidden
+
+#description
+  margin: auto
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 20
+  font-weight: 700
+
+button
+  position: absolute
+  bottom: 10px
+  right: 5px
+
+div img
+  width: 300px
+  margin-top: 10px 
+  position: absolute
+  left: 5px
+  right: 5px
+
+text
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 13
+  position: absolute
+  bottom: 10px
+  left: 5px
