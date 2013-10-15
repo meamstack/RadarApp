@@ -1,5 +1,8 @@
 angular.module('meetMeApp.controller.map', [])
   .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, userData, $http, googleMapInit, googleMapLatLon) {
+    var date = new Date();
+    $scope.hour = date.getHours();
+    $scope.minute = date.getMinutes();
 
     var initialize = function() {
       var promise = userData.init();

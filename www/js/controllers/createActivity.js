@@ -31,7 +31,6 @@ angular.module('meetMeApp.controller.createActivity', [])
       $scope.picData = postToServer.getPic();
       $scope.eventName = postToServer.getName();
       $scope.description = postToServer.getDesc();
-
       $scope.date = '10/12/13 12:10:20';
       $scope.picData = 'img/test_img.jpg';
     };
