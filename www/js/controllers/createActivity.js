@@ -35,6 +35,10 @@ angular.module('meetMeApp.controller.createActivity', [])
       $scope.picData = 'img/test_img.jpg';
     };
 
+    $scope.showOptions = function () {
+      
+    }
+
     $scope.saveActivity = function(activity) {
       $scope.activity = activity;
     };
