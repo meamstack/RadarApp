@@ -22,11 +22,11 @@
 
         </script>
         </head>
-        <body ng-app="meetMeApp">
+        <body>
             <div id='statusBar'></div>
 
         <!-- Add your site or application content here -->
-          <mobile-view ng-view=""></mobile-view>
+          <mobile-view id="ng-app" ng-view></mobile-view>
 
         <!-- phonegap helper files -->
         <script src="js/inobounce.js"></script>
@@ -69,6 +69,7 @@
         <script src="lib/hammer.min.js"></script>
         <script src="lib/jquery.hammer.min.js"></script>
         <script src="js/lib/gestures.js"></script>
+        <script src="lib/freewall.js"></script>
 
 
         <!-- other library files -->
@@ -76,9 +77,11 @@
         <script src="lib/mobile-nav.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-              angular.bootstrap(document, ['meetMeApp']);
+              angular.bootstrap(document.getElementById('ng-app'), ['meetMeApp']);
+              app.initialize();
+              var wall = new freewall('mobile-view');
+              wall.fitWidth();
             });
-            app.initialize();
     </script>
     </body>
 </html>
