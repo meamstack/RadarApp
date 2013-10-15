@@ -63,16 +63,18 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
   };
 
    // Add a marker to the map at specified latitude and longitude with tooltip
-  var addMarker = function(map,lat,long,contentString) {
-      var infowindow = new google.maps.InfoWindow({content:el, 
-        maxWidth:50, maxHeight: 150, disableAutoPan : true});//disableAutoPan prevents skipping when info window opens
+  var addMarker = function(map,lat,long,el) {
+      var infowindow = new google.maps.InfoWindow({
+        content:el, 
+        disableAutoPan: true
+      });//disableAutoPan prevents skipping when info window opens
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
-          position: markerLatlng, 
-          map: map,
-          animation: google.maps.Animation.DROP,
-          title:"San Francisco Ferry Building"});
-  google.maps.event.addListener(marker, 'mouseout', function() {
+        position: markerLatlng, 
+        map: map,
+        animation: google.maps.Animation.DROP
+      });
+  google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
   //mouseout works when you click on something else on the phone, which is what we want

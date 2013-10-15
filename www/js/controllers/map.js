@@ -19,7 +19,7 @@ angular.module('meetMeApp.controller.map', [])
         var img = $scope.newEvents[i].photo;
         var description = $scope.newEvents[i].description;
         var total = $scope.total || 1;//add this to the database
-        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><text>Number of cool people in this event is ' + total + '</text><button ng-click="addPerson(event)">+</button></div>';
+        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson(event)">+</button></div>';
         googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
       }
     };
@@ -85,22 +85,5 @@ angular.module('meetMeApp.controller.map', [])
 
     googleMapInit.initializeGoogleMap();
 
-    $scope.slide = function () {
-      var element = document.getElementById('hourSlider');
-      // alert('test');
-      // element.addEventListener('swipedown', function (event) {
-      //   if (event.targetTouches.length === 1) 
-      //     var touch = event.targetTouches[0];
-      //     alert('touched');
-      // });
-      var hammertime = Hammer(element).on("tap", function(event, time) {
-      var date = new Date().toString();
-      var time = date.split(" ")[4].split(':')[0];
-      console.log(time);
-        alert(time);
-        return time++;
-    });
-
-  };
 }]);
 
