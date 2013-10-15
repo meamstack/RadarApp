@@ -69,6 +69,7 @@
         <script src="lib/hammer.min.js"></script>
         <script src="lib/jquery.hammer.min.js"></script>
         <script src="js/lib/gestures.js"></script>
+        <script src="lib/freewall.js"></script>
 
 
         <!-- other library files -->
@@ -79,6 +80,10 @@
               angular.bootstrap(document, ['meetMeApp']);
             });
             app.initialize();
+            $(function() {
+                var wall = new freewall('mobile-view');
+                wall.fitWidth();
+            });
     </script>
     </body>
 </html>
