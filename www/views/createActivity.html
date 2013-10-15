@@ -17,15 +17,19 @@
 	<i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
 	<activity-button ng-repeat="activity in activities"></activity-button>
 
-<div class="submitNav">
-	<input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
-		<a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
+	<div class="submitNav">
+		<input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
 		<div class="calendarDateSetter">
 			<input id='eventDate' type='datetime-local' ng-click="saveDate()">
-			<a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
+			
 			<span class="dateSet" ng-bind="date"></span>
 		</div>
 	</div>
 
 </form>
+<div id="footer">
+	<a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
+	<a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
+</div>
+
 </div>
