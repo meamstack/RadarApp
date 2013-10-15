@@ -5,9 +5,11 @@
   <br><br>
 
   <button class='topcoat-button' ng-click='login()'>Log in with Facebook</button>
-
-  <a ng-click='$navigate.go("/map", "slide")'>map</a>
-  <a ng-click='$navigate.go("/createActivity", "slide")'>create</a>
-  <a ng-click='$navigate.go("/chat", "slide")'>chat</a>
-
+<div id="links">
+<ul class="topcoat-list__container">
+  <li class="topcoat-list__item" ng-click='$navigate.go("/map", "slide")'>Map</li>
+  <li class="topcoat-list__item" ng-click='$navigate.go("/createActivity", "slide")'>Create</li>
+  <li class="topcoat-list__item" ng-click='$navigate.go("/chat", "slide")'>Chat</li>
+</ul>
+</div>
 </div>
