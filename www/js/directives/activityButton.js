@@ -2,7 +2,8 @@ angular.module("meetMeApp.directive.createActivity", [])
   .directive('activityButton', function () {
     return {
       restrict: 'E',
-      template: "<div class='activityButton' ng-click='saveActivity(activity)'><img ng-src='{{activity[1]}}' />{{activity[0]}}</div>"
+      template: "<div class='activityButton' ng-click='saveActivity(activity)'>{{activity[0]}}</div>"
+      // template: "<div class='activityButton' ng-click='saveActivity(activity)'><img ng-src='{{activity[1]}}' />{{activity[0]}}</div>"
     };
   })
   .directive('pictureThumb', function() {
@@ -21,5 +22,12 @@ angular.module("meetMeApp.directive.createActivity", [])
       //    });
       //   });
       // }
+    };
+  })
+  .directive('ngBlur', function() {
+    return function( scope, elem, attrs ) {
+      elem.bind('blur', function() {
+        scope.$apply(attrs.ngBlur);
+      });
     };
   });

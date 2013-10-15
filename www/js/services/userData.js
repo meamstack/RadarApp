@@ -6,7 +6,8 @@ angular.module("meetMeApp.service.userData", [])
 	    var deferred = $q.defer();
 	    
 	    // CHANGE URL WHEN DEPLOYED TO FINAL SERVER
-	    $http.get('http://meetme123.com:3000/api/getUserData')  // getting all user data
+      $http.get('http://54.200.135.103:9000/api/getUserData')
+	    // $http.get('http://meetme123.com:3000/api/getUserData')  // getting all user data
 	    .success(function(userData, status, headers, config) {
 	    	user = userData;
 	      deferred.resolve(userData);
@@ -14,10 +15,12 @@ angular.module("meetMeApp.service.userData", [])
 	    return deferred.promise;
 	  };
 
-	  return {
-	    init: init,
-	    getUser: function(){
-	    	return user;
-	    }
-	  };
+    return {
+      init: init,
+      getUser: function(){
+        // alert('user',user);
+        // console.log('user',user);
+        return user;
+      }
+    };
   }]);
