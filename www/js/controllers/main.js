@@ -1,40 +1,21 @@
 angular.module('meetMeApp.controller.main', [])
-  .controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.test = 'default';
+  .controller('MainCtrl', ['$scope', '$navigate', '$timeout', function ($scope, $navigate, $timeout) {
 
+    $scope.$navigate = $navigate;
     $scope.login = function() {
-      $scope.ref = window.open('http://meetme123.com:3000/auth/facebook/', '_blank', 'location=no,toolbar=no');
-      $scope.ref.addEventListener('loadstart', function(event){
-        if (event.url === 'http://meetme123.com:3000/') {
-          $scope.test = 'asdf';
-          $scope.ref.close();
+      // NOTE: URLS BELOW NEED TO BE CHANGED FOR DEPLOYMENT
+      var ref = window.open('http://edhsieh.com/auth/facebook', '_blank', 'location=no,toolbar=no');
+      // var ref = window.open('http://meetme123.com:3000/auth/facebook', '_blank', 'location=no,toolbar=no');
+      ref.addEventListener('loadstart', function(event){
+        if (event.url === 'http://54.200.135.103:9000/') {
+        // if (event.url === 'http://meetme123.com:3000/') {
+          ref.close();
+          $timeout(function(){
+            $scope.$navigate.go('/map', 'slide');
+          }, 0);
         }
       });
     };
 
+}]);
 
-
-
-
-      // $scope.onGeoSuccess = function(position) {
-      //   $scope.latitude = position.coords.latitude;
-      //   $scope.longitude = position.coords.longitude;
-      //   $scope.altitude = position.coords.altitude;
-      //   $scope.accuracy = position.coords.accuracy;
-      //   $scope.altitudeAccuracy = position.coords.altitudeAccuracy;
-      //   $scope.heading = position.coords.heading;
-      //   $scope.speed = position.coords.speed;
-      //   $scope.timestamp = position.timestamp;
-      // };
-
-      // // onError Callback receives a PositionError object
-      // //
-      // $scope.onError = function(error) {
-      //     alert('code: '    + error.code    + '\n' +
-      //           'message: ' + error.message + '\n');
-      // };
-      // $scope.runLocate = function() {
-      //   navigator.geolocation.getCurrentPosition($scope.onGeoSuccess, $scope.onError);
-      // };
-
-  }]);

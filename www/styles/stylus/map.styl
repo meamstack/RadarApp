@@ -1,0 +1,116 @@
+blue = #accecd
+pink = #bc6367
+off-white = #fafffc
+
+@import 'reset.css'
+@import url(http://fonts.googleapis.com/css?family=Josefin\+Sans:400,700)
+
+body
+  height: 100%
+  width: 100%
+
+#LayoutDiv1
+  height:100%
+  display:block
+
+text
+  clear: both
+
+h1
+  margin: 0px
+
+.headerRight
+  float: right
+.headerLeft
+  float: left
+
+#carrier-date-battery
+  width: 100%
+  height: 20px
+
+#centerMarker
+  position: absolute
+  top:190px
+  left:160px
+  z-index: 1
+
+
+#mapCanvas
+  float: right
+  overlow: hidden
+  width: 90%
+  height: 100%
+  min-width: 300px
+  min-height: 300px
+  z-index: 0
+
+#daySlider
+  position: fixed
+  float:left
+  margin-left: 0
+  width: 100%
+  height: 10%
+  min-height: 20px
+  bottom:0
+
+
+#hourSlider, #daySlider
+  background: blue
+  overflow: hidden
+
+#hourSlider 
+  float: right
+  margin-left: 0
+  width: 10%
+  height: 100%
+  z-index:1
+
+  vertical-allign: middle
+  color: off-white
+
+.focus
+  color: off-white
+
+.blur 
+   color: transparent
+   text-shadow: 0 0 5px rgba(0,0,0,0.5)
+
+.slider
+  overflow: auto
+  -webkit-overflow-scrolling:touch
+  position: absolute
+  
+.stitched 
+   padding: 20px
+   margin: 10px
+   background: #ff0030
+   color: #fff
+   font-size: 21px
+   font-weight: bold
+   line-height: 1.3em
+   border: 2px dashed #fff
+   border-radius: 10px
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
+   text-shadow: -1px -1px #aa3030
+   font-weight: normal
+
+#infoWindow
+  position: relative
+  overflow: hidden
+
+#description
+  margin: auto
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 20px
+  font-weight: 700
+
+button
+  float: right
+  right: 5px
+
+div img
+  width: 300px
+
+text
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 13

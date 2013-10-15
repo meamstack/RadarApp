@@ -9,12 +9,12 @@ module.exports = function(grunt) {
       },
       stylus: {
         files: ['www/styles/stylus/*'],
-        tasks: ['stylus', 'phonegap:build']
+        tasks: ['stylus']
       },
-      phonegap: {
-        files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
-        tasks: ['phonegap:build']
-      }
+      //, phonegap: {
+      //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
+      //   tasks: ['phonegap:build']
+      // }
     },
     stylus: {
       compile: {
@@ -26,7 +26,8 @@ module.exports = function(grunt) {
         },
         files: {
           'www/styles/css/main.css': ['www/styles/stylus/meetme.styl',
-          'www/styles/stylus/leaflet.styl', 'www/styles/stylus/createActivity.styl']
+          'www/styles/stylus/map.styl', 'www/styles/stylus/createActivity.styl', 'www/styles/css/boilerplate.css','www/styles/css/map.css','www/styles/css/index.css']
+
         }
       }
     },
@@ -37,26 +38,26 @@ module.exports = function(grunt) {
         src: ['**'],
         dest: 'www/styles/exa/maines/'
       }
-    },
-    phonegap: {
-      config: {
-        root: 'www',
-        config: 'www/config.xml',
-        cordova: '/.cordova',
-        path: 'phonegap_grunt',
-        plugins: [],
-        platforms: ['ios'],
-        verbose: false
-      }
     }
+    // phonegap: {
+    //   config: {
+    //     root: 'www',
+    //     config: 'www/config.xml',
+    //     cordova: '/.cordova',
+    //     path: 'phonegap_grunt',
+    //     plugins: [],
+    //     platforms: ['ios'],
+    //     verbose: false
+    //   }
+    // }
   });
 
   // Default task
-  grunt.registerTask('default', ['stylus', 'copy', 'phonegap:build', 'phonegap:run:ios:emulator', 'watch']);
+  grunt.registerTask('default', ['stylus', 'copy', 'watch']);
 
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-phonegap');
+    // grunt.loadNpmTasks('grunt-phonegap');
 };
 

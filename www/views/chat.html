@@ -1,10 +1,14 @@
-<div class="hero-unit" ng-controller="ChatCtrl">
+<div class="hero-unit">
   <h1>Chat page</h1>
   <p>Chat stuff here</p>
+  <img src='{{user.facebook.picture.data.url}}' width = '70'>
+  id is {{user._id}}
   <a href='#/viewActivity'>
   	<button class='topcoat-button'>Return</button>
 	</a>
-	<p>should this be profile page view instead?</p>
+	<a href='#/main'>
+  	<button class='topcoat-button'>Main</button>
+	</a>
   <!-- <a href='#/viewActivity'>Link to view user profile?</a> -->
 </div>
 

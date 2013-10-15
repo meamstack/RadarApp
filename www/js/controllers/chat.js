@@ -1,10 +1,4 @@
-angular.module('meetMeApp.controller.main', [])
-  .controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
-
+angular.module('meetMeApp.controller.chat', [])
+  .controller('ChatCtrl', ['$scope', 'userData', function ($scope, userData) {
+    $scope.user = userData.getUser();
   }]);
