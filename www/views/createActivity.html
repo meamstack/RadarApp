@@ -3,7 +3,7 @@
 	<div class="photo">
 		<div picture-thumb></div>
 		<i ng-click="takePic()" class="icon-camera-retro icon-2x block"></i>
-		<button class="createEvent" on-click="showOption()">Create Event</button>
+		<!-- <button class="createEvent" on-click="showOption()">Create Event</button> -->
 		<i ng-click="openPhotoLib()" class="icon-film icon-2x block"></i>
 </div>
 
@@ -14,16 +14,16 @@
 	<i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i>
 	<input class="topcoat-text-input" type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
 	<i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
-	<activity-button ng-repeat="activity in activities"></activity-button>
+	<!-- <activity-button ng-repeat="activity in activities"></activity-button> -->
 
 	<div class="submitNav">
 		<input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
-<!-- 		<div class="calendarDateSetter">
+		<div class="calendarDateSetter">
 			<input id='eventDate' type='datetime-local' ng-click="saveDate()">
 			
 			<span class="dateSet" ng-bind="date"></span>
 		</div>
-	</div> -->
+	</div>
 
 </form>
 <div id="footer">
