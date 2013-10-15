@@ -1,6 +1,6 @@
 # Radar #
 **Upgrade Your Social Calendar.**
-----
+---
 
 Radar is a mobile-first location-based social app where users can discover events in their area, let others know about events they're hosting, and join events they want to attend. The map page shows all the events in a given area[, and allows users to swipe through different dates and times to view events in a given time frame]. [If users join an event, hosts will receive notification of the new attendee.]
 
