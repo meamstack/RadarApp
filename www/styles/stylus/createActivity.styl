@@ -6,7 +6,7 @@ blue = #accecd
   width: 60px
   opacity: .5
   float: left
-  color: #c6c8c8
+  color: white
   text-align: center
 
 .activityButton:hover
@@ -59,19 +59,19 @@ border-radius()
 
 .icon, .icon:visited
   display: inline
-  color: black
+  color: white
   text-decoration: none
 
 .icon-film
   position: absolute
-  top: 0
+  bottom: 0
   right: 10px
   color: white
   z-index: 2
 
 .icon-camera-retro
   position: absolute
-  top: 0
+  bottom: 0
   left: 10px
   color: white
   z-index: 2
@@ -84,18 +84,21 @@ border-radius()
   z-index: 0
 
 .createEvent
-  position: relative
-  left: 46px
+  position: absolute
+  bottom: 0
+  left: 50%
+  margin-left: -45px
+
   line-height: 2rem
-  border-radius: 0px
+  border-radius: 5px
   width: 90px !important
   height: 40px !important
+  text-align: center
 
 .icon-calendar-empty
   position:absolute
-  left: 3px
-  text-rendering: auto
-  pointer-events: none
+  float: right
+
 
 .icon-map-marker
   position:absolute
@@ -124,9 +127,9 @@ border-radius()
   border: none
 
 .submitNav
-  margin-top: 192px
+  margin-top: 0px
   width: 100%
-  height:49px
+
   bottom: 0px
 
 .dateSet
@@ -195,3 +198,13 @@ border-radius()
   opacity: 0.5
   z-index: 1
   height: 100%
+
+#footer
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: 30px
+  background: #191919
+  border-bottom-width: 1px
+  border-bottom-style: solid
+  border-top-color: #404040
