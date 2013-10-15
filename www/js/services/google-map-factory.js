@@ -65,8 +65,7 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
    // Add a marker to the map at specified latitude and longitude with tooltip
   var addMarker = function(map,lat,long,el) {
       var infowindow = new google.maps.InfoWindow({
-        content:el,
-        disableAutoPan: true
+        content:el
       });//disableAutoPan prevents skipping when info window opens
       var markerLatlng = new google.maps.LatLng(lat,long);
       var marker = new google.maps.Marker({
@@ -79,7 +78,7 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
   });
   //mouseout works when you click on something else on the phone, which is what we want
   google.maps.event.addListener(marker, 'mouseout', function() {
-    //infowindow.close(map,marker);
+    infowindow.close(map,marker);
   });
  };
 
