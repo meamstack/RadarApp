@@ -1,89 +1,89 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="styles/css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
-        <link rel="stylesheet" href="lib/mobile-nav.css">
-        <link rel="stylesheet" href="styles/css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles/css/main.css">
-        <script type="text/xml">
-            <oa:widgets>
-            <oa:widget wid="2187524" binding="#mapCanvas" />
-            </oa:widgets>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
+    <link rel="stylesheet" href="lib/mobile-nav.css">
+    <link rel="stylesheet" href="styles/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+    <script type="text/xml">
+        <oa:widgets>
+        <oa:widget wid="2187524" binding="#mapCanvas" />
+        </oa:widgets>
 
-        </script>
-        </head>
-        <body>
-            <div id='statusBar'></div>
-
-        <!-- Add your site or application content here -->
-          <mobile-view id="ng-app" ng-view></mobile-view>
-
-        <!-- phonegap helper files -->
-        <script src="js/inobounce.js"></script>
-        <script src="lib/jquery-2.0.3.min.js"></script>
-        <!-- libraries -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <script src="bower_components/angular/angular.js"></script>
-
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="cordova-2.7.0.js"></script>
-
-       <!-- controllers -->
-        <script src="js/controllers/main.js"></script>
-        <script src="js/controllers/map.js"></script>
-        <script src="js/controllers/createActivity.js"></script>
-        <script src="js/controllers/viewActivity.js"></script>
-        <script src="js/controllers/chat.js"></script>
-        <!-- directives -->
-        <script src="js/services/eventLocation.js"></script>
-        <script src="js/services/postToServer.js"></script>
-        <script src="js/services/google-map-factory.js"></script>
-        <script src="js/directives/activityButton.js"></script>
-        <script src="js/services/userData.js"></script>
-
-        <!-- phonegap helper files -->
-        <script src="js/lib/inobounce.js"></script>
-        <script src="js/lib/respond.min.js"></script>
-
-        <!-- main angular js files -->
-        <script src="js/index.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/config.js"></script>
-        <script src="lib/hammer.min.js"></script>
-        <script src="lib/jquery.hammer.min.js"></script>
-        <script src="js/lib/gestures.js"></script>
-        <script src="lib/freewall.js"></script>
-
-
-        <!-- other library files -->
-        <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-        <script src="lib/mobile-nav.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-              angular.bootstrap(document.getElementById('ng-app'), ['meetMeApp']);
-              app.initialize();
-              var wall = new freewall('mobile-view');
-              wall.fitWidth();
-            });
     </script>
-    </body>
+    </head>
+    <body>
+        <div id='statusBar'></div>
+
+    <!-- Add your site or application content here -->
+      <mobile-view id="ng-app" ng-view></mobile-view>
+
+    <!-- phonegap helper files -->
+    <script src="js/inobounce.js"></script>
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <!-- libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- build:js scripts/modules.js -->
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="cordova-2.7.0.js"></script>
+
+   <!-- controllers -->
+    <script src="js/controllers/main.js"></script>
+    <script src="js/controllers/map.js"></script>
+    <script src="js/controllers/createActivity.js"></script>
+    <script src="js/controllers/viewActivity.js"></script>
+    <script src="js/controllers/chat.js"></script>
+    <!-- directives -->
+    <script src="js/services/eventLocation.js"></script>
+    <script src="js/services/postToServer.js"></script>
+    <script src="js/services/google-map-factory.js"></script>
+    <script src="js/directives/activityButton.js"></script>
+    <script src="js/services/userData.js"></script>
+
+    <!-- phonegap helper files -->
+    <script src="js/lib/inobounce.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+
+    <!-- main angular js files -->
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="lib/hammer.min.js"></script>
+    <script src="lib/jquery.hammer.min.js"></script>
+    <script src="js/lib/gestures.js"></script>
+    <script src="lib/freewall.js"></script>
+
+
+    <!-- other library files -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <script src="lib/mobile-nav.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        angular.bootstrap(document.getElementById('ng-app'), ['meetMeApp']);
+        app.initialize();
+        var wall = new freewall('mobile-view');
+        wall.fitWidth();
+      });
+  </script>
+  </body>
 </html>
 
