@@ -1,6 +1,6 @@
 angular.module('meetMeApp.controller.map', [])
   .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, userData, $http, googleMapInit, googleMapLatLon) {
-    
+
     var initialize = function() {
       var promise = userData.init();
       promise.then(function(retrievedUserData) {
@@ -10,24 +10,32 @@ angular.module('meetMeApp.controller.map', [])
 
     initialize();
 
+    $scope.addPerson = function(socialEventId) {
+      console.log('hello');
+      alert(socialEventId, 'addperson');
+      // $http.post('/api/rsvp', socialEventId)
+      // .success(function(data) {
+      //   console.log('user rsvp\'d to event ', data);
+      // }).error(function(err) {
+      //   if(err) throw err;
+      // });
+    };
+
     $scope.addMarker = function () {
       map = googleMapInit.fetchMap();
-      
+
       //attaches the data to markers and renders el
       for (var i = 0; i < $scope.newEvents.length; i++) {
         var name =  $scope.newEvents[i].name;
         var img = $scope.newEvents[i].photo;
         var description = $scope.newEvents[i].description;
+        var evtId = $scope.newEvents[i]._id;
         var total = $scope.total || 1;//add this to the database
-        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson(event)">+</button></div>';
+        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson(' + evtId + ')">+</button></div>';
         googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
       }
     };
 
-    // $scope.addPerson = function () {
-    //   $scope.total++;
-    //   alert($scope.total);
-    // };
 
     //dummy data for $scope.newEvents
     // $scope.newEvents = [
