@@ -1,5 +1,5 @@
 # Radar #
-Upgrade your social life with Radar.
+**Upgrade your social life**
 
 Radar is a mobile-first location-based social app where users can discover events in their area, let others know about events they're hosting, and join events they want to attend. The map page shows all the events in a given area[, and allows users to swipe through different dates and times to view events in a given time frame]. [If users join an event, hosts will receive notification of the new attendee.]
 
@@ -20,7 +20,7 @@ Radar is coded in Javascript using AngularJS and the PhoneGap frameworks. App vi
 Hammer.js is used for multi-touch and swiping functionality, while Topcoat is used for 
 
 ## Contributors ##
-<a href="https://github.com/emailnitram">Martin Henry-Castaneda</a>
-<a href="https://github.com/moog16">Matthew Goo</a>
-<a href="https://github.com/eddyfh">Ed Hsieh</a>
+<a href="https://github.com/emailnitram">Martin Henry-Castaneda</a><br>
+<a href="https://github.com/moog16">Matthew Goo</a><br>
+<a href="https://github.com/eddyfh">Ed Hsieh</a><br>
 <a href="https://github.com/Yonet">Aysegul Yonet</a>
