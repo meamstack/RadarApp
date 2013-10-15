@@ -19,10 +19,30 @@ text
 h1
   margin: 0px
 
-.headerRight
+#mapHeader
+  width: 100%
+  height: 40px
+  z-index:2
+  font-size: 25px
+  color: #404040;
+  box-shadow: 0px 3px 3px #888888
+  background: #E0E0E0
+
+#mapHeaderBottom
+  width: 100%
+  height: 3px
+  z-index:2
+
+#headerRight
   float: right
-.headerLeft
+  padding: 0px 0px
+  margin: 15px 10px 0px 10px
+  font-size: 20px
+  color: #909090
+#headerLeft
   float: left
+  padding: 0px 0px
+  margin: 10px 10px 0px 10px
 
 #carrier-date-battery
   width: 100%
@@ -43,28 +63,35 @@ h1
   min-width: 300px
   min-height: 300px
   z-index: 0
+  box-shadow: 0px 3px 3px #888888
 
 #daySlider
   position: fixed
   float:left
   margin-left: 0
   width: 100%
-  height: 10%
-  min-height: 20px
+  height: 6%
+  min-height: 15px
   bottom:0
+  box-shadow: 0px 3px 3px #888888
+  margin-top: 3px
 
+#daySliderText
+  float: right
+  font-size: 20px
+  color: #909090
 
 #hourSlider, #daySlider
   background: blue
   overflow: hidden
 
 #hourSlider 
-  float: right
+  float: left
   margin-left: 0
   width: 10%
   height: 100%
   z-index:1
-
+  box-shadow: 3px 0px 3px #888888
   vertical-allign: middle
   color: off-white
 
