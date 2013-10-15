@@ -250,6 +250,13 @@ var debug_el = $("#debug");
           margin: 16px 16px;
         }
 
+        #carousel li h3 {
+          text-align: center;
+          text-shadow: -1px -1px 0 rgba(0,0,0,.2);
+          color: #fff;
+          margin: 16px 16px;
+        }
+
         #carousel li.pane1 { background: #43d692; }
         #carousel li.pane2 { background: #4a86e7; }
         #carousel li.pane3 { background: #d16b64; }
@@ -268,8 +275,15 @@ var debug_el = $("#debug");
 
         #fb {
           position: absolute;
-          left: 18%;
-          bottom: 20px;
+          left: 2%;
+          bottom: 40px;
+        }
+
+        #quick-guide {
+            height: 40px;
+            display: block;
+            line-height: 40px;
+            bottom: 73px;
         }
 
     </style>
@@ -279,29 +293,29 @@ var debug_el = $("#debug");
             <li class="pane1">
               <h2>Discover events</h2>
               <img src="https://s3-us-west-2.amazonaws.com/helenimages/discoverEvents.png" class="discoverEvents">
-              <h2>Check out events going on around you and click to see more details</h2>
-              <div class="fb-login">
+              <h3>Check out events going on around you and click to see more details</h3>
+              <!-- <div class="fb-login"> -->
                 <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
-              </div>
+              <!-- </div> -->
             </li>
             <li class="pane2">
               <h2>Create your own event!</h2>
               <img src="https://s3-us-west-2.amazonaws.com/helenimages/discoverEvents.png" class="discoverEvents">
-              <h2>Drag the blue pin and drop it on the location of your event.
-                  Click on the pin to create a new event.</h2>
+              <h3>Drag the blue pin and drop it on the location of your event.
+                  Click on the pin to create a new event.</h3>
               <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
             </li>
             <li class="pane3">
               <h2>Fill in the details</h2>
               <img src="https://s3-us-west-2.amazonaws.com/helenimages/createEvent.png" class="discoverEvents">
-              <h2>Take a picture or choose one from your library.
+              <h3>Take a picture or choose one from your library.
                   Enter a name and description and select an icon that represents what you are doing.
                   Choose a date and click Create!
-              </h2>
+              </h3>
               <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
             </li>
             <li class="pane4">
-              <h2>You can now view your new event and everything else going on around you.</h2>
+              <h3>You can now view your new event and everything else going on around you.</h3>
               <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
             </li>
             <!-- <li class="pane5">
