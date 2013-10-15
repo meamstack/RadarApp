@@ -71,7 +71,7 @@ angular.module('meetMeApp.controller.createActivity', [])
 
     $scope.takePic = function() {
       var options = {
-          quality: 50,
+          quality: 14,        // on scale of 0 - 100. 100 being full quality
           destinationType: 0, // 0: Data_URL, 1: File_URI
           sourceType: 1,      // 0: Photo Library, 1: Camera, 2: Saved Photo Album
           encodingType: 0,    // 0: JPG, 1: PNG,
@@ -86,9 +86,10 @@ angular.module('meetMeApp.controller.createActivity', [])
 
     $scope.openPhotoLib = function() {
       var options = {
-          quality: 50,
-          destinationType: Camera.DestinationType.DATA_URL,
+          quality: 14,
+          destinationType: 0,
           sourceType: 0,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+          allowEdit: true,
           encodingType: 0     // 0=JPG 1=PNG
       };
       // Take picture using device camera and retrieve image as base64-encoded string
