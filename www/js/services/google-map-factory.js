@@ -13,11 +13,11 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
       zoom: 14,
       center: latlng,
       navigationControl: false,
-      navigationControlOptions: 
+      navigationControlOptions:
         {style: google.maps.NavigationControlStyle.DEFAULT,
        position: google.maps.ControlPosition.TOP_LEFT },
       mapTypeControl: false,
-      mapTypeControlOptions: 
+      mapTypeControlOptions:
         {style: google.maps.MapTypeControlStyle.DEFAULT,
        position: google.maps.ControlPosition.TOP_RIGHT },
 
@@ -65,7 +65,7 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
    // Add a marker to the map at specified latitude and longitude with tooltip
   var addMarker = function(map,lat,long,el) {
       var infowindow = new google.maps.InfoWindow({
-        content:el, 
+        content:el,
         disableAutoPan: true
       });//disableAutoPan prevents skipping when info window opens
       var markerLatlng = new google.maps.LatLng(lat,long);
@@ -79,7 +79,7 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
   });
   //mouseout works when you click on something else on the phone, which is what we want
   google.maps.event.addListener(marker, 'mouseout', function() {
-    infowindow.close(map,marker);
+    //infowindow.close(map,marker);
   });
  };
 
