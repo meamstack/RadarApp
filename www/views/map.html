@@ -5,11 +5,16 @@
     <!-- {{user}} -->
     <!-- <p>Welcome {{user.name}}</p> -->
     <!-- <a href='#/main'>Main (testing link)</a> -->
-    <p class='headerLeft'>RADAR</p>
-    <p class='headerRight'>City: San Francisco</p>
-
+    <div id="mapHeader">
+	    <h1 id='headerLeft'>RADAR</h1>
+	    <p id='headerRight'><b>City: </b>San Francisco</p>
+    </div>
+    <div id='mapHeaderBottom'></div>
     <div id="mapCanvas" ></div>
-    <div id="hourSlider" class="slider">{{time}}
+    <div id="hourSlider" class="slider">{{hour}}:{{minute}}
+    </div>
+    <div id="daySlider" class="slider">
+    	<p id="daySliderText">Tuesday October 14, 2013<p>
     </div>
   </div>
 </div>

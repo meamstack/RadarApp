@@ -1,15 +1,20 @@
 <div class="hero-unit">
-  <h1>MeetMe</h1>
-  <br>
+  <h1>Radar</h1>
   <img src='img/meamteam.JPG'/>
-  <br><br>
   <a href='#/walkthrough'>swipe (testing link)</a>
-  <!-- <div ng-view="walkthrough">
-  </div> -->
-  <button class='topcoat-button' ng-click='login()'>Log in with Facebook</button>
 
-  <a ng-click='$navigate.go("/map", "slide")'>map</a>
-  <a ng-click='$navigate.go("/createActivity", "slide")'>create</a>
-  <a ng-click='$navigate.go("/chat", "slide")'>chat</a>
-
+  <button class='facebook topcoat-button' ng-click='login()'>Log in with Facebook</button>
+	<div id="links">
+		<div class="topcoat-button-bar">
+			<div class="topcoat-button-bar__item">
+		  <button class="topcoat-button-bar__button full" ng-click='$navigate.go("/map", "slide")'>Map</button>
+		  </div>
+		  <div class="topcoat-button-bar__item">
+		  <button class="topcoat-button-bar__button full" ng-click='$navigate.go("/createActivity", "slide")'>Create</button>
+		  </div>
+		  <div class="topcoat-button-bar__item">
+		  <button class="topcoat-button-bar__button full" ng-click='$navigate.go("/chat", "slide")'>Chat</button>
+		  </div>
+		</div>
+	</div>
 </div>
