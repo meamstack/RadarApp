@@ -2,6 +2,9 @@ blue = #accecd
 pink = #bc6367
 off-white = #fafffc
 
+@import 'reset.css'
+@import url(http://fonts.googleapis.com/css?family=Josefin\+Sans:400,700)
+
 body
   height: 100%
   width: 100%
@@ -10,32 +13,16 @@ body
   height:100%
   display:block
 
-.hero-unit
-  height: 100%
-  margin: 0px
-  float: left
-  width: 90%
-
 text
   clear: both
 
-#description
-  float: right
-
-p
-  position: center
-  top: 200px
-  left: 0
-
-img
-  display: block
-  width: 100%
-
-button
-  float: right
-
 h1
   margin: 0px
+
+.headerRight
+  float: right
+.headerLeft
+  float: left
 
 #carrier-date-battery
   width: 100%
@@ -72,7 +59,7 @@ h1
   overflow: hidden
 
 #hourSlider 
-  float: left
+  float: right
   margin-left: 0
   width: 10%
   height: 100%
@@ -107,3 +94,23 @@ h1
    text-shadow: -1px -1px #aa3030
    font-weight: normal
 
+#infoWindow
+  position: relative
+  overflow: hidden
+
+#description
+  margin: auto
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 20px
+  font-weight: 700
+
+button
+  float: right
+  right: 5px
+
+div img
+  width: 300px
+
+text
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 13

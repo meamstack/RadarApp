@@ -9,6 +9,8 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- CSS Files -->
+        <link rel="stylesheet" href="styles/css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
         <link rel="stylesheet" href="lib/mobile-nav.css">
         <link rel="stylesheet" href="styles/css/font-awesome/css/font-awesome.min.css">
@@ -20,10 +22,11 @@
 
         </script>
         </head>
-        <body ng-app="meetMeApp">
+        <body>
+            <div id='statusBar'></div>
 
         <!-- Add your site or application content here -->
-          <mobile-view ng-view=""></mobile-view>
+          <mobile-view id="ng-app" ng-view></mobile-view>
 
         <!-- phonegap helper files -->
         <script src="js/inobounce.js"></script>
@@ -66,6 +69,7 @@
         <script src="lib/hammer.min.js"></script>
         <script src="lib/jquery.hammer.min.js"></script>
         <script src="js/lib/gestures.js"></script>
+        <script src="lib/freewall.js"></script>
 
 
         <!-- other library files -->
@@ -73,9 +77,11 @@
         <script src="lib/mobile-nav.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-              angular.bootstrap(document, ['meetMeApp']);
+              angular.bootstrap(document.getElementById('ng-app'), ['meetMeApp']);
+              app.initialize();
+              var wall = new freewall('mobile-view');
+              wall.fitWidth();
             });
-            app.initialize();
     </script>
     </body>
 </html>
