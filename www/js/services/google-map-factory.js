@@ -1,6 +1,6 @@
 var googleMapFactory = angular.module("google-map-service", []);
 
-googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMapLatLon) {
+googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', function (googleMapLatLon, $http, $q) {
     // initialize the google Maps
    var localMap; // refer to map for events
 
@@ -83,14 +83,38 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
     google.maps.event.addListener(marker, 'mouseout', function() {
       //infowindow.close(map,marker);
     });
- };
+  };
+
+  var getMarkers = function() {
+    var d = $q.defer();
+    var url = 'http://54.200.135.103:9000/api';
+    var request = {
+      location: [37.800305,-122.409239],
+      date: {
+        year: 2013,
+        month: 10,
+        day: 06
+      },
+      maxD: 1
+    };
+    request = JSON.stringify(request);
+
+    $http.post(url + '/findEvents', request)
+      .success(function(data) {
+        d.resolve(data);
+    }).error(function(error){
+        d.resolve(error);
+    });
+    return d.promise;
+  };
+
 
   return {
     initializeGoogleMap: initializeGoogleMap,
     addMarker: addMarker,
-    fetchMap: fetchMap
-  }
+    fetchMap: fetchMap,
+    getMarkers: getMarkers
+  };
 
 }]);
-  
 // EndOAWidget_Instance_2187524
