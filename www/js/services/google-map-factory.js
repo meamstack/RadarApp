@@ -67,21 +67,21 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
    // Add a marker to the map at specified latitude and longitude with tooltip
   var addMarker = function(map,lat,long,el) {
     var infowindow = new google.maps.InfoWindow({
-      content:el,
-      disableAutoPan: true
+      content:el
     });//disableAutoPan prevents skipping when info window opens
     var markerLatlng = new google.maps.LatLng(lat,long);
     var marker = new google.maps.Marker({
-      position: markerLatlng,
+      position: markerLatlng, 
       map: map,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP, 
+      label: 1
     });
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map,marker);
     });
     //mouseout works when you click on something else on the phone, which is what we want
     google.maps.event.addListener(marker, 'mouseout', function() {
-      //infowindow.close(map,marker);
+      infowindow.close(map,marker);
     });
   };
 
@@ -107,7 +107,6 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
     });
     return d.promise;
   };
-
 
   return {
     initializeGoogleMap: initializeGoogleMap,

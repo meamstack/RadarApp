@@ -15,10 +15,12 @@ body
 
 text
   clear: both
- 
 
 h1
   margin: 0px
+
+.mapPage
+  background: #e0e0e0
 
 #mapHeader
   width: 100%
@@ -27,25 +29,26 @@ h1
   font-size: 25px
   color: #333
   box-shadow: 0px 3px 3px #888888
-  background: #333
+  background: #e0e0e0
 
 #mapHeaderBottom
   width: 100%
   height: 3px
   z-index:2
+  background: transparent
 
 #headerRight
   float: right
   padding: 0px 0px
-  margin: 15px 10px 0px 10px
-  font-size: 20px
-  color: #909090
+  margin: 14px 10px 0px 10px
+  font-size: 16px
+  color: #b0b0b0
   
 #headerLeft
   float: left
   font-size: 20px
   padding: 0px 0px
-  margin: 10px 10px 0px 10px
+  margin: 12px 10px 0px 10px
 
 #carrier-date-battery
   width: 100%
@@ -63,8 +66,8 @@ h1
   overlow: hidden
   width: 90%
   height: 100%
-  min-width: 300px
-  min-height: 300px
+  min-width: 220px
+  min-height: 250px
   z-index: 0
   box-shadow: 0px 3px 3px #888888
 
@@ -82,7 +85,8 @@ h1
 #daySliderText
   float: right
   font-size: 20px
-  color: #909090
+  color: #F0F0F0
+  padding: 0px 0px 15px 0px
 
 #hourSlider, #daySlider
   background: blue
@@ -97,6 +101,13 @@ h1
   box-shadow: 3px 0px 3px #888888
   vertical-allign: middle
   color: off-white
+
+#hourSliderText
+  font-weight: bold
+  margin-left: 1px
+  margin-top: 10px
+  color: #F0F0F0
+  font-size: 12px
 
 .focus
   color: off-white
@@ -139,7 +150,7 @@ button
   right: 5px
 
 div img
-  width: 300px
+  width: 200px
 
 text
   font-family: 'Josefin Sans', sans-serif

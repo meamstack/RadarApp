@@ -25,6 +25,10 @@ iPhoneApp.config(['$routeProvider',
       templateUrl: 'views/chat.html',
       controller: 'ChatCtrl'
     })
+    .when('/walkthrough', {
+      templateUrl: 'views/walkthrough.html',
+      controller: 'MainCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
