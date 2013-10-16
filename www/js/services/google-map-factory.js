@@ -72,7 +72,8 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', function (googleMa
       var marker = new google.maps.Marker({
         position: markerLatlng, 
         map: map,
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP, 
+        label: 1
       });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
