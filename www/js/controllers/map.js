@@ -80,7 +80,7 @@ angular.module('meetMeApp.controller.map', [])
       maxD: 1
     };
     request = JSON.stringify(request);
-    var url = 'http://54.200.135.103:9000/api';
+    var url = 'http://myradar.co/api';
     // var url = 'http://meetme123.com:3000/api';
 
 

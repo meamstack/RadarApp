@@ -18,7 +18,6 @@ border-radius()
   -moz-border-radius: argument
   border-radius: arguments
 
-
 .photoSource
   font: black
 
@@ -32,47 +31,31 @@ border-radius()
 
 .createActivity
   width: 100%
-  height: 100%
   padding: 0px
-  margin-top: 20px
+  margin-top: 0px
+  overflow: auto
+  -webkit-overflow-scrolling:touch
 
 .pictureSaved img
   width: 100%
-  height: 100%
+  height: 400px
 
 .photo
   position: relative
   width: 100%
-  height: 100%
-
-#eventDate
-  position: absolute
-  z-index: 1
-  opacity: 0
-  width: 140px
-  height: 37px
-
-.calendarIcon
-  pointer-events: none
-  position: relative
-  left: -71px
+  height: 400px
 
 .icon, .icon:visited
-  display: inline
   color: white
   text-decoration: none
 
-.icon-film
-  position: absolute
-  bottom: 0
-  right: 10px
+.icon-folder-open
+  padding-right: 18px
   color: white
   z-index: 2
 
 .icon-camera-retro
-  position: absolute
-  bottom: 0
-  left: 10px
+  padding-right: 18px
   color: white
   z-index: 2
 
@@ -80,30 +63,24 @@ border-radius()
   width 300px
   height: 400px
   margin: auto
-  overflow:hidden
+
   z-index: 0
 
 .createEvent
+  display: block
+  margin-left: auto
+  margin-right: auto
   margin-bottom: 30px
-  left: 50%
-  margin-left: -45px
-  height: 100%
   line-height: 2rem
   border-radius: 5px
-  width: 120px !important
-  height: 40px !important
+  width: 120px
+  height: 40px
   text-align: center
 
-.icon-calendar-empty
-  position:absolute
-  float: right
-
-
 .icon-map-marker
-  position:absolute
-  // bottom: 25px
-  left: 15px
-
+  padding-right: 18px
+  color: white
+  z-index: 2
 
 #eventDesc
   width: 80%
@@ -126,22 +103,28 @@ border-radius()
   border: none
 
 .submitNav
-  margin-top: 0px
   width: 100%
 
-  bottom: 0px
+.calendarWrapper
+  width: 100%
+  height: 50px
+
+.calendarDateSetter
+  width: 255px
+  margin-right: auto
+  margin-left: auto
+
+#eventDate
+  width: 250px
+  height: 37px
+  display: inline
+  font-size: 20px
 
 .dateSet
-  display: block
-  position: absolute
-  left: 46px
+  display: inline
   font-size: 13px
   pointer-events: none
   width: 113px
-
-.calendarDateSetter
-  position: absolute
-  left: 150px
 
 .block
   display:block
@@ -190,20 +173,29 @@ border-radius()
 .topcoat-text-input:invalid 
   border: 1px solid #d83b75
 
-#transparent
-  position: absolute
-  top: 350px
-  color: #333
-  opacity: 0.5
-  z-index: 1
-  height: 100%
-
-#footer
-  position: fixed
-  bottom: 0
+#createActivityHeader
   width: 100%
-  height: 30px
+  height: 40px
+  z-index:2
+  font-size: 25px
+  box-shadow: 0px 3px 3px #888888
   background: #191919
-  border-bottom-width: 1px
-  border-bottom-style: solid
-  border-top-color: #404040
+  display: block
+
+#caHeaderLeft
+  color: #fff
+  float: left
+  font-size: 20px
+  padding: 0px 0px
+  margin: 12px 10px 0px 10px
+
+#caHeaderRight
+  float: right
+  padding: 0px 0px
+  margin: 14px 10px 0px 10px
+  font-size: 16px
+  color: #b0b0b0
+
+.activityForm
+  overflow: auto
+  -webkit-overflow-scrolling:touch
