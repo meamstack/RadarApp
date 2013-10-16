@@ -1,3 +1,4 @@
+<div class="gridContainer clearfix">
 
 <div class="gridContainer clearfix" >
   
@@ -6,8 +7,8 @@
     <!-- <p>Welcome {{user.name}}</p> -->
     <!-- <a href='#/main'>Main (testing link)</a> -->
     <div id="mapHeader">
-	    <h1 id='headerLeft'>RADAR</h1>
-	    <p id='headerRight'>San Francisco</p>
+      <h1 id='headerLeft'>RADAR</h1>
+      <p id='headerRight'>San Francisco</p>
     </div>
     <div id='mapHeaderBottom'></div>
     <div id="mapCanvas" ></div>
@@ -15,7 +16,9 @@
         <div id="hourSliderText">{{hour}}:{{minute}}</div>
     </div>
     <div id="daySlider" class="slider">
-    	<div id="daySliderText">Tuesday October 14, 2013<div>
+    <map-markers events="newEvents"></map-markers>
+      <button ng-click="addPerson()">hello</button>
+      <div id="daySliderText">Tuesday October 14, 2013<div>
     </div>
   </div>
 </div>
