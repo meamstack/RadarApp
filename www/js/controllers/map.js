@@ -2,7 +2,7 @@ angular.module('meetMeApp.controller.map', [])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
     var date = new Date();
     $scope.hour = date.getHours();
-    $scope.minute = date.getMinutes();
+    $scope.minute = (0+date.getMinutes().toString()).slice(-2);
 
     var initialize = function() {
       var promise = userData.init();
@@ -100,7 +100,7 @@ angular.module('meetMeApp.controller.map', [])
       maxD: 1
     };
     request = JSON.stringify(request);
-    var url = 'http://54.200.135.103:9000/api';
+    var url = 'http://myradar.co/api';
     // var url = 'http://meetme123.com:3000/api';
 
 
