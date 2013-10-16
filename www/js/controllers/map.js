@@ -1,5 +1,5 @@
 angular.module('meetMeApp.controller.map', [])
-  .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, userData, $http, googleMapInit, googleMapLatLon) {
+  .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
     var date = new Date();
     $scope.hour = date.getHours();
     $scope.minute = date.getMinutes();
@@ -13,16 +13,25 @@ angular.module('meetMeApp.controller.map', [])
 
     initialize();
 
-    $scope.addPerson = function(socialEventId) {
-      console.log('hello');
-      alert(socialEventId, 'addperson');
+      $scope.addEventData = function (i) {
+
+      }
+      //user should be able to add to event only once 
+
+
+      $scope.addPerson = function(i) {
+      //var event = $scope.newEvents[i];
+      var total = event.total || 1;
+      total++;
+      alert(total);
+      //var user = userData.getUser();
       // $http.post('/api/rsvp', socialEventId)
       // .success(function(data) {
       //   console.log('user rsvp\'d to event ', data);
       // }).error(function(err) {
       //   if(err) throw err;
       // });
-    };
+    }
 
     $scope.addMarker = function () {
       map = googleMapInit.fetchMap();
@@ -34,7 +43,18 @@ angular.module('meetMeApp.controller.map', [])
         var description = $scope.newEvents[i].description;
         var evtId = $scope.newEvents[i]._id;
         var total = $scope.total || 1;//add this to the database
-        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson(' + evtId + ')">+</button></div>';
+        // el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text ng-init="total="'+ total +'"">People attending: {{total}} </text><button ng-click="function(total){return ++;}">+</button></div>';
+        // console.log($scope);
+
+        // begin larry cod
+        content = '<div id="infoWindow" ng-init="event=newEvents['+i+']"><p id="description">{{event.description}}</p><img src="{{event.img}}"></img><br><text>People attending: {{event.total}} </text><button ng-click="addPerson()">+</button></div>';
+        //var content = '<div id="infowindow_content">{{'+total+'}}<button ng-click="addPerson('+i+')">+</button></div>';
+        console.log('Compiling', content);
+        var compiled = $compile(content)($scope);
+        var el = compiled[i];
+        console.log('Compiled HTML', el);
+        // end larry code
+
         googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
       }
     };
