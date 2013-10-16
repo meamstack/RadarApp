@@ -29,14 +29,39 @@ angular.module('meetMeApp.controller.map', [])
     };
 
 
-  var eventPromise = googleMapInit.getMarkers();
-  eventPromise.then(function(events) {
-    $scope.newEvents = events;
-    console.log($scope.newEvents);
-    $scope.addMarker();
-  });
 
-  googleMapInit.initializeGoogleMap();
+    var eventPromise = googleMapInit.getMarkers();
+    eventPromise.then(function(events) {
+      $scope.newEvents = events;
+      console.log($scope.newEvents);
+      $scope.addMarker();
+    });
+
+
+    // var request = {
+    //   location: [37.800305,-122.409239],
+    //   date: {
+    //     year: 2013,
+    //     month: 10,
+    //     day: 06
+    //   },
+    //   maxD: 1
+    // };
+    // request = JSON.stringify(request);
+    // var url = 'http://myradar.co/api';
+    // // var url = 'http://meetme123.com:3000/api';
+
+
+    // $http.post(url + '/findEvents', request)
+    // .success(function(data) {
+    //   $scope.newEvents = data;
+    //   $scope.addMarker();
+    // })
+    // .error(function(error){
+    //   $scope.newEvents = error;
+    // });
+
+   googleMapInit.initializeGoogleMap();
 
 }]);
 

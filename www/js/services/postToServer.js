@@ -3,7 +3,7 @@ angular.module("meetMeApp.service.postToServer", [])
     var picData = null;
     var eventName = null;
     var description = null;
-    var urlPath = 'http://54.200.135.103:9000';
+    var urlPath = 'http://myradar.co';
     // var urlPath = 'http://localhost:3000';
 
 
