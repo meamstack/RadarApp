@@ -1,31 +1,9 @@
 iPhoneApp.config(['$routeProvider',
   function ($routeProvider) {
-
-    var checkLoggedin = function($q, $timeout, $http, $location){
-      // Initialize a new promise
-      var deferred = $q.defer();
-
-      // Make an AJAX call to check if the user is logged in
-      $http.get('/auth/facebook').success(function(user){
-        if (user) {
-          // Authenticated
-          $timeout(deferred.resolve, 0);
-        } else {
-          // Not Authenticated
-          $timeout(function(){deferred.reject();}, 0);
-          $location.url('/login');
-        }
-      });
-      return deferred.promise;
-    };
-
     $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
-      controller: 'MainCtrl',
-      resolve: {
-        loggedin: checkLoggedin
-      }
+      controller: 'MainCtrl'
     })
     .when('/main', {
       templateUrl: 'views/main.html',
@@ -55,6 +33,18 @@ iPhoneApp.config(['$routeProvider',
 .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  }
+])
+.run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
+    var promise = loginCheck();
+    promise.then(function(credential) {
+      console.log(credential);
+      if(credential === 'true') {
+        $location.path('/map');
+      } else {
+        $location.path('/');
+      }
+    });
   }
 ]);
 
