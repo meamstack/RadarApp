@@ -22,7 +22,7 @@ Radar is coded in Javascript using AngularJS and the PhoneGap frameworks. App vi
 Hammer.js is used for multi-touch and swiping functionality, while Topcoat and Stylus are used for CSS and preprocessing. The Grunt task runner is used to automate updating of CSS files.
 
 ## Contributors ##
-<a href="https://github.com/emailnitram">Martin Henry-Castaneda</a><br>
 <a href="https://github.com/moog16">Matthew Goo</a><br>
+<a href="https://github.com/emailnitram">Martin Henry-Castaneda</a><br>
 <a href="https://github.com/eddyfh">Ed Hsieh</a><br>
 <a href="https://github.com/Yonet">Aysegul Yonet</a>
