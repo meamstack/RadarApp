@@ -1,36 +1,36 @@
 angular.module("meetMeApp.directive.map", []);
 googleMapFactory.directive('mapMarkers', ['$q', 'googleMapInit', function($q, googleMapInit) {
-  var el = '<button ng-click="addPerson()">+</button>';
-  return {
-    restrict: 'EA',
-    transclude: true,
-    scope: {
-      events: '='
-      // location: '='
-    },
-    template: '_______________________________________' + events[0].name,
-    // '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson()">+</button></div>',
-    compile: function(tElement, tAttrs, transclude) {
-      var link = function(scope, ele, attrs, ctrl) {
-        // Initialize google maps
-        // googleMapInit.initializeGoogleMap();
-        // Add all the markers
-        // scope.$watch(events, function() {
-        //   console.log(events.length);
-        // });
-        // for (var i = 0; i < scope.events.length; i++) {
-          // console.log(i);
-          // var marker = tAttrs.markers[i];
-          // scope.event = marker;
-          // var e = transclude(scope, function(clone) {
-          //   // Individual marker element
-          // });
-        // Set up map controls
-      };
+  // var el = '<button ng-click="addPerson()">+</button>';
+  // return {
+  //   restrict: 'EA',
+  //   transclude: true,
+  //   scope: {
+  //     events: '='
+  //     // location: '='
+  //   },
+  //   template: '_______________________________________' + events[0].name,
+  //   // '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson()">+</button></div>',
+  //   compile: function(tElement, tAttrs, transclude) {
+  //     var link = function(scope, ele, attrs, ctrl) {
+  //       // Initialize google maps
+  //       // googleMapInit.initializeGoogleMap();
+  //       // Add all the markers
+  //       // scope.$watch(events, function() {
+  //       //   console.log(events.length);
+  //       // });
+  //       // for (var i = 0; i < scope.events.length; i++) {
+  //         // console.log(i);
+  //         // var marker = tAttrs.markers[i];
+  //         // scope.event = marker;
+  //         // var e = transclude(scope, function(clone) {
+  //         //   // Individual marker element
+  //         // });
+  //       // Set up map controls
+  //     };
 
-      return link;
-    }
-  };
+  //     return link;
+  //   }
+  
 }]);
 /*
     $scope.addMarker = function () {

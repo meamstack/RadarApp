@@ -1,5 +1,7 @@
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
+
+    $scope.myMarkers = [];
     $scope.mapOptions = {
       center: new google.maps.LatLng(37.79,-122.4),
       zoom: 13,
@@ -20,27 +22,62 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       draggable: true,
       disableDoubleClickZoom: false,
       keyboardShortcuts: true
-      // mapTypeId: google.maps.MapTypeId.ROADMAP,
-      // disableDefaultUI: true,
-      // zoomControl: true,
-      // style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
   };
-  $scope.mapTypes = [
-    google.maps.MapTypeId.ROADMAP,
-    google.maps.MapTypeId.SATELLITE,
-    google.maps.MapTypeId.HYBRID,
-    google.maps.MapTypeId.TERRAIN
-  ]
-  $scope.$watch('mapOptions.zoom', function(n) {
-    if (n) {
-      $scope.myMap.setOptions($scope.mapOptions);
-    }
-  });
-  $scope.$watch('mapOptions.mapTypeId', function(n) {
-    if (n) {
-      $scope.myMap.setOptions($scope.mapOptions);
-    }
-  })
+
+  $scope.addMarker = function ($event) {
+    console.log('addMarker');
+    $scope.myMarkers.push(new google.maps.Marker({
+      map: $scope.myMap,
+      position: $scope.myMap['center']//change to event location
+    }))
+  }
+  $scope.openMarkerInfo = function(marker) {
+    $scope.currentMarker = marker;
+    $scope.currentMarkerLat = marker.getPosition().lat();
+    $scope.currentMarkerLng = marker.getPosition().lng();
+    $scope.myInfoWindow.open($scope.myMap, marker);
+  };
+   
+  $scope.addPerson = function(total) {
+    var total = total || 1;
+    total++;
+    console.log(total);
+  };
+  $scope.newEvents = function ($event) {
+    var request = {
+      location: [37.800305,-122.409239],
+      date: {
+        year: 2013,
+        month: 10,
+        day: 06
+      },
+      maxD: 1
+    };
+    request = JSON.stringify(request);
+    var url = 'http://myradar.co/api';
+    // var url = 'http://meetme123.com:3000/api';
+
+
+    $http.post(url + '/findEvents', request)
+    .success(function(data) {
+      $scope.newEvents = data;
+    })
+    .error(function(error){
+      $scope.newEvents = error;
+    });
+    $scope.newEvents[0];
+  }
+  $scope.newEvents();
+  // $scope.$watch('mapOptions.zoom', function(n) {
+  //   if (n) {
+  //     $scope.myMap.setOptions($scope.mapOptions);
+  //   }
+  // });
+  // $scope.$watch('mapOptions.mapTypeId', function(n) {
+  //   if (n) {
+  //     $scope.myMap.setOptions($scope.mapOptions);
+  //   }
+  // })
    //  var date = new Date();
    //  $scope.hour = date.getHours();
    //  $scope.minute = date.getMinutes();
@@ -112,30 +149,30 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
    //  });
 
 
-   //  // var request = {
-   //  //   location: [37.800305,-122.409239],
-   //  //   date: {
-   //  //     year: 2013,
-   //  //     month: 10,
-   //  //     day: 06
-   //  //   },
-   //  //   maxD: 1
-   //  // };
-   //  // request = JSON.stringify(request);
-   //  // var url = 'http://myradar.co/api';
-   //  // // var url = 'http://meetme123.com:3000/api';
+    // var request = {
+    //   location: [37.800305,-122.409239],
+    //   date: {
+    //     year: 2013,
+    //     month: 10,
+    //     day: 06
+    //   },
+    //   maxD: 1
+    // };
+    // request = JSON.stringify(request);
+    // var url = 'http://myradar.co/api';
+    // // var url = 'http://meetme123.com:3000/api';
 
 
-   //  // $http.post(url + '/findEvents', request)
-   //  // .success(function(data) {
-   //  //   $scope.newEvents = data;
-   //  //   $scope.addMarker();
-   //  // })
-   //  // .error(function(error){
-   //  //   $scope.newEvents = error;
-   //  // });
-
+    // $http.post(url + '/findEvents', request)
+    // .success(function(data) {
+    //   $scope.newEvents = data;
+    // })
+    // .error(function(error){
+    //   $scope.newEvents = error;
+    // });
+    // $scope.newEvents[0];
    // googleMapInit.initializeGoogleMap();
+   // google.maps.event.addDomListener(window, 'load', initialize);
 
 }]);
 

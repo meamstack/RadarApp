@@ -47,16 +47,7 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
       googleMapLatLon.set(lat, lng);
       window.location.href = centerMarker.url;
     });
-    /*
-    if (false) {
-      var trafficLayer = new google.maps.TrafficLayer();
-      trafficLayer.setMap(map);
-    }
-    if (false) {
-      var bikeLayer = new google.maps.BicyclingLayer();
-      bikeLayer.setMap(map);
-    }
-    */
+
     localMap = map; // reference map for future use
   };
 
@@ -115,6 +106,14 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
     fetchMap: fetchMap,
     getMarkers: getMarkers
   };
+  // function loadScript() {
+  //   var script = document.createElement('script');
+  //   script.type = 'text/javascript';
+  //   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&' +
+  //       'callback=initialize';
+  //   document.body.appendChild(script);
+  // }
 
+  // window.onload = loadScript;
 }]);
 // EndOAWidget_Instance_2187524
