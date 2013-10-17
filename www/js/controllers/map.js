@@ -62,6 +62,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     };
     request = JSON.stringify(request);
     var url = 'http://myradar.co/api';
+
     $http.post(url + '/findEvents', request)
     .success(function(data) {
       $scope.newEvents = data;

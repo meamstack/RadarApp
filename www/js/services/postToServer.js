@@ -4,7 +4,6 @@ angular.module("meetMeApp.service.postToServer", [])
     var eventName = null;
     var description = null;
     var urlPath = 'http://myradar.co';
-    // var urlPath = 'http://localhost:3000';
 
 
     var send = function(options, cb) {

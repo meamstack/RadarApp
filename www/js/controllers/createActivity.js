@@ -15,7 +15,6 @@ angular.module('meetMeApp.controller.createActivity', [])
         activity: $scope.activity,
         location: $scope.latlon,
         userId: $scope.userID
-        // userId: $scope.createActivityUser._id
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
