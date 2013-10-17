@@ -1,33 +1,9 @@
 iPhoneApp.config(['$routeProvider',
   function ($routeProvider) {
-
-    // TODO: work on going to map page automatically when logged in
-    // var checkLoggedin = function($q, $timeout, $http, $location, $rootScope){
-    //   // Initialize a new promise
-    //   var deferred = $q.defer();
-
-    //   // Make an AJAX call to check if the user is logged in
-    //   $http.get('http://meetme123.com:3000/loggedin').success(function(user){
-    //     // Authenticated
-    //     if (user !== '0') {
-    //       $timeout(deferred.resolve, 0);
-    //     }
-    //     // Not Authenticated
-    //     else {
-    //       $timeout(function(){deferred.reject();}, 0);
-    //       $location.url('/main');
-    //     }
-    //   });
-    //   return deferred.promise;
-    // };
-
     $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
-      // , resolve: {
-      //   loggedin: checkLoggedin
-      // }
     })
     .when('/main', {
       templateUrl: 'views/main.html',
@@ -61,6 +37,18 @@ iPhoneApp.config(['$routeProvider',
 .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  }
+])
+.run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
+    var promise = loginCheck();
+    promise.then(function(credential) {
+      console.log(credential);
+      if(credential === 'true') {
+        $location.path('/map');
+      } else {
+        $location.path('/');
+      }
+    });
   }
 ]);
 
