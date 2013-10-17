@@ -37,6 +37,18 @@ angular.module('meetMeApp.controller.map', [])
       $scope.addMarker();
     });
 
+    var request = {
+      location: [37.800305,-122.409239],
+      date: {
+        year: 2013,
+        month: 10,
+        day: 06
+      },
+      maxD: 1
+    };
+    request = JSON.stringify(request);
+    var url = 'http://myradar.co/api';
+    // var url = 'http://meetme123.com:3000/api';
 
     // var request = {
     //   location: [37.800305,-122.409239],
