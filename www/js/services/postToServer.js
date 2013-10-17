@@ -5,6 +5,7 @@ angular.module("meetMeApp.service.postToServer", [])
     var description = null;
     var urlPath = 'http://myradar.co';
 
+
     var send = function(options, cb) {
       options = JSON.stringify(options);
       $http.post(urlPath + '/api/createEvent', options)

@@ -1,77 +1,58 @@
-angular.module('meetMeApp.controller.map', [])
-  .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, userData, $http, googleMapInit, googleMapLatLon) {
-    var date = new Date();
-    $scope.hour = date.getHours();
-    $scope.minute = (0+date.getMinutes().toString()).slice(-2);
+angular.module('meetMeApp.controller.map', ['ui.map'])
+  .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
 
-    var initialize = function() {
-      var promise = userData.init();
-      promise.then(function(retrievedUserData) {
-        $scope.user = retrievedUserData;
-      });
-    };
+    $scope.myMarkers = [];
+    $scope.mapOptions = {
+      center: new google.maps.LatLng(37.79,-122.4),
+      zoom: 13,
+      navigationControl: false,
+      navigationControlOptions: {
+        style: google.maps.NavigationControlStyle.DEFAULT,
+        position: google.maps.ControlPosition.TOP_LEFT },
+      mapTypeControl: false,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.DEFAULT,
+        position: google.maps.ControlPosition.TOP_RIGHT },
 
-    initialize();
+      scaleControl: false,
+      scaleControlOptions: {
+        position: google.maps.ControlPosition.BOTTOM_LEFT },
+      streetViewControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      draggable: true,
+      disableDoubleClickZoom: false,
+      keyboardShortcuts: true
+  };
 
-    $scope.addPerson = function(socialEventId) {
-      console.log('hello');
-      alert(socialEventId, 'addperson');
-      // $http.post('/api/rsvp', socialEventId)
-      // .success(function(data) {
-      //   console.log('user rsvp\'d to event ', data);
-      // }).error(function(err) {
-      //   if(err) throw err;
-      // });
-    };
+  $scope.addMarker = function (objs) {
 
-    $scope.addMarker = function () {
-      map = googleMapInit.fetchMap();
+    angular.forEach(objs, function(obj) {
+      $scope.myMarkers.push(new google.maps.Marker({
+        map: $scope.myMap,
+        position: new google.maps.LatLng(obj.location[0], obj.location[1]),
+        animation: google.maps.Animation.DROP,
+        obj: obj
+      }))
+    })
+  };
+  
+  $scope.openMarkerInfo = function (marker) {
 
-      //attaches the data to markers and renders el
-      for (var i = 0; i < $scope.newEvents.length; i++) {
-        var name =  $scope.newEvents[i].name;
-        var img = $scope.newEvents[i].photo;
-        var description = $scope.newEvents[i].description;
-        var evtId = $scope.newEvents[i]._id;
-        var total = $scope.total || 1;//add this to the database
-        el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text>People attending: ' + total + '</text><button ng-click="addPerson(' + evtId + ')">+</button></div>';
-        googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
-      }
-    };
+    $scope.currentMarker = marker;
+    $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
+    $scope.currentMarkerImg = marker.obj['photo'];
+    $scope.currentMarkerTotal = 1;//marker.obj['total'] || 1;
+    $scope.currentMarkerAddPerson = function() {var num = 1; num++;$scope.currentMarkerTotal = num;}//function() {$scope.currentMarkerTotal++;};
+    $scope.myInfoWindow.open($scope.myMap, marker);
 
-
-    //dummy data for $scope.newEvents
-    // $scope.newEvents = [
-    //     {
-    //       name: "Free pizza @ Hack reactor!",
-    //       description: 'awesomeness!',
-    //       location: [37.785427,-122.40572],
-    //       time: 'Fri Oct 11 2013 16:59:16 GMT-0700 (PDT)',
-    //       photo: 'img/fun.jpg',
-    //       activity: 'eat'
-    //     }, {
-    //       name: "Goo time!",
-    //       description: 'Who knows what!',
-    //       location: [37.789984,-122.40523],
-    //       time: 'Fri Nov 01 2013 00:00:00 GMT-0700 (PDT)',
-    //       photo: 'img/fun.jpg',
-    //       activity: 'party'
-    //     }, {
-    //       name: 'Thursday night footbal!!',
-    //       description: 'Chips and tacos',
-    //       location: [37.7836,-122.408904],
-    //       time: new Date(2013, 10,01),
-    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
-    //       activity: 'pizza'
-    //     }
-    // ];
-
-    // $scope.setLocation = function(){
-      // googleMapLatLon.set(37.705427,-122.39572);
-    // };
-
+  };
+   
+  // $scope.addPerson = function (currentMarker) {
+  //   $scope.currentMarkerTotal++;
+  // };
+  $scope.newEvents = function ($event) {
     var request = {
-      location: [37.800305,-122.409239],
+      location: $scope.mapOptions['center'],
       date: {
         year: 2013,
         month: 10,
@@ -85,14 +66,13 @@ angular.module('meetMeApp.controller.map', [])
     $http.post(url + '/findEvents', request)
     .success(function(data) {
       $scope.newEvents = data;
-      $scope.addMarker();
+      $scope.addMarker($scope.newEvents);
+      console.log($scope.newEvents);
     })
     .error(function(error){
-      alert('this is the error',error)
       $scope.newEvents = error;
     });
-
-    googleMapInit.initializeGoogleMap();
+  }
 
 }]);
 

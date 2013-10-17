@@ -1,21 +1,37 @@
+<div class="gridContainer clearfix">
 
 <div class="gridContainer clearfix" >
   
   <div id="LayoutDiv1" class="mapPage">
-    <!-- {{user}} -->
-    <!-- <p>Welcome {{user.name}}</p> -->
-    <!-- <a href='#/main'>Main (testing link)</a> -->
+
     <div id="mapHeader">
+
 	    <h2 id='headerLeft'>RADAR</h2>
 	    <p id='headerRight'>San Francisco</p>
     </div>
     <div id='mapHeaderBottom'></div>
-    <div id="mapCanvas" ></div>
-    <div id="hourSlider" class="slider">
+
+    <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
+      ui-event="{'map-click': 'openMarkerInfo(marker)'}">
+    </div>
+ 
+    <div ui-map-info-window="myInfoWindow">
+      <p id="description" ng-model="currentMarkerDes">{{currentMarkerDes.name}} : {{currentMarkerDes.description}}</p>
+      <img ng-src="{{currentMarkerImg}}">
+      <text ng-model="currentMarkerTotal">People attending: {{currentMarkerTotal}} </text>
+      <a ng-click="currentMarkerAddPerson()">+1</a>
+    </div>
+    <div ui-map="myMap" 
+      ui-options="mapOptions" 
+      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'newEvents($event)'}" ui-options="mapOptions">
+    </div>
+    <!-- </section> -->
+    <!-- <div id="hourSlider" class="slider">
         <div id="hourSliderText">{{hour}}:{{minute}}</div>
     </div>
     <div id="daySlider" class="slider">
-    	<div id="daySliderText">Tuesday October 14, 2013<div>
-    </div>
+    <map-markers events="newEvents"></map-markers>
+      <div id="daySliderText">Tuesday October 14, 2013<div>
+    </div> -->
   </div>
 </div>

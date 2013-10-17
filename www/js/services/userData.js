@@ -16,8 +16,6 @@ angular.module("meetMeApp.service.userData", [])
     return {
       init: init,
       getUser: function(){
-        // alert('user',user);
-        // console.log('user',user);
         return user;
       }
     };
