@@ -11,11 +11,14 @@
     </div>
     <div id='mapHeaderBottom'></div>
     <div id="mapCanvas" ></div>
+
+    <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
+      <div id="hourSliderText">{{hourpm}}:{{minute}}{{ampm}}</div>
+    </div>
+  	<div id="daySliderText">Tuesday October 14, 2013<div>
     <!-- <div id="hourSlider" class="slider"> -->
-        <!-- <div id="hourSliderText">{{hour}}:{{minute}}</div> -->
     <!-- </div> -->
     <!-- <div id="daySlider" class="slider"> -->
-    	<!-- <div id="daySliderText">Tuesday October 14, 2013<div> -->
     <!-- </div> -->
   </div>
 </div>
