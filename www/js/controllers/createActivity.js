@@ -11,6 +11,7 @@ angular.module('meetMeApp.controller.createActivity', [])
         name: $scope.eventName,
         description: $scope.description,
         time: date[0].value,
+        total:1,
         photo: $scope.picData,
         activity: $scope.activity,
         location: $scope.latlon,

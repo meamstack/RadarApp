@@ -15,11 +15,11 @@
       ui-event="{'map-click': 'openMarkerInfo(marker)'}">
     </div>
  
-    <div ui-map-info-window="myInfoWindow">
+    <div ui-map-info-window="myInfoWindow" id="infoWindow">
       <p id="description" ng-model="currentMarkerDes">{{currentMarkerDes.name}} : {{currentMarkerDes.description}}</p>
       <img ng-src="{{currentMarkerImg}}">
       <text ng-model="currentMarkerTotal">People attending: {{currentMarkerTotal}} </text>
-      <a ng-click="currentMarkerAddPerson()">+1</a>
+      <a>+1</a>
     </div>
     <div ui-map="myMap" 
       ui-options="mapOptions" 
