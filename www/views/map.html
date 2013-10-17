@@ -19,7 +19,7 @@
     </div>
  
     <div ui-map-info-window="myInfoWindow">
-      <p id="description">title</p>
+      <p id="description" ng-model="currentMarkerDes">{{description}}</p>
       <!-- Lat: <input ng-model="currentMarkerLat">, Lng: <input ng-model="currentMarkerLng"> -->
       <a ng-click="addPerson()">++++</a>
     </div>

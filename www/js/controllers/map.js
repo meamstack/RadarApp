@@ -24,17 +24,17 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
   };
 
-  $scope.addMarker = function ($index) {
+  $scope.addMarker = function (evnt) {
 
-    console.log('addMarker');
+    console.log('addMarker' + $index);
     $scope.myMarkers.push(new google.maps.Marker({
       map: $scope.myMap,
-      position: $scope.myMap['center']//change to event location
+      position: evnt.['location']//change to event location
     }))
   }
   $scope.openMarkerInfo = function(marker) {
     $scope.currentMarker = marker;
-    $scope.currentMarkerLat = marker.getPosition().lat();
+    $scope.currentMarkerDes = marker.getPosition().lat();
     $scope.currentMarkerLng = marker.getPosition().lng();
     $scope.myInfoWindow.open($scope.myMap, marker);
   };
@@ -62,16 +62,14 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $http.post(url + '/findEvents', request)
     .success(function(data) {
       $scope.newEvents = data;
-      angular.forEach($scope.newEvents, $scope.addMarker);
+      angular.forEach($scope.newEvents, $scope.addMarker(evnt));
       console.log(data);
 
     })
     .error(function(error){
       $scope.newEvents = error;
     });
-    $scope.newEvents[0];
   }
-  $scope.newEvents();
   // $scope.$watch('mapOptions.zoom', function(n) {
   //   if (n) {
   //     $scope.myMap.setOptions($scope.mapOptions);
