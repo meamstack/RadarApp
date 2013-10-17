@@ -24,7 +24,8 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
   };
 
-  $scope.addMarker = function ($event) {
+  $scope.addMarker = function ($index) {
+
     console.log('addMarker');
     $scope.myMarkers.push(new google.maps.Marker({
       map: $scope.myMap,
@@ -45,7 +46,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
   };
   $scope.newEvents = function ($event) {
     var request = {
-      location: [37.800305,-122.409239],
+      location: $scope.mapOptions['center'],
       date: {
         year: 2013,
         month: 10,
@@ -61,6 +62,9 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $http.post(url + '/findEvents', request)
     .success(function(data) {
       $scope.newEvents = data;
+      angular.forEach($scope.newEvents, $scope.addMarker);
+      console.log(data);
+
     })
     .error(function(error){
       $scope.newEvents = error;
