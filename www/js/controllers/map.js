@@ -25,38 +25,31 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
   };
 
   $scope.addMarker = function (objs) {
-    //console.log(obj);
-    // console.log('addMarker' + $index[0]);
-    // objs.each(obj, function (){}) 
-    //   console.log(obj);
-    //for (var i = 0; )
+
     angular.forEach(objs, function(obj) {
-      console.log(obj.location);
       $scope.myMarkers.push(new google.maps.Marker({
-      map: $scope.myMap,
-      position: new google.maps.LatLng(obj.location[0], obj.location[1])
+        map: $scope.myMap,
+        position: new google.maps.LatLng(obj.location[0], obj.location[1]),
+        animation: google.maps.Animation.DROP,
+        obj: obj
       }))
     })
-    // $scope.myMarkers.push(new google.maps.Marker({
-    //   map: $scope.myMap,
-    //   position: $scope.myMap.center
-      //position: new google.maps.LatLng(obj['lb'],obj['mb'])
-      //change to event location
-    
   };
   
-  $scope.openMarkerInfo = function(marker) {
+  $scope.openMarkerInfo = function (marker) {
+
     $scope.currentMarker = marker;
-    $scope.currentMarkerDes = marker.getPosition().lat();
-    $scope.currentMarkerLng = marker.getPosition().lng();
+    $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
+    $scope.currentMarkerImg = marker.obj['photo'];
+    $scope.currentMarkerTotal = 1;//marker.obj['total'] || 1;
+    $scope.currentMarkerAddPerson = function() {var num = 1; num++;$scope.currentMarkerTotal = num;}//function() {$scope.currentMarkerTotal++;};
     $scope.myInfoWindow.open($scope.myMap, marker);
+
   };
    
-  $scope.addPerson = function(total) {
-    var total = total || 1;
-    total++;
-    console.log(total);
-  };
+  // $scope.addPerson = function (currentMarker) {
+  //   $scope.currentMarkerTotal++;
+  // };
   $scope.newEvents = function ($event) {
     var request = {
       location: $scope.mapOptions['center'],
@@ -69,125 +62,16 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     };
     request = JSON.stringify(request);
     var url = 'http://myradar.co/api';
-    // var url = 'http://meetme123.com:3000/api';
-
-
     $http.post(url + '/findEvents', request)
     .success(function(data) {
       $scope.newEvents = data;
       $scope.addMarker($scope.newEvents);
       console.log($scope.newEvents);
-
     })
     .error(function(error){
       $scope.newEvents = error;
     });
   }
-  // $scope.$watch('mapOptions.zoom', function(n) {
-  //   if (n) {
-  //     $scope.myMap.setOptions($scope.mapOptions);
-  //   }
-  // });
-  // $scope.$watch('mapOptions.mapTypeId', function(n) {
-  //   if (n) {
-  //     $scope.myMap.setOptions($scope.mapOptions);
-  //   }
-  // })
-   //  var date = new Date();
-   //  $scope.hour = date.getHours();
-   //  $scope.minute = date.getMinutes();
-
-   //  var initialize = function() {
-   //    var promise = userData.init();
-   //    promise.then(function(retrievedUserData) {
-   //      $scope.user = retrievedUserData;
-
-   //    });
-   //  };
-
-   //  initialize();
-
-   //    $scope.addEventData = function (i) {
-
-   //    }
-   //    //user should be able to add to event only once 
-
-
-   //    $scope.addPerson = function(i) {
-   //    //var event = $scope.newEvents[i];\
-   //    console.log('clicked');
-   //    var total = event.total || 1;
-   //    total++;
-   //    alert(total);
-   //    //var user = userData.getUser();
-   //    // $http.post('/api/rsvp', socialEventId)
-   //    // .success(function(data) {
-   //    //   console.log('user rsvp\'d to event ', data);
-   //    // }).error(function(err) {
-   //    //   if(err) throw err;
-   //    // });
-   //  }
-
-   //  $scope.addMarker = function () {
-   //    map = googleMapInit.fetchMap();
-
-   //    //attaches the data to markers and renders el
-   //    for (var i = 0; i < $scope.newEvents.length; i++) {
-   //      var name =  $scope.newEvents[i].name;
-   //      var img = $scope.newEvents[i].photo;
-   //      var description = $scope.newEvents[i].description;
-   //      var evtId = $scope.newEvents[i]._id;
-   //      var total = $scope.total || 1;//add this to the database
-   //      //el = '<div id="infoWindow"><p id="description">' + name + ' : ' + description + '</p><img src="' + img + '"></img><br><text ng-init="total="'+ total +'"">People attending: {{total}} </text><button ng-click="addPerson()">+</button></div>';
-   //      // console.log($scope);
-
-   //      // begin larry cod
-   //      content = '<div id="infoWindow" ng-init="event=newEvents['+i+']"><p id="description">{{event.description}}</p><img src="{{event.img}}"></img><br><text>People attending: {{event.total}} </text><button ng-click="addPerson()">+</button></div>';
-   //      // var content = '<div id="infowindow_content">{{'+total+'}}<button ng-click="addPerson('+i+')">+</button></div>';
-   //      //console.log('Compiling', content);
-   //      var compiled = $compile(content)($scope);
-   //      var el = compiled[i];
-   //      console.log('Compiled HTML', el);
-   //      // end larry code
-
-   //      googleMapInit.addMarker(map, $scope.newEvents[i].location[0], $scope.newEvents[i].location[1], el);
-   //    }
-   //  };
-
-
-
-   //  var eventPromise = googleMapInit.getMarkers();
-   //  eventPromise.then(function(events) {
-   //    $scope.newEvents = events;
-   //    console.log($scope.newEvents);
-   //    $scope.addMarker();
-   //  });
-
-
-    // var request = {
-    //   location: [37.800305,-122.409239],
-    //   date: {
-    //     year: 2013,
-    //     month: 10,
-    //     day: 06
-    //   },
-    //   maxD: 1
-    // };
-    // request = JSON.stringify(request);
-    // var url = 'http://myradar.co/api';
-    // // var url = 'http://meetme123.com:3000/api';
-
-
-    // $http.post(url + '/findEvents', request)
-    // .success(function(data) {
-    //   $scope.newEvents = data;
-    // })
-    // .error(function(error){
-    //   $scope.newEvents = error;
-    // });
-    // $scope.newEvents[0];
-   // googleMapInit.initializeGoogleMap();
-   // google.maps.event.addDomListener(window, 'load', initialize);
 
 }]);
 
