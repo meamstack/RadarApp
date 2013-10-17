@@ -15,44 +15,9 @@ angular.module('meetMeApp.controller.createActivity', [])
         activity: $scope.activity,
         location: $scope.latlon,
         userId: $scope.userID
-        // userId: $scope.createActivityUser._id
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
-    };
-
-    var initializeInfo = function() {   // initialize information, called at bottom of page
-      $scope.activities = [ ['coffee','a.png'],
-                            ['park','b.png'],
-                            ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
-                            ['bar', 'c.png'],
-                            ['reading', 'd.png'],
-                            ['sports', 'e.png'],
-                            ['music', 'f.png'],
-                            ['...', 'more.png']];
-      $scope.picData = postToServer.getPic();
-      $scope.eventName = postToServer.getName();
-      $scope.description = postToServer.getDesc();
-      $scope.date = '10/12/13 12:10:20';
-      $scope.picData = 'img/test_img.jpg';
-    };
-
-    $scope.showOptions = function () {
-      
-    }
-
-    $scope.saveActivity = function(activity) {
-      $scope.activity = activity;
-    };
-
-    $scope.saveName = function() {
-      alert('save name');
-      postToServer.saveName($scope.eventName);
-    };
-
-    $scope.saveDesc = function() {
-      alert('saved desc');
-      postToServer.saveDesc($scope.description);
     };
 
     $scope.saveToServer = function() {
@@ -69,11 +34,6 @@ angular.module('meetMeApp.controller.createActivity', [])
       postToServer.savePic($scope.picData);
     };
 
-    $scope.saveDate = function() {
-      var date = angular.element('#eventDate');
-      console.log(date[0].value);
-      $scope.date = date[0].value;
-    };
 
     $scope.takePic = function() {
       var options = {
@@ -85,8 +45,6 @@ angular.module('meetMeApp.controller.createActivity', [])
           mediaType: 0,        // 0: picture, 1: video, 2: all media,
           saveToPhotoAlbum: true
       };
-      // Take picture using device camera and retrieve image as base64-encoded string
-      console.log(navigator);
       navigator.camera.getPicture(onSuccess,onFail,options);
     };
 
@@ -94,12 +52,10 @@ angular.module('meetMeApp.controller.createActivity', [])
       var options = {
           quality: 14,
           destinationType: 0,
-          sourceType: 0,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+          sourceType: 0,
           allowEdit: true,
-          encodingType: 0     // 0=JPG 1=PNG
+          encodingType: 0
       };
-      // Take picture using device camera and retrieve image as base64-encoded string
-      console.log(navigator);
       navigator.camera.getPicture(onSuccess,onFail,options);
     };
 
@@ -109,9 +65,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
     var onFail = function(e) {
       console.log("On fail " + e);
-      // alert('err', e);
     };
-
-    initializeInfo();
 
   }]);
