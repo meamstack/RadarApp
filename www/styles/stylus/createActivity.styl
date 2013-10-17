@@ -43,6 +43,7 @@ border-radius()
   position: relative
   width: 100%
   height: 250px
+  z-index: 2
 
 .icon, .icon:visited
   color: #191919
@@ -121,42 +122,42 @@ border-radius()
   height 50px
 
 ::-webkit-input-placeholder
-  color: grey
-  padding-left: 10px
+  color: #909090
+  background: #e0e0e0
+  border-radius: 6px
 
 .topcoat-text-input,
 .topcoat-text-input--large 
+  background: #e0e0e0 !important
   line-height: 3rem
   font-size: 16px
   letter-spacing: 1px
-  padding: 0 
-  border: 1px solid #e0e0e0
+  border: none
   border-radius: 6px
-  background-color: #e0e0e0
   box-shadow: inset 0 1px rgba(0,0,0,0.18)
-  color: #c6c8c8
+  color: #191919 !important
   vertical-align: top
   margin-right: auto
   margin-left: auto
 
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus 
-  background-color: #e0e0e0
-  color: #f0f0f0
-  border: 1px solid #e0e0e0
+  background: #e0e0e0
+  color: #191919 !important
+  border: none
   box-shadow: 0 0 0 2px #6fb5f1
-  padding-left: 10px
 
 .topcoat-text-input:disabled::-webkit-input-placeholder 
   color: #f0f0f0
-
+  background: #e0e0e0
 
 .topcoat-text-input:disabled::-moz-placeholder 
   color: #f0f0f0
-
+  background: #e0e0e0
 
 .topcoat-text-input:disabled:-ms-input-placeholder 
   color: #f0f0f0
+  background: #e0e0e0
 
 
 .topcoat-text-input:invalid 

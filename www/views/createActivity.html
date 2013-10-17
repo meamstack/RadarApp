@@ -10,12 +10,13 @@
 	</div>
 
 	<div class="photo">
-		<div picture-thumb></div>
+		<div ng-show='picData' class='pictureSaved'><img ng-src='{{picData}}'/>
+		</div>
 	</div>
 
 	<form class="activityForm" name="myForm" novalidate ng-submit="submitForm()">
 		<input class="topcoat-text-input" type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
-		<i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i>
+		<i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i><br><br>
 		<input class="topcoat-text-input" type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
 		<i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
 
