@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "angular-cookies": "~1.0.7",
-    "angular-mocks": "~1.0.7",
+    "angular-mocks": "~1.0.8",
     "angular-resource": "~1.0.7",
     "angular-sanitize": "~1.0.7",
     "angular-scenario": "~1.0.7",
