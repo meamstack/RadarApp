@@ -3,8 +3,10 @@ angular.module('meetMeApp.controller.createActivity', [])
 
     $scope.createActivityUser = userData.getUser();
     console.log($scope.createActivityUser);
+    console.log(googleMapLatLon);
     //$scope.userID = $scope.createActivityUser._id;
     $scope.latlon = googleMapLatLon.get();
+
     $scope.$navigate = $navigate;
     //$scope.picData = $scope.createActivityUser.facebook.picture.data.url;
     $scope.submitForm = function () {

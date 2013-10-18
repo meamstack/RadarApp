@@ -1,6 +1,8 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
+
+
     var date = new Date();
     $scope.clockHour = date.getHours();
     $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
@@ -77,10 +79,11 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
 
   $scope.createActivity = function () {
     console.log('creating activity');
-    var lat = $scope.myMap.getCenter()[0];
-    var lng = $scope.myMap.getCenter()[0];
-    console.log(lat, lng);
-    googleMapLatLon.set(lat, lng);
+    var lat = $scope.myMap.getCenter().lat();
+    var lng = $scope.myMap.getCenter().lng();
+    //console.log(lat, lng);
+    googleMapLatLon.set(lat, lng) ;
+    //console.log('lat is ' + $scope.myMap.getCenter().lat());
     //$scope.myMap.set(lat, lng);
     window.location.href = '#/createActivity';
   }
