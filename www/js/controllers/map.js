@@ -24,6 +24,36 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
   };
 
+  $scope.addCenterMarker = function () {
+
+    $scope.centerMarker = (new google.maps.Marker({
+      map: $scope.myMap,
+      position: $scope.myMap.getCenter(),
+      draggable:true,
+      animation: google.maps.Animation.DROP,
+      title: 'Create an Event',
+      url:'#/createActivity',
+      icon: "http://library.csun.edu/images/google_maps/marker-blue.png"
+    }))
+    // google.maps.event.addListener($scope.centerMarker, 'click', function() {
+    //   console.log('clicked ');
+    //   var lat = $scope.centerMarker.getPosition().lat();
+    //   var lng = $scope.centerMarker.getPosition().lng();
+    //   $scope.myMap.set(lat, lng);
+    //   window.location.href = '#/createActivity';
+
+    // });
+  };
+
+  $scope.createActivity = function (marker) {
+    alert('clicked');
+    $scope.centerMarker = marker;
+    var lat = $scope.centerMarker.getPosition().lat();
+    var lng = $scope.centerMarker.getPosition().lng();
+    $scope.myMap.set(lat, lng);
+    window.location.href = '#/createActivity';
+  }
+
   $scope.addMarker = function (objs) {
 
     angular.forEach(objs, function(obj) {
@@ -68,7 +98,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
         year: 2013,
         month: 10,
         day: 06
-      }
+      },
       maxD: 1
     };
     request = JSON.stringify(request);
@@ -77,6 +107,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     .success(function(data) {
       $scope.newEvents = data;
       $scope.addMarker($scope.newEvents);
+      $scope.centerMarker = $scope.addCenterMarker();
       console.log($scope.newEvents);
     })
     .error(function(error){

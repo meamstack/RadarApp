@@ -10,7 +10,8 @@
 	    <p id='headerRight'>San Francisco</p>
     </div>
     <div id='mapHeaderBottom'></div>
-
+    <div ui-map-marker="centerMarker" ui-event="{'map-click':'createActivity()'}"></div>
+   <!--  </div> -->
     <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
       ui-event="{'map-click': 'openMarkerInfo(marker)'}">
     </div>
