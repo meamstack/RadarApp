@@ -11,8 +11,7 @@
     </div>
     <div id='mapHeaderBottom'></div>
     <a ng-click="createActivity()" href="#/createActivity"><img id="centerMarker"src="http://library.csun.edu/images/google_maps/marker-blue.png"></img></a>
-<!--     <div ui-map-marker="centerMarker" ui-event="{'map-click':'createActivity(centerMarker)'}"></div> -->
-   <!--  </div> -->
+
     <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
       ui-event="{'map-click': 'openMarkerInfo(marker)'}">
     </div>
