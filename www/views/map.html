@@ -10,12 +10,16 @@
 	    <p id='headerRight'>San Francisco</p>
     </div>
     <div id='mapHeaderBottom'></div>
-    <div id="mapCanvas" ></div>
-
     <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
       <div id="hourSliderText">{{hourpm}}:{{minute}}{{ampm}}</div>
     </div>
-  	<div id="daySliderText">Tuesday October 14, 2013<div>
+    <div id='mapAndDay'>
+      <div id="mapCanvas" ></div>
+      <div id='daySlider'>
+        <div id="daySliderText">Tuesday October 14, 2013<div>
+      </div>
+    </div>
+
     <!-- <div id="hourSlider" class="slider"> -->
     <!-- </div> -->
     <!-- <div id="daySlider" class="slider"> -->

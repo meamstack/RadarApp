@@ -4,32 +4,33 @@ angular.module('meetMeApp.controller.map', [])
     // $scope.clockHour = date.getHours();
     // $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
     
-    var map;
-    var newTime;
-    var origTime = date.getHours() * 60 + date.getMinutes();
-    var pixels = 960;// iphone 4 screen size - may need to change
-    var totalMinutes = 1440; // minutes in a day
-    $scope.minute = (0 + (origTime % 60).toString()).slice(-2);
-    $scope.hour = Math.floor(origTime / 60) % 24;
-    $scope.hourpm = $scope.hour % 12;
-    if ($scope.hour > 12){
-      $scope.ampm = 'PM';
-    } else $scope.ampm = 'AM';
+    // var map;
+    // var newTime;
+    // var origTime = date.getHours() * 60 + date.getMinutes();
+    // var pixels = 960;// iphone 4 screen size - may need to change
+    // var totalMinutes = 1440; // minutes in a day
+    // $scope.minute = (0 + (origTime % 60).toString()).slice(-2);
+    // $scope.hour = Math.floor(origTime / 60) % 24;
+    // $scope.hourpm = $scope.hour % 12;
+    // if ($scope.hour > 12){
+    //   $scope.ampm = 'PM';
+    // } else $scope.ampm = 'AM';
 
-    $scope.changeTime = function(e) {
-      var deltaMins = Math.floor((e.gesture.deltaY / pixels) * totalMinutes); // change in minutes
-      newTime = origTime + deltaMins;
-      $scope.minute = (0+(newTime % 60).toString()).slice(-2);
-      $scope.hour = Math.floor(newTime / 60) % 24;
-      $scope.hourpm = $scope.hour % 12;
-      if ($scope.hour > 12){
-        $scope.ampm = 'PM';
-      } else $scope.ampm = 'AM';
-      // $scope.addMarker(map);
-    };
-    $scope.release = function(e){
-      origTime = newTime;
-    };
+    // $scope.changeTime = function(e) {
+    //   var deltaMins = Math.floor((e.gesture.deltaY / pixels) * totalMinutes); // change in minutes
+    //   newTime = origTime + deltaMins;
+    //   $scope.minute = (0+(newTime % 60).toString()).slice(-2);
+    //   $scope.hour = Math.floor(newTime / 60) % 24;
+    //   $scope.hourpm = $scope.hour % 12;
+    //   if ($scope.hour > 12){
+    //     $scope.ampm = 'PM';
+    //   } else $scope.ampm = 'AM';
+    //   // $scope.addMarker(map);
+    // };
+    // $scope.releaseTime = function(e){
+    //   origTime = newTime;
+    //   // $scope.addMarker();
+    // };
 
 
 
@@ -70,58 +71,59 @@ angular.module('meetMeApp.controller.map', [])
 
 
     //dummy data for $scope.newEvents
-    // $scope.newEvents = [
-    //     {
-    //       name: "Free pizza @ Hack reactor!",
-    //       description: 'awesomeness!',
-    //       location: [37.785427,-122.40572],
-    //       time: 'Fri Oct 11 2013 16:59:16 GMT-0700 (PDT)',
-    //       photo: 'img/fun.jpg',
-    //       activity: 'eat'
-    //     }, {
-    //       name: "Goo time!",
-    //       description: 'Who knows what!',
-    //       location: [37.789984,-122.40523],
-    //       time: 'Fri Nov 01 2013 00:00:00 GMT-0700 (PDT)',
-    //       photo: 'img/fun.jpg',
-    //       activity: 'party'
-    //     }, {
-    //       name: 'Thursday night footbal!!',
-    //       description: 'Chips and tacos',
-    //       location: [37.7836,-122.408904],
-    //       time: new Date(2013, 10,01),
-    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
-    //       activity: 'pizza'
-    //     }
-    // ];
+    $scope.newEvents = [
+        {
+          name: "Free pizza @ Hack reactor!",
+          description: 'awesomeness!',
+          location: [37.785427,-122.40572],
+          time: 'Fri Oct 18 2013 18:59:16 GMT-0700 (PDT)',
+          photo: 'img/fun.jpg',
+          activity: 'eat'
+        }, {
+          name: "Goo time!",
+          description: 'Who knows what!',
+          location: [37.789984,-122.40523],
+          time: 'Fri Oct 18 2013 19:59:16 GMT-0700 (PDT)',
+          photo: 'img/fun.jpg',
+          activity: 'party'
+        }, {
+          name: 'Thursday night footbal!!',
+          description: 'Chips and tacos',
+          location: [37.7836,-122.408904],
+          time: 'Fri Oct 18 2013 20:59:16 GMT-0700 (PDT)',
+          photo: 'http://i.imgur.com/QTITt2D.jpg',
+          activity: 'pizza'
+        }
+    ];
 
     // $scope.setLocation = function(){
       // googleMapLatLon.set(37.705427,-122.39572);
     // };
 
-    var request = {
-      location: [37.800305,-122.409239],
-      date: {
-        year: 2013,
-        month: 10,
-        day: 06
-      },
-      maxD: 1
-    };
-    request = JSON.stringify(request);
-    var url = 'http://myradar.co/api';
+    // var request = {
+    //   location: [37.800305,-122.409239],
+    //   date: {
+    //     year: 2013,
+    //     month: 10,
+    //     day: 06
+    //   },
+    //   maxD: 1
+    // };
+    // request = JSON.stringify(request);
+    // var url = 'http://myradar.co/api';
 
-    $http.post(url + '/findEvents', request)
-    .success(function(data) {
-      $scope.newEvents = data;
-      $scope.addMarker();
-    })
-    .error(function(error){
-      alert('this is the error',error)
-      $scope.newEvents = error;
-    });
+    // $http.post(url + '/findEvents', request)
+    // .success(function(data) {
+    //   $scope.newEvents = data;
+    //   $scope.addMarker();
+    // })
+    // .error(function(error){
+    //   alert('this is the error',error)
+    //   $scope.newEvents = error;
+    // });
 
     googleMapInit.initializeGoogleMap();
+    $scope.addMarker();
 
 }]);
 
