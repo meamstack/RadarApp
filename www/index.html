@@ -9,10 +9,10 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
     <link rel="stylesheet" href="styles/css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/topcoat-0.7.5/css/topcoat-mobile-light.css">
     <link rel="stylesheet" href="lib/mobile-nav.css">
     <link rel="stylesheet" href="styles/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/css/main.css">
@@ -29,7 +29,6 @@
     <!-- Add your site or application content here -->
      <mobile-view ng-view=""></mobile-view>
     <!-- phonegap helper files -->
-    <script src="js/inobounce.js"></script>
     <script src="lib/jquery-2.0.3.min.js"></script>
     <!-- libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -49,7 +48,7 @@
     <script src="js/controllers/main.js"></script>
     <script src="js/controllers/map.js"></script>
     <script src="js/controllers/createActivity.js"></script>
-    <script src="js/controllers/viewActivity.js"></script>
+    \<script src="js/controllers/viewActivity.js"></script>
     <script src="js/controllers/chat.js"></script>
     <!-- services -->
     <script src="js/services/eventLocation.js"></script>
@@ -63,7 +62,8 @@
     <script src="js/directives/mapService_temp.js"></script>
 
     <!-- phonegap helper files -->
-    <script src="js/lib/inobounce.js"></script>
+    <!-- having trouble implementing inobounce without conflicting with scrolling-->
+    <script src="lib/inobounce.js"></script>
     <script src="js/lib/respond.min.js"></script>
 
     <!-- main angular js files -->
@@ -72,6 +72,7 @@
     <script src="js/config.js"></script>
     <script src="lib/hammer.min.js"></script>
     <script src="lib/jquery.hammer.min.js"></script>
+    <script src="lib/angular-hammer.min.js"></script>
     <script src="js/lib/gestures.js"></script>
     <script src="lib/freewall.js"></script>
 

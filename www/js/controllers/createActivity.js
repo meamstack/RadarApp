@@ -5,6 +5,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.userID = $scope.createActivityUser._id;
     $scope.latlon = googleMapLatLon.get();
     $scope.$navigate = $navigate;
+    $scope.picData = $scope.createActivityUser.facebook.picture.data.url;
     $scope.submitForm = function () {
       var date = angular.element('#eventDate');
       postToServer.send({
@@ -18,6 +19,39 @@ angular.module('meetMeApp.controller.createActivity', [])
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
+    };
+
+    var initializeInfo = function() {   // initialize information, called at bottom of page
+      $scope.activities = [ ['coffee','a.png'],
+                            ['park','b.png'],
+                            ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
+                            ['bar', 'c.png'],
+                            ['reading', 'd.png'],
+                            ['sports', 'e.png'],
+                            ['music', 'f.png'],
+                            ['...', 'more.png']];
+      $scope.picData = postToServer.getPic();
+      $scope.eventName = postToServer.getName();
+      $scope.description = postToServer.getDesc();
+      $scope.date = '10/12/13 12:10:20';
+    };
+
+    $scope.showOptions = function () {
+      
+    }
+
+    $scope.saveActivity = function(activity) {
+      $scope.activity = activity;
+    };
+
+    $scope.saveName = function() {
+      alert('save name');
+      postToServer.saveName($scope.eventName);
+    };
+
+    $scope.saveDesc = function() {
+      alert('saved desc');
+      postToServer.saveDesc($scope.description);
     };
 
     $scope.saveToServer = function() {

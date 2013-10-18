@@ -1,28 +1,34 @@
 <div class="createActivity">
-	<div class="photo">
-		<div ng-show='picData' class='pictureSaved'><img ng-src='{{picData}}'/></div>
-		<i ng-click="takePic()" class="icon-camera-retro icon-2x block"></i>
-		<i ng-click="openPhotoLib()" class="icon-film icon-2x block"></i>
-</div>
 
-<form name="myForm" novalidate ng-submit="submitForm()">
-	<input class="topcoat-text-input" type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
-	<i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i>
-	<input class="topcoat-text-input" type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
-	<i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
-
-	<div class="submitNav">
-		<input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
-		<div class="calendarDateSetter">
-			<input id='eventDate' type='datetime-local'>
-			<span class="dateSet" ng-bind="date"></span>
+	<div id="createActivityHeader">
+		<h2 id="caHeaderLeft">RADAR</h2>
+		<div id="caHeaderRight">
+			<a href="#/map" class="icon"><i class="icon-map-marker icon-large"></i></a>
+			<a ng-click="takePic()"><i class="icon-camera-retro icon block icon-large"></i></a>
+			<a ng-click="openPhotoLib()"><i  class="icon-folder-open icon block icon-large"></i></a>
 		</div>
 	</div>
-</form>
-<div id="footer">
-	<a href="#/map" class="icon"><i class="icon-map-marker icon-2x"></i></a>
-	<a class="icon"><i class="icon-calendar-empty calendarIcon icon-2x"></i></a>
-</div>
+
+	<div class="photo">
+		<div ng-show='picData' class='pictureSaved'><img ng-src='{{picData}}'/>
+		</div>
+	</div>
+
+	<form class="activityForm" name="myForm" novalidate ng-submit="submitForm()">
+		<input class="topcoat-text-input" type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
+		<i class="icon-warning-sign custom-error" ng-show="myForm.eventName.$dirty && myForm.eventName.$invalid"></i><br><br>
+		<input class="topcoat-text-input" type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
+		<i ng-show="myForm.description.$dirty && myForm.description.$invalid" class="custom-error icon-warning-sign"></i>
+
+		<div class='calendarWrapper'>
+			<div class="calendarDateSetter">
+				<input id='eventDate' type='datetime-local' ng-click="saveDate()">
+			</div>
+		</div>
+		<div class="submitNav">
+			<input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
+		</div>
+
+	</form>
 
 </div>
-
