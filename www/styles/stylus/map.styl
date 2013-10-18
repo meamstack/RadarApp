@@ -68,42 +68,49 @@ h1
 #mapCanvas
   float: right
   overlow: hidden
-  width: 90%
+  width: 100%
   min-width: 220px
   min-height: 250px
   z-index: 0
   height: 100%
 
-#daySlider
+#daySliderText
   font-size: 20px
-  color: #F0F0F0
   width: 100%
-  height: 30px
+  height: 40px
   position: absolute
-  bottom:20px
   z-index: 1
+  margin-left: auto
+  margin-right: auto
+  display: block
+  text-align: center
+  padding-top: 5px
+  color: #303030
+  font-family: helvetica
+  text-shadow: 1px 1px 3px #909090
+
+#daySlider
+  width: 100%
+  height: 50px
+  position: absolute
+  z-index: 2
   background: blue
   overflow: hidden
   margin: 0
-  padding: 5px 0 0 0
+  padding: 0 0 0 0
+  bottom: 0px
 
-#daySliderText
-  margin-left: auto
-  margin-right: auto
-  width: 250px
-  display: block
 
 #hourSlider, #daySlider
-  background: blue
+  background: none
   overflow: hidden
 
 #hourSlider 
   float: left
   margin-left: 0
-  width: 10%
+  width: 15%
   height: 100%
   z-index:1
-  box-shadow: 3px 0px 3px #888888
   vertical-allign: middle
   color: off-white
 
@@ -150,7 +157,7 @@ h1
   font-size: 20px
   font-weight: 700
 
-button
+a
   float: right
   right: 5px
 
