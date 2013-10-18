@@ -82,7 +82,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     console.log(lat, lng);
     googleMapLatLon.set(lat, lng);
     //$scope.myMap.set(lat, lng);
-    $location.href = '#/createActivity';
+    window.location.href = '#/createActivity';
   }
 
   $scope.addMarker = function (objs) {
@@ -119,9 +119,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     console.log($scope);//$scope.currentMarkerTotal++;
   };
    
-  // $scope.addPerson = function (currentMarker) {
-  //   $scope.currentMarkerTotal++;
-  // };
+
   $scope.newEvents = function ($event) {
     var request = {
       location: $scope.mapOptions['center'],
