@@ -15,10 +15,11 @@ Radar is a mobile-first location-based social app where users can discover event
 * jQuery
 * Topcoat.io
 * Stylus
+* Grunt
 
 Radar is coded in Javascript using AngularJS and the PhoneGap frameworks. App views are created using AngularJS to allow for dynamic dom manipulation and a structured MVC environment. The PhoneGap open source framework is used to gain access to native mobile phone functionality core to the app including the camera, image library, GPS, and inappbrowser. 
 
-Hammer.js is used for multi-touch and swiping functionality, while Topcoat and Stylus are used for CSS and preprocessing.
+Hammer.js is used for multi-touch and swiping functionality, while Topcoat and Stylus are used for CSS and preprocessing. The Grunt task runner is used to automate updating of CSS files.
 
 ## Contributors ##
 <a href="https://github.com/emailnitram">Martin Henry-Castaneda</a><br>
