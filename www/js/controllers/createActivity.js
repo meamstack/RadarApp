@@ -1,11 +1,25 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
 
-    $scope.createActivityUser = userData.getUser();
-    $scope.userID = $scope.createActivityUser._id;
-    $scope.latlon = googleMapLatLon.get();
-    $scope.$navigate = $navigate;
-    $scope.picData = $scope.createActivityUser.facebook.picture.data.url;
+    var init = function() {
+      $scope.createActivityUser = userData.getUser();
+      $scope.userID = $scope.createActivityUser._id;
+      $scope.latlon = googleMapLatLon.get();
+      $scope.$navigate = $navigate;
+      var currentDate = new Date();
+      $scope.date = (currentDate.getMonth()+1)  + "/" 
+                + currentDate.getDate() + "/"
+                + currentDate.getFullYear() + " @ "  
+                + currentDate.getHours() + ":"  
+                + currentDate.getMinutes() + ":" 
+                + currentDate.getSeconds(); 
+      $scope.picData = 'img/photoPlaceholder.png';
+      // $scope.dateTtime = "2013-10-01T00:00";
+      // $scope.date = $scope.dateTtime;
+    };
+
+    init();
+
     $scope.submitForm = function () {
       var date = angular.element('#eventDate');
       postToServer.send({
@@ -20,40 +34,7 @@ angular.module('meetMeApp.controller.createActivity', [])
         $scope.$navigate.go('/map', 'slide');
       });
     };
-
-    var initializeInfo = function() {   // initialize information, called at bottom of page
-      $scope.activities = [ ['coffee','a.png'],
-                            ['park','b.png'],
-                            ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
-                            ['bar', 'c.png'],
-                            ['reading', 'd.png'],
-                            ['sports', 'e.png'],
-                            ['music', 'f.png'],
-                            ['...', 'more.png']];
-      $scope.picData = postToServer.getPic();
-      $scope.eventName = postToServer.getName();
-      $scope.description = postToServer.getDesc();
-      $scope.date = '10/12/13 12:10:20';
-    };
-
-    $scope.showOptions = function () {
-      
-    }
-
-    $scope.saveActivity = function(activity) {
-      $scope.activity = activity;
-    };
-
-    $scope.saveName = function() {
-      alert('save name');
-      postToServer.saveName($scope.eventName);
-    };
-
-    $scope.saveDesc = function() {
-      alert('saved desc');
-      postToServer.saveDesc($scope.description);
-    };
-
+ 
     $scope.saveToServer = function() {
       var date = angular.element('#eventDate');
       $scope.isDisabled = true;

@@ -36,18 +36,34 @@ border-radius()
   -webkit-overflow-scrolling:touch
 
 .pictureSaved img
-  height: 250px
+  max-height: 250px
+  padding-top: 5%
+
+.pictureSaved
+  pointer-events: none
+
+.eventPicDesc span
+  color: #d5d5d5
+  margin: 0 auto
 
 .photo
   margin-top: 15px
   position: relative
   width: 100%
   height: 250px
-  z-index: 2
 
 .icon, .icon:visited
-  color: #191919
+  color: black
   text-decoration: none
+
+.iconTop
+  height: 26px
+  width: 32px
+  display: inline-block
+  padding-left: 1px
+
+.iconTop:visited
+  color: black
 
 .icon-folder-open
   padding-right: 18px
@@ -72,40 +88,45 @@ border-radius()
   padding-right: 18px
   z-index: 2
 
-#eventDesc
+#eventDesc,#eventName
   width: 80%
   display: block
-  margin-top:5px 
-  background-color: transparent
+  background-color: #3a3a3a
+  color: white
+  padding-left: 5px
+
+#eventDesc
+  margin-top: 8px
   border: none
 
 #eventName
-  width: 80%
-  margin-top:5px
-  display: block
-  position: relative
-  top: 5px
-  background-color: transparent
+  margin-top:10px
   border: none
 
 .submitNav
   width: 100%
-
-.calendarWrapper
-  width: 100%
-  height: 50px
+  margin-top: 8px
 
 .calendarDateSetter
-  width: 255px
-  margin-right: auto
-  margin-left: auto
+  height: 58px
+
 
 #eventDate
   width: 250px
-  height: 37px
-  display: inline
+  height: 44px
   font-size: 20px
-  margin-top: 5px
+  position: relative
+  bottom: 49px
+  left: 31px
+  margin-top: 8px
+  opacity: 0.1
+
+.dateTimeLocal
+  position: relative
+  left: 33px
+  width: 80%
+  top: 8px
+
 
 .dateSet
   display: inline
@@ -122,42 +143,31 @@ border-radius()
   height 50px
 
 ::-webkit-input-placeholder
-  color: #909090
-  background: #e0e0e0
-  border-radius: 6px
+  color: grey
+  padding-left: 10px
 
-.topcoat-text-input,
-.topcoat-text-input--large 
-  background: #e0e0e0 !important
-  line-height: 3rem
-  font-size: 16px
-  letter-spacing: 1px
-  border: none
-  border-radius: 6px
-  box-shadow: inset 0 1px rgba(0,0,0,0.18)
-  color: #191919 !important
-  vertical-align: top
-  margin-right: auto
-  margin-left: auto
+.topcoat-text-input
+  padding: 0
+  margin: 0 auto
 
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus 
-  background: #e0e0e0
-  color: #191919 !important
-  border: none
+  background-color: #e0e0e0
+  color: #f0f0f0
+  border: 1px solid #e0e0e0
   box-shadow: 0 0 0 2px #6fb5f1
+  padding-left: 10px
 
 .topcoat-text-input:disabled::-webkit-input-placeholder 
   color: #f0f0f0
-  background: #e0e0e0
+
 
 .topcoat-text-input:disabled::-moz-placeholder 
   color: #f0f0f0
-  background: #e0e0e0
+
 
 .topcoat-text-input:disabled:-ms-input-placeholder 
   color: #f0f0f0
-  background: #e0e0e0
 
 
 .topcoat-text-input:invalid 
