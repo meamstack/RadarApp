@@ -1,6 +1,8 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
+
+
     var date = new Date();
     $scope.clockHour = date.getHours();
     $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
@@ -54,33 +56,35 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
   };
 
-  $scope.addCenterMarker = function () {
-
-    $scope.centerMarker = (new google.maps.Marker({
-      map: $scope.myMap,
-      position: $scope.myMap.getCenter(),
-      draggable:true,
-      animation: google.maps.Animation.DROP,
-      title: 'Create an Event',
-      url:'#/createActivity',
-      icon: "http://library.csun.edu/images/google_maps/marker-blue.png"
-    }))
+  // $scope.addCenterMarker = function () {
+  //   $scope.centerMarker = new google.maps.Marker({
+  //     map: $scope.myMap,
+  //     position: $scope.myMap.getCenter(),
+  //     draggable:true,
+  //     animation: google.maps.Animation.DROP,
+  //     title: 'Create an Event',
+  //     url:'#/createActivity',
+  //     icon: "http://library.csun.edu/images/google_maps/marker-blue.png"
+  //   })
     // google.maps.event.addListener($scope.centerMarker, 'click', function() {
     //   console.log('clicked ');
     //   var lat = $scope.centerMarker.getPosition().lat();
     //   var lng = $scope.centerMarker.getPosition().lng();
     //   $scope.myMap.set(lat, lng);
-    //   window.location.href = '#/createActivity';
+    //   window.location.href = '#/createActivity'; // Use $location for this.
 
     // });
-  };
+  //};
 
-  $scope.createActivity = function (marker) {
-    alert('clicked');
-    $scope.centerMarker = marker;
-    var lat = $scope.centerMarker.getPosition().lat();
-    var lng = $scope.centerMarker.getPosition().lng();
-    $scope.myMap.set(lat, lng);
+
+  $scope.createActivity = function () {
+    console.log('creating activity');
+    var lat = $scope.myMap.getCenter().lat();
+    var lng = $scope.myMap.getCenter().lng();
+    //console.log(lat, lng);
+    googleMapLatLon.set(lat, lng) ;
+    //console.log('lat is ' + $scope.myMap.getCenter().lat());
+    //$scope.myMap.set(lat, lng);
     window.location.href = '#/createActivity';
   }
 
@@ -118,9 +122,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     console.log($scope);//$scope.currentMarkerTotal++;
   };
    
-  // $scope.addPerson = function (currentMarker) {
-  //   $scope.currentMarkerTotal++;
-  // };
+
   $scope.newEvents = function ($event) {
     var request = {
       location: $scope.mapOptions['center'],
@@ -137,7 +139,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     .success(function(data) {
       $scope.newEvents = data;
       $scope.addMarker($scope.newEvents);
-      $scope.centerMarker = $scope.addCenterMarker();
+      //$scope.centerMarker = $scope.addCenterMarker();
       console.log($scope.newEvents);
     })
     .error(function(error){
