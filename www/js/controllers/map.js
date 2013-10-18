@@ -103,7 +103,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
           $http.post(url + '/rsvp', request)
           .success(function(data) {
             $scope.currentMarkerTotal++;
-            alert('You are added to ' + $scope.currentMarkerDes);
+            alert('You are added to ' + $scope.currentMarkerDes['name'] + ' : '+ $scope.currentMarkerDes['description']);
           })
           .error(function(error){
             $scope.addPerson = error;
