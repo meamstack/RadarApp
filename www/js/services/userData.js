@@ -3,16 +3,15 @@ angular.module("meetMeApp.service.userData", [])
 
     var user;
     var init = function() {
-
-	    var deferred = $q.defer();
+      var deferred = $q.defer();
 
       $http.get('http://myradar.co/api/getUserData')
-	    .success(function(userData, status, headers, config) {
-	    	user = userData;
-	      deferred.resolve(userData);
-	    }).error(function(err, status, headers, config) {if(err) throw err;});
-	    return deferred.promise;
-	  };
+      .success(function(userData, status, headers, config) {
+        user = userData;
+        deferred.resolve(userData);
+      }).error(function(err, status, headers, config) {if(err) throw err;});
+      return deferred.promise;
+    };
 
     return {
       init: init,
