@@ -18,12 +18,10 @@
     <input class="topcoat-text-input" type="text" name="eventName" id="eventName" ng-model="eventName" placeholder="Name" required />
     <input class="topcoat-text-input" type="text" name="description" id="eventDesc" placeholder="Description" ng-model="description" required/>
 
-    <!-- <div class="calendarWrapper"> -->
       <div class="calendarDateSetter">
         <input type='time' id="eventTime">
         <input type='date' id="eventDate">
       </div>
-    <!-- </div> -->
     <div class="submitNav">
       <input type="submit" ng-disabled="myForm.eventName.$pristine || myForm.eventName.$dirty && myForm.eventName.$invalid || myForm.description.$pristine || myForm.description.$dirty && myForm.description.$invalid" class="createEvent topcoat-button" value="Create">
     </div>
