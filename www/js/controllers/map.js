@@ -54,16 +54,16 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
   };
 
-  $scope.addCenterMarker = function () {
-    $scope.centerMarker = new google.maps.Marker({
-      map: $scope.myMap,
-      position: $scope.myMap.getCenter(),
-      draggable:true,
-      animation: google.maps.Animation.DROP,
-      title: 'Create an Event',
-      url:'#/createActivity',
-      icon: "http://library.csun.edu/images/google_maps/marker-blue.png"
-    })
+  // $scope.addCenterMarker = function () {
+  //   $scope.centerMarker = new google.maps.Marker({
+  //     map: $scope.myMap,
+  //     position: $scope.myMap.getCenter(),
+  //     draggable:true,
+  //     animation: google.maps.Animation.DROP,
+  //     title: 'Create an Event',
+  //     url:'#/createActivity',
+  //     icon: "http://library.csun.edu/images/google_maps/marker-blue.png"
+  //   })
     // google.maps.event.addListener($scope.centerMarker, 'click', function() {
     //   console.log('clicked ');
     //   var lat = $scope.centerMarker.getPosition().lat();
@@ -72,15 +72,17 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     //   window.location.href = '#/createActivity'; // Use $location for this.
 
     // });
-  };
+  //};
 
-  $scope.createActivity = function (marker) {
-    console.log(marker);
-    $scope.centerMarker = marker;
-    var lat = $scope.centerMarker.getPosition().lat();
-    var lng = $scope.centerMarker.getPosition().lng();
-    $scope.myMap.set(lat, lng);
-    window.location.href = '#/createActivity';
+
+  $scope.createActivity = function () {
+    console.log('creating activity');
+    var lat = $scope.myMap.getCenter()[0];
+    var lng = $scope.myMap.getCenter()[0];
+    console.log(lat, lng);
+    googleMapLatLon.set(lat, lng);
+    //$scope.myMap.set(lat, lng);
+    $location.href = '#/createActivity';
   }
 
   $scope.addMarker = function (objs) {
