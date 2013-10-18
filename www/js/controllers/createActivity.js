@@ -15,26 +15,22 @@ angular.module('meetMeApp.controller.createActivity', [])
                 + currentDate.getMinutes() + ":" 
                 + currentDate.getSeconds(); 
       $scope.picData = 'img/photoPlaceholder.png';
-      // var d1 = new Date();
-      // var y1= d1.getFullYear();
-      // var m1 = d1.getMonth()+1;
-      // if(m1<10)
-      // m1="0"+m1;
-      // var dt1 = d1.getDate();
-      // if(dt1<10)
-      // dt1 = "0"+dt1;
-      // var d2 = y1+"-"+m1+"-"+dt1;
       document.getElementById('eventDate').value = new Date().toISOString().substring(0, 10);
+      var hour = new Date().getHours();
+      var min = new Date().getMinutes();
+      document.getElementById('eventTime').value = hour+':'+min
     };
 
     init();
 
     $scope.submitForm = function () {
-      var date = angular.element('#eventDate');
+      var date = document.getElementById('eventDate').value;
+      var time = document.getElementById('eventTime').value;
+      console.log(date, time);
       postToServer.send({
         name: $scope.eventName,
         description: $scope.description,
-        time: date[0].value,
+        time: date + ' ' + time,
         photo: $scope.picData,
         activity: $scope.activity,
         location: $scope.latlon,
