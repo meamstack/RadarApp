@@ -1,6 +1,36 @@
+
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
+    var date = new Date();
+    $scope.clockHour = date.getHours();
+    $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
+    
+    var map;
+    var newTime;
+    var origTime = date.getHours() * 60 + date.getMinutes();
+    var pixels = 960;// iphone 4 screen size - may need to change
+    var totalMinutes = 1440; // minutes in a day
+    $scope.minute = (0 + (origTime % 60).toString()).slice(-2);
+    $scope.hour = Math.floor(origTime / 60) % 24;
+    $scope.hourpm = $scope.hour % 12;
+    if ($scope.hour > 12){
+      $scope.ampm = 'PM';
+    } else $scope.ampm = 'AM';
 
+    $scope.changeTime = function(e) {
+      var deltaMins = Math.floor((e.gesture.deltaY / pixels) * totalMinutes); // change in minutes
+      newTime = origTime + deltaMins;
+      $scope.minute = (0+(newTime % 60).toString()).slice(-2);
+      $scope.hour = Math.floor(newTime / 60) % 24;
+      $scope.hourpm = $scope.hour % 12;
+      if ($scope.hour > 12){
+        $scope.ampm = 'PM';
+      } else $scope.ampm = 'AM';
+      // $scope.addMarker(map);
+    };
+    $scope.release = function(e){
+      origTime = newTime;
+    };
     $scope.myMarkers = [];
     $scope.mapOptions = {
       center: new google.maps.LatLng(37.79,-122.4),

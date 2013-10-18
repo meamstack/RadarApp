@@ -5,6 +5,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.userID = $scope.createActivityUser._id;
     $scope.latlon = googleMapLatLon.get();
     $scope.$navigate = $navigate;
+    $scope.picData = $scope.createActivityUser.facebook.picture.data.url;
     $scope.submitForm = function () {
       var date = angular.element('#eventDate');
       postToServer.send({
@@ -34,7 +35,6 @@ angular.module('meetMeApp.controller.createActivity', [])
       $scope.eventName = postToServer.getName();
       $scope.description = postToServer.getDesc();
       $scope.date = '10/12/13 12:10:20';
-      $scope.picData = 'img/test_img.jpg';
     };
 
     $scope.showOptions = function () {
