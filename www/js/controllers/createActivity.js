@@ -4,6 +4,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     var init = function() {
       // $scope.createActivityUser = userData.getUser();
       // $scope.userID = $scope.createActivityUser._id;
+      $scope.showDateTime = true;
       $scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
       var currentDate = new Date();
@@ -14,8 +15,16 @@ angular.module('meetMeApp.controller.createActivity', [])
                 + currentDate.getMinutes() + ":" 
                 + currentDate.getSeconds(); 
       $scope.picData = 'img/photoPlaceholder.png';
-      // $scope.dateTtime = "2013-10-01T00:00";
-      // $scope.date = $scope.dateTtime;
+      // var d1 = new Date();
+      // var y1= d1.getFullYear();
+      // var m1 = d1.getMonth()+1;
+      // if(m1<10)
+      // m1="0"+m1;
+      // var dt1 = d1.getDate();
+      // if(dt1<10)
+      // dt1 = "0"+dt1;
+      // var d2 = y1+"-"+m1+"-"+dt1;
+      document.getElementById('eventDate').value = new Date().toISOString().substring(0, 10);
     };
 
     init();
@@ -47,6 +56,12 @@ angular.module('meetMeApp.controller.createActivity', [])
         location: googleMapLatLon.get()
       });
       postToServer.savePic($scope.picData);
+    };
+
+    $scope.showDate = function() {
+      $scope.showDateTime = false;
+      // angular.element('.dateTimeLocal').addClass('clear');
+      // angular.element('#eventDate').removeClass('clear');
     };
 
 

@@ -39,16 +39,12 @@ border-radius()
   max-height: 250px
   padding-top: 5%
 
-.pictureSaved
-  pointer-events: none
-
 .eventPicDesc span
   color: #d5d5d5
   margin: 0 auto
 
 .photo
   margin-top: 15px
-  position: relative
   width: 100%
   height: 250px
 
@@ -88,20 +84,19 @@ border-radius()
   padding-right: 18px
   z-index: 2
 
-#eventDesc,#eventName
+#eventDesc,#eventName,#eventDate,.dateTimeLocal
   width: 80%
   display: block
   background-color: #3a3a3a
   color: white
   padding-left: 5px
+  border: none
 
 #eventDesc
   margin-top: 8px
-  border: none
 
 #eventName
   margin-top:10px
-  border: none
 
 .submitNav
   width: 100%
@@ -110,23 +105,32 @@ border-radius()
 .calendarDateSetter
   height: 58px
 
-
 #eventDate
-  width: 250px
-  height: 44px
+  height: 48px
+  width: 79.5%
   font-size: 20px
-  position: relative
-  bottom: 49px
-  left: 31px
-  margin-top: 8px
-  opacity: 0.1
+  color: white
+  margin: 8px auto
+  border-radius: 5px
+  z-index: 1
+
+::-webkit-datetime-edit
+  padding: 1em
+
+::-webkit-datetime-edit-text
+  color: white
+  padding: 0 0.3em
+
+::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-year-field
+  color: white
+  font-size: 15px
+
+::-webkit-inner-spin-button,::-webkit-calendar-picker-indicator
+  display: none
+
 
 .dateTimeLocal
-  position: relative
-  left: 33px
-  width: 80%
-  top: 8px
-
+  z-index: 2
 
 .dateSet
   display: inline
@@ -195,3 +199,6 @@ border-radius()
   margin: 10px 10px 0px 10px
   font-size: 16px
   color: #191919
+
+.clear
+  opacity: 0

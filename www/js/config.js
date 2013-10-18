@@ -40,17 +40,16 @@ iPhoneApp.config(['$routeProvider',
   }
 ])
 .run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
-    var promise = loginCheck();
-    promise.then(function(credential) {
-      console.log(credential);
-      if(credential === 'true') {
-        $location.path('/map');
-      } else {
-        $location.path('/');
-      }
-    });
-  }
-]);
+  //   var promise = loginCheck();
+  //   promise.then(function(credential) {
+  //     console.log(credential);
+  //     if(credential === 'true') {
+  //       $location.path('/map');
+  //     } else {
+  //       $location.path('/');
+  //     }
+  //   });
+}]);
 
 
 //Setting HTML5 Location Mode
