@@ -2,8 +2,8 @@ angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
 
     var init = function() {
-      $scope.createActivityUser = userData.getUser();
-      $scope.userID = $scope.createActivityUser._id;
+      // $scope.createActivityUser = userData.getUser();
+      // $scope.userID = $scope.createActivityUser._id;
       $scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
       var currentDate = new Date();
