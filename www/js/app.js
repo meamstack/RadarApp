@@ -1,17 +1,14 @@
 var iPhoneApp = angular.module('meetMeApp', [
   'meetMeApp.controller.main',
   'meetMeApp.controller.map',
-  'meetMeApp.service.eventLocation',
-  'meetMeApp.service.postToServer',
-  'ajoslin.mobile-navigate',
   'meetMeApp.controller.createActivity',
   'meetMeApp.directive.createActivity',
-  'google-map-service',
+  'meetMeApp.service.eventLocation',
+  'meetMeApp.service.postToServer',
   'meetMeApp.service.userData',
   'meetMeApp.service.loginCheck',
-  'meetMeApp.directive.map',
+  'ajoslin.mobile-navigate',
   'ui.map',
-  'meetMeApp.service.loginCheck',
   'ngCookies',
   'hammer'
 ]);

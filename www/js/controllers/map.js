@@ -1,13 +1,12 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
-  .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
+  .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapLatLon) {
 
 
     var date = new Date();
-
     $scope.clockHour = date.getHours();
     $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
-
+    
     var map;
     var newTime;
     var origTime = date.getHours() * 60 + date.getMinutes();
@@ -74,7 +73,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     //   $scope.myMap.set(lat, lng);
     //   window.location.href = '#/createActivity'; // Use $location for this.
 
-
     // });
   //};
 
@@ -120,6 +118,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     }
   };
   $scope.currentMarkerAddPerson = function() {
+    debugger;
     console.log($scope);//$scope.currentMarkerTotal++;
   };
    
@@ -136,7 +135,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     };
     request = JSON.stringify(request);
     var url = 'http://myradar.co/api';
-
     $http.post(url + '/findEvents', request)
     .success(function(data) {
       $scope.newEvents = data;
@@ -150,4 +148,3 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
   }
 
 }]);
-
