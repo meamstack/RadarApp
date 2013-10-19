@@ -238,4 +238,3 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     }
 
 }]);
-
