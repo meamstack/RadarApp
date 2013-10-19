@@ -140,8 +140,10 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     // alert(currentGeoPos.longitude);
     // alert('number');
     $scope.myMarkers = [];
-      var lati = currentGeoPos.latitude || 37.79;
-      var longi = currentGeoPos.longitude || -122.4;
+    var lati = currentGeoPos.latitude || 37.79;
+    var longi = currentGeoPos.longitude || -122.4;
+    alert(currentGeoPos.latitude);
+    alert('latitude');
     $scope.mapOptions = {
       center: new google.maps.LatLng(lati, longi),
       zoom: 13,

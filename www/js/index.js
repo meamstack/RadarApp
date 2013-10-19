@@ -35,6 +35,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        alert('onDeviceReady');
         var options = {
             frequency: 500,
             maximumAge: 0,
@@ -42,6 +43,7 @@ var app = {
             enableHighAccuracy: true
         };
         var geolocationSuccess = function(position) {
+            alert('hello');
             currentGeoPos.latitude = position.coords.latitude;
             currentGeoPos.longitude = position.coords.longitude;
         };
@@ -50,6 +52,8 @@ var app = {
             console.log('error: ' + error.code + ' ' + error.message);
         };
         navigator.geolocation.watchPosition(geolocationSuccess, geolocationError, options);
+        alert(navigator);
+        alert('navvvv');
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
