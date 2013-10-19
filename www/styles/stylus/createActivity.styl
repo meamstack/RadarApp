@@ -36,18 +36,24 @@ border-radius()
   -webkit-overflow-scrolling:touch
 
 .pictureSaved img
-  height: 250px
+  max-height: 250px
+  padding-top: 5%
 
 .photo
   margin-top: 15px
-  position: relative
   width: 100%
   height: 250px
-  z-index: 2
 
 .icon, .icon:visited
-  color: #191919
+  color: black
   text-decoration: none
+
+.iconTop,.iconTop:visited
+  height: 26px
+  width: 32px
+  display: inline-block
+  padding-left: 1px
+  color: black
 
 .icon-folder-open
   padding-right: 18px
@@ -72,94 +78,77 @@ border-radius()
   padding-right: 18px
   z-index: 2
 
-#eventDesc
+#eventDesc,#eventName
   width: 80%
   display: block
-  margin-top:5px 
-  background-color: transparent
+  margin-top: 8px
+  padding-left: 5px
+
+#eventDesc,#eventName,#eventDate, #eventTime
+  // -webkit-appearance: none
+  background-color: #3a3a3a
+  color: white
   border: none
 
-#eventName
+.calendarDateSetter
+  height: 58px
   width: 80%
-  margin-top:5px
-  display: block
-  position: relative
-  top: 5px
-  background-color: transparent
-  border: none
+  margin: 0 auto
+
+#eventDate,#eventTime
+  height: 48px
+  width: 100%
+  font-size: 15px
+  background: black
+  margin: 8px auto
+  border-radius: 5px
+
+#eventDate
+  margin-left: 7px
+
+#eventTime
+  margin-left: 12px
+
+::-webkit-datetime-edit-text
+  // color: white
+  // background: #3a3a3a
+
+::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-year-field
+  color: white
+  font-size: 15px
+  margin: 0
+  background: #3a3a3a
+
+::-webkit-datetime-edit-fields-wrapper
+  background: #3a3a3a
+
+::-webkit-inner-spin-button,::-webkit-calendar-picker-indicator
+  display: none
+
+::-webkit-input-placeholder
+  color: grey
+  background: #3a3a3a
 
 .submitNav
   width: 100%
+  margin-top: 8px
 
-.calendarWrapper
-  width: 100%
-  height: 50px
-
-.calendarDateSetter
-  width: 255px
-  margin-right: auto
-  margin-left: auto
-
-#eventDate
-  width: 250px
-  height: 37px
-  display: inline
-  font-size: 20px
-  margin-top: 5px
-
-.dateSet
-  display: inline
-  font-size: 13px
-  pointer-events: none
-  width: 113px
-
-
-.block
-  display:block
-
-.activities 
-  background rgb(135, 199, 135)
-  width 200px
-  height 50px
-
-::-webkit-input-placeholder
-  color: #909090
-  background: #e0e0e0
-  border-radius: 6px
-
-.topcoat-text-input,
-.topcoat-text-input--large 
-  background: #e0e0e0 !important
-  line-height: 3rem
-  font-size: 16px
-  letter-spacing: 1px
-  border: none
-  border-radius: 6px
-  box-shadow: inset 0 1px rgba(0,0,0,0.18)
-  color: #191919 !important
-  vertical-align: top
-  margin-right: auto
-  margin-left: auto
+.topcoat-text-input
+  padding: 0
+  margin: 0 auto
 
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus 
-  background: #e0e0e0
-  color: #191919 !important
-  border: none
+  background-color: #e0e0e0
+  color: #f0f0f0
+  border: 1px solid #e0e0e0
   box-shadow: 0 0 0 2px #6fb5f1
+  padding-left: 10px
 
-.topcoat-text-input:disabled::-webkit-input-placeholder 
-  color: #f0f0f0
-  background: #e0e0e0
-
-.topcoat-text-input:disabled::-moz-placeholder 
-  color: #f0f0f0
-  background: #e0e0e0
-
+.topcoat-text-input:disabled::-webkit-input-placeholder,
+.topcoat-text-input:disabled::-moz-placeholder,
 .topcoat-text-input:disabled:-ms-input-placeholder 
   color: #f0f0f0
-  background: #e0e0e0
-
 
 .topcoat-text-input:invalid 
   border: 1px solid #d83b75
@@ -187,3 +176,8 @@ border-radius()
   font-size: 16px
   color: #191919
 
+.clear
+  opacity: 0
+
+.block
+  display:block

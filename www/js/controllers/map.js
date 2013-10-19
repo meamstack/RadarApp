@@ -157,61 +157,63 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
     };
 
-    $scope.createActivity = function () {
-      console.log('creating activity');
-      var lat = $scope.myMap.getCenter().lat();
-      var lng = $scope.myMap.getCenter().lng();
-      //console.log(lat, lng);
+  $scope.createActivity = function () {
+    console.log('creating activity');
+    var lat = $scope.myMap.getCenter().lat();
+    var lng = $scope.myMap.getCenter().lng();
+    //console.log(lat, lng);
+    $timeout(function(){
       googleMapLatLon.set(lat, lng) ;
-      //console.log('lat is ' + $scope.myMap.getCenter().lat());
-      //$scope.myMap.set(lat, lng);
       window.location.href = '#/createActivity';
+    }, 2000);
+
+  }
+
+  $scope.addMarker = function (objs) {
+
+    angular.forEach(objs, function(obj) {
+      $scope.myMarkers.push(new google.maps.Marker({
+        map: $scope.myMap,
+        position: new google.maps.LatLng(obj.location[0], obj.location[1]),
+        animation: google.maps.Animation.DROP,
+        obj: obj
+      }))
+    })
+  };
+  
+  $scope.openMarkerInfo = function (marker) {
+    var pic = getS3Photo(marker.obj['_id']);
+    $scope.currentMarker = marker;
+    $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
+    // $scope.currentMarkerImg = marker.obj['photo'];
+    $scope.currentMarkerTotal = marker.obj['total'] || 1;
+    $scope.myInfoWindow.open($scope.myMap, marker);
+
+    // don't mess with this, EVER. Well if you are curious, this is unbinding the click event to angular-ui events. 
+    var a = $($scope.myInfoWindow.content).find('a');
+    if (!a.data('click-bound')) {
+      a.data('click-bound', true);
+      a.click(function() {$scope.$apply(function () {
+        $scope.currentMarkerTotal++;
+      })})
     }
+  };
 
-    $scope.addMarker = function (objs) {
-
-      angular.forEach(objs, function(obj) {
-        $scope.myMarkers.push(new google.maps.Marker({
-          map: $scope.myMap,
-          position: new google.maps.LatLng(obj.location[0], obj.location[1]),
-          animation: google.maps.Animation.DROP,
-          obj: obj
-        }))
-      })
-    };
-    
-    $scope.openMarkerInfo = function (marker) {
-
-      $scope.currentMarker = marker;
-      $scope.currentMarkerId = marker.obj['_id'];
-      $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
-      $scope.currentMarkerImg = marker.obj['photo'];
-      $scope.currentMarkerTotal = marker.obj['total'] || 1;
-      $scope.myInfoWindow.open($scope.myMap, marker);
-
-      // don't mess with this, EVER. Well if you are curious, this is unbinding the click event to angular-ui events. 
-      var a = $($scope.myInfoWindow.content).find('a');
-      if (!a.data('click-bound')) {
-        a.data('click-bound', true);
-        a.click(function() {$scope.$apply(function () {
-          
-          var request = {
-            eventId : $scope.currentMarkerId,
-            userId: $scope.currentUserId
-          };
-          request = JSON.stringify(request);
-          var url = 'http://myradar.co/api';
-          $http.post(url + '/rsvp', request)
-          .success(function(data) {
-            $scope.currentMarkerTotal++;
-            alert('You are added to ' + $scope.currentMarkerDes['name'] + ' : '+ $scope.currentMarkerDes['description']);
-          })
-          .error(function(error){
-            $scope.addPerson = error;
-          });
-        })})
-      }
-    };
+  var getS3Photo = function(id) {
+    var url = 'https://s3-us-west-2.amazonaws.com/helenimages/eventImages/' + id + '.json';
+    var headers = {'Content-Type':'application/json'};
+    $http({method:'GET',url:url,headers:headers}).success(function(data){
+      $scope.currentMarkerImg = data.pic;
+      console.log(data.pic)
+    }).error(function(data){
+      alert('error',data);
+    });
+  };
+  $scope.currentMarkerAddPerson = function() {
+    debugger;
+    console.log($scope);//$scope.currentMarkerTotal++;
+  };
+   
 
     $scope.fetchEvents = function ($event) {
       var request = {
@@ -238,4 +240,3 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     }
 
 }]);
-
