@@ -37,9 +37,8 @@ iPhoneApp.config(['$routeProvider',
 .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
-  }
-])
-.run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
+  }]);
+// .run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
   //   var promise = loginCheck();
   //   promise.then(function(credential) {
   //     console.log(credential);
@@ -49,7 +48,7 @@ iPhoneApp.config(['$routeProvider',
   //       $location.path('/');
   //     }
   //   });
-}]);
+// }]);
 
 
 //Setting HTML5 Location Mode
