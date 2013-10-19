@@ -47,16 +47,7 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
       googleMapLatLon.set(lat, lng);
       window.location.href = centerMarker.url;
     });
-    /*
-    if (false) {
-      var trafficLayer = new google.maps.TrafficLayer();
-      trafficLayer.setMap(map);
-    }
-    if (false) {
-      var bikeLayer = new google.maps.BicyclingLayer();
-      bikeLayer.setMap(map);
-    }
-    */
+
     localMap = map; // reference map for future use
   };
 
@@ -67,7 +58,8 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
    // Add a marker to the map at specified latitude and longitude with tooltip
   var addMarker = function(map,lat,long,el) {
     var infowindow = new google.maps.InfoWindow({
-      content:el
+      content:el,
+      maxWidth:200
     });//disableAutoPan prevents skipping when info window opens
     var markerLatlng = new google.maps.LatLng(lat,long);
     var marker = new google.maps.Marker({
@@ -80,9 +72,9 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
       infowindow.open(map,marker);
     });
     //mouseout works when you click on something else on the phone, which is what we want
-    google.maps.event.addListener(marker, 'mouseout', function() {
-      infowindow.close(map,marker);
-    });
+    // google.maps.event.addListener(marker, 'mouseout', function() {
+    //   infowindow.close(map,marker);
+    // });
   };
 
   var getMarkers = function() {
@@ -114,6 +106,14 @@ googleMapFactory.factory('googleMapInit', ['googleMapLatLon', '$http', '$q', fun
     fetchMap: fetchMap,
     getMarkers: getMarkers
   };
+  // function loadScript() {
+  //   var script = document.createElement('script');
+  //   script.type = 'text/javascript';
+  //   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&' +
+  //       'callback=initialize';
+  //   document.body.appendChild(script);
+  // }
 
+  // window.onload = loadScript;
 }]);
 // EndOAWidget_Instance_2187524

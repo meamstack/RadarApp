@@ -27,7 +27,7 @@ h1
   height: 40px
   z-index:2
   font-size: 25px
-  color: #333
+  color: #191919
   box-shadow: 0px 3px 3px #888888
   background: #e0e0e0
 
@@ -42,7 +42,7 @@ h1
   padding: 0px 0px
   margin: 14px 10px 0px 10px
   font-size: 16px
-  color: #b0b0b0
+  color: #333
   
 #headerLeft
   float: left
@@ -60,45 +60,57 @@ h1
   left:160px
   z-index: 1
 
+#mapAndDay 
+  height: 100%
+  padding: 0
+  margin: 0
 
 #mapCanvas
   float: right
   overlow: hidden
-  width: 90%
-  height: 100%
+  width: 100%
   min-width: 220px
   min-height: 250px
   z-index: 0
-  box-shadow: 0px 3px 3px #888888
-
-#daySlider
-  position: fixed
-  float:left
-  margin-left: 0
-  width: 100%
-  height: 6%
-  min-height: 15px
-  bottom:0
-  box-shadow: 0px 3px 3px #888888
-  margin-top: 3px
+  height: 100%
 
 #daySliderText
-  float: right
   font-size: 20px
-  color: #F0F0F0
-  padding: 0px 0px 15px 0px
+  width: 100%
+  height: 40px
+  position: absolute
+  z-index: 1
+  margin-left: auto
+  margin-right: auto
+  display: block
+  text-align: center
+  padding-top: 5px
+  color: #303030
+  font-family: helvetica
+  text-shadow: 1px 1px 3px #909090
+
+#daySlider
+  width: 100%
+  height: 50px
+  position: absolute
+  z-index: 2
+  background: blue
+  overflow: hidden
+  margin: 0
+  padding: 0 0 0 0
+  bottom: 0px
+
 
 #hourSlider, #daySlider
-  background: blue
+  background: none
   overflow: hidden
 
 #hourSlider 
   float: left
   margin-left: 0
-  width: 10%
+  width: 15%
   height: 100%
   z-index:1
-  box-shadow: 3px 0px 3px #888888
   vertical-allign: middle
   color: off-white
 
@@ -138,6 +150,8 @@ h1
 #infoWindow
   position: relative
   overflow: hidden
+  width: 200px
+  z-index: 2
 
 #description
   margin: auto
@@ -145,7 +159,7 @@ h1
   font-size: 20px
   font-weight: 700
 
-button
+a
   float: right
   right: 5px
 
@@ -155,3 +169,12 @@ div img
 text
   font-family: 'Josefin Sans', sans-serif
   font-size: 13
+
+#centerMarker
+  position:fixed
+  width: 40px
+  top: 50%
+  left: 50%
+  margin-top: 10 
+  margin-left: -10px
+  z-index:1

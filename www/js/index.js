@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var currentGeoPos = {number: 2000};
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -33,6 +35,21 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        var options = {
+            frequency: 500,
+            maximumAge: 0,
+            timeout: 100,
+            enableHighAccuracy: true
+        };
+        var geolocationSuccess = function(position) {
+            currentGeoPos.latitude = position.coords.latitude;
+            currentGeoPos.longitude = position.coords.longitude;
+        };
+        var geolocationError = function(error) {
+            alert('error', error.message, error.code);
+            console.log('error: ' + error.code + ' ' + error.message);
+        };
+        navigator.geolocation.watchPosition(geolocationSuccess, geolocationError, options);
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event

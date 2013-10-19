@@ -18,7 +18,6 @@ border-radius()
   -moz-border-radius: argument
   border-radius: arguments
 
-
 .photoSource
   font: black
 
@@ -29,181 +28,156 @@ border-radius()
   margin: 10px 10px 0px 10px
   text-align: center
 
-
 .createActivity
   width: 100%
-  height: 100%
   padding: 0px
-  margin-top: 20px
+  margin-top: 0px
+  overflow: auto
+  -webkit-overflow-scrolling:touch
 
 .pictureSaved img
-  width: 100%
-  height: 100%
+  max-height: 250px
+  padding-top: 5%
 
 .photo
-  position: relative
+  margin-top: 15px
   width: 100%
-  height: 100%
-
-#eventDate
-  position: absolute
-  z-index: 1
-  opacity: 0
-  width: 140px
-  height: 37px
-
-.calendarIcon
-  pointer-events: none
-  position: relative
-  left: -71px
+  height: 250px
 
 .icon, .icon:visited
-  display: inline
-  color: white
+  color: black
   text-decoration: none
 
-.icon-film
-  position: absolute
-  bottom: 0
-  right: 10px
-  color: white
+.iconTop,.iconTop:visited
+  height: 26px
+  width: 32px
+  display: inline-block
+  padding-left: 1px
+  color: black
+
+.icon-folder-open
+  padding-right: 18px
   z-index: 2
 
 .icon-camera-retro
-  position: absolute
-  bottom: 0
-  left: 10px
-  color: white
+  padding-right: 18px
   z-index: 2
 
-.photo, .photo div
-  width 300px
-  height: 400px
-  margin: auto
-  overflow:hidden
-  z-index: 0
-
 .createEvent
+  display: block
+  margin-left: auto
+  margin-right: auto
   margin-bottom: 30px
-  left: 50%
-  margin-left: -45px
-  height: 100%
   line-height: 2rem
   border-radius: 5px
-  width: 120px !important
-  height: 40px !important
+  width: 120px
+  height: 40px
   text-align: center
 
-.icon-calendar-empty
-  position:absolute
-  float: right
-
-
 .icon-map-marker
-  position:absolute
-  // bottom: 25px
-  left: 15px
+  padding-right: 18px
+  z-index: 2
 
-
-#eventDesc
+#eventDesc,#eventName
   width: 80%
   display: block
-  margin-top:5px 
-  background-color: transparent
+  margin-top: 8px
+  padding-left: 5px
+
+#eventDesc,#eventName,#eventDate, #eventTime
+  // -webkit-appearance: none
+  background-color: #3a3a3a
+  color: white
   border: none
+
+.calendarDateSetter
+  height: 58px
+  width: 80%
+  margin: 0 auto
+
+#eventDate,#eventTime
+  height: 48px
+  width: 100%
+  font-size: 15px
+  background: black
+  margin: 8px auto
+  border-radius: 5px
+
+#eventDate
+  margin-left: 7px
+
+#eventTime
+  margin-left: 12px
+
+::-webkit-datetime-edit-text
+  // color: white
+  // background: #3a3a3a
+
+::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-year-field
+  color: white
+  font-size: 15px
+  margin: 0
+  background: #3a3a3a
+
+::-webkit-datetime-edit-fields-wrapper
+  background: #3a3a3a
+
+::-webkit-inner-spin-button,::-webkit-calendar-picker-indicator
+  display: none
 
 ::-webkit-input-placeholder
   color: grey
-
-#eventName
-  width: 80%
-  margin-top:5px
-  display: block
-  position: relative
-  top: 5px
-  
-  background-color: transparent
-  border: none
+  background: #3a3a3a
 
 .submitNav
-  display: block
-  bottom: 30px
-  margin-top: 10px
   width: 100%
-  height: 40px
+  margin-top: 8px
 
-.dateSet
-  display: block
-  position: absolute
-  left: 46px
-  font-size: 13px
-  pointer-events: none
-  width: 113px
-
-.calendarDateSetter
-  position: absolute
-
-.block
-  display:block
-
-.activities 
-  background rgb(135, 199, 135)
-  width 200px
-  height 50px
-
-.topcoat-text-input,
-.topcoat-text-input--large 
-  line-height: 3rem
-  font-size: 16px
-  letter-spacing: 1px
-  padding: 0 
-  border: 1px solid #303233
-  border-radius: 6px
-  background-color: #404141
-  box-shadow: inset 0 1px rgba(0,0,0,0.18)
-  color: #c6c8c8
-  vertical-align: top
-  margin-right: auto
-  margin-left: auto
-
+.topcoat-text-input
+  padding: 0
+  margin: 0 auto
 
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus 
-  background-color: #646666
-  color: #fff
-  border: 1px solid #0940fd
+  background-color: #e0e0e0
+  color: #f0f0f0
+  border: 1px solid #e0e0e0
   box-shadow: 0 0 0 2px #6fb5f1
+  padding-left: 10px
 
-
-.topcoat-text-input:disabled::-webkit-input-placeholder 
-  color: #fff
-
-
-.topcoat-text-input:disabled::-moz-placeholder 
-  color: #fff
-
-
+.topcoat-text-input:disabled::-webkit-input-placeholder,
+.topcoat-text-input:disabled::-moz-placeholder,
 .topcoat-text-input:disabled:-ms-input-placeholder 
-  color: #fff
-
+  color: #f0f0f0
 
 .topcoat-text-input:invalid 
   border: 1px solid #d83b75
 
-#transparent
-  position: absolute
-  top: 350px
-  color: #333
-  opacity: 0.5
-  z-index: 1
-  height: 100%
-
-#footer
-  position: fixed
-  bottom: 0
+#createActivityHeader
   width: 100%
   height: 40px
-  background: #191919
-  border-bottom-width: 1px
-  border-bottom-style: solid
-  border-top-color: #404040
+  z-index:2
+  font-size: 25px
+  box-shadow: 0px 3px 3px #888888
+  background: #e0e0e0
+  display: block
+
+#caHeaderLeft
+  color: #191919
+  float: left
+  font-size: 20px
+  padding: 0px 0px
+  margin: 12px 10px 0px 10px
+
+#caHeaderRight
+  float: right
+  padding: 0px 0px
+  margin: 10px 10px 0px 10px
+  font-size: 16px
+  color: #191919
+
+.clear
+  opacity: 0
+
+.block
+  display:block

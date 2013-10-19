@@ -11,16 +11,16 @@ module.exports = function(grunt) {
         files: ['www/styles/stylus/*'],
         tasks: ['stylus']
       },
-      karma: {
-        files: ['www/js/controllers/*.js',
-                'www/js/directives/*.js', 
-                'www/js/services/*.js',
-                'www/app.js',
-                'www/config.js',
-                'www/index.js',
-                'test/spec/*.js'],
-        tasks: ['karma:unit:start']
-      }
+      // karma: {
+      //   files: ['www/js/controllers/*.js',
+      //           'www/js/directives/*.js', 
+      //           'www/js/services/*.js',
+      //           'www/app.js',
+      //           'www/config.js',
+      //           'www/index.js',
+      //           'test/spec/*.js'],
+      //   tasks: ['karma:unit:start']
+      // }
       //, phonegap: {
       //   files: ['www/js/*', 'www/img/*', '/www/views/*', '/www/views/*'],
       //   tasks: ['phonegap:build']
