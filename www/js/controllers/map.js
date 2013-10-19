@@ -55,6 +55,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       disableDoubleClickZoom: false,
       zoomControl: false,
       disableDefaultUI:true,
+      infoWindowOptions: {maxWidth:100},
       keyboardShortcuts: true
     };
 
@@ -137,6 +138,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
         $scope.newEvents = error;
       });
     }
-
+    //function ()
 }]);
 
