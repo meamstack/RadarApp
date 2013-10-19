@@ -10,8 +10,7 @@
 	    <p id='headerRight'>San Francisco</p>
     </div>
     <div id='mapHeaderBottom'></div>
-        <div ui-map-marker="centerMarker" ui-event="{'map-click':'createActivity()'}"></div>
-   <!--  </div> -->
+    <a ng-click="createActivity()" href="#/createActivity"><img id="centerMarker"src="http://library.csun.edu/images/google_maps/marker-blue.png"></img></a>
     <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
       ui-event="{'map-click': 'openMarkerInfo(marker)'}">
     </div>
@@ -24,8 +23,9 @@
     </div>
     <div ui-map="myMap" 
       ui-options="mapOptions" 
-      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)'}" ui-options="mapOptions">
+      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)', 'map-zoom_changed': 'preventDefault()'}" ui-options="mapOptions">
     </div>
+
 
     <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
       <div id="hourSliderText"> </div>

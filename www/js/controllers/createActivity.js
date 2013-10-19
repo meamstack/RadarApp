@@ -2,10 +2,13 @@ angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
 
     $scope.createActivityUser = userData.getUser();
-    $scope.userID = $scope.createActivityUser._id;
+    console.log($scope.createActivityUser);
+    console.log(googleMapLatLon);
+    //$scope.userID = $scope.createActivityUser._id;
     $scope.latlon = googleMapLatLon.get();
+
     $scope.$navigate = $navigate;
-    $scope.picData = $scope.createActivityUser.facebook.picture.data.url;
+    //$scope.picData = $scope.createActivityUser.facebook.picture.data.url;
     $scope.submitForm = function () {
       var date = angular.element('#eventDate');
       postToServer.send({
@@ -14,9 +17,9 @@ angular.module('meetMeApp.controller.createActivity', [])
         time: date[0].value,
         total:1,
         photo: $scope.picData,
-        activity: $scope.activity,
+        //activity: $scope.activity,
         location: $scope.latlon,
-        userId: $scope.userID
+        //userId: $scope.userID
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
