@@ -82,10 +82,11 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     var lat = $scope.myMap.getCenter().lat();
     var lng = $scope.myMap.getCenter().lng();
     //console.log(lat, lng);
-    googleMapLatLon.set(lat, lng) ;
-    //console.log('lat is ' + $scope.myMap.getCenter().lat());
-    //$scope.myMap.set(lat, lng);
-    window.location.href = '#/createActivity';
+    $timeout(function(){
+      googleMapLatLon.set(lat, lng) ;
+      window.location.href = '#/createActivity';
+    }, 2000);
+
   }
 
   $scope.addMarker = function (objs) {
@@ -101,10 +102,10 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
   };
   
   $scope.openMarkerInfo = function (marker) {
-
+    var pic = getS3Photo(marker.obj['_id']);
     $scope.currentMarker = marker;
     $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
-    $scope.currentMarkerImg = marker.obj['photo'];
+    // $scope.currentMarkerImg = marker.obj['photo'];
     $scope.currentMarkerTotal = marker.obj['total'] || 1;
     $scope.myInfoWindow.open($scope.myMap, marker);
 
@@ -116,6 +117,17 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
         $scope.currentMarkerTotal++;
       })})
     }
+  };
+
+  var getS3Photo = function(id) {
+    var url = 'https://s3-us-west-2.amazonaws.com/helenimages/eventImages/' + id + '.json';
+    var headers = {'Content-Type':'application/json'};
+    $http({method:'GET',url:url,headers:headers}).success(function(data){
+      $scope.currentMarkerImg = data.pic;
+      console.log(data.pic)
+    }).error(function(data){
+      alert('error',data);
+    });
   };
   $scope.currentMarkerAddPerson = function() {
     debugger;
