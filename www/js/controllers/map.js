@@ -2,7 +2,6 @@
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapInit', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapInit, googleMapLatLon) {
     
-    // NEED TO HIDE MAP NAVIGATION ITEMS (+/- zoom etc)
     var date = new Date();
     var dates = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
@@ -11,11 +10,11 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $scope.date = date.getDate();
     $scope.day = dates[date.getDay()];
     var newDate;
-    var newTime;
-    var origTime = date;
     var pixelsY = 960;// iphone 4 screen size - may need to change
     var totalMinutes = 1440; // minutes in a day
     $scope.minute = (0 + date.getMinutes().toString()).slice(-2);
+    
+    // Turn 24-hr into 12-hr format and replace 0 with 12 for hours output
     var hourClean = function(hour){
       if (hour > 12){
         $scope.ampm = 'pm';
@@ -29,17 +28,13 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $scope.hourpm = hourClean(date.getHours());
 
     $scope.changeDay = function(e){
-      // One day for every x pixels
-      var deltaDays = Math.floor(e.gesture.deltaX / 100);
+      // One day for every x pixels on line below
+      var deltaDays = Math.floor(e.gesture.deltaX / 70);
       newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
       $scope.year = newDate.getFullYear();
       $scope.month = months[newDate.getMonth()];
       $scope.date = newDate.getDate();
       $scope.day = dates[newDate.getDay()];
-    };
-
-    $scope.releaseDay = function(e){
-      date = newDate;
     };
 
     $scope.changeTime = function(e) {
@@ -50,14 +45,13 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       $scope.date = newDate.getDate();
       $scope.day = dates[newDate.getDay()];
       $scope.minute = (0+newDate.getMinutes().toString()).slice(-2);
-      $scope.hour = newDate.getHours();
       $scope.hourpm = hourClean(newDate.getHours());
     };
     $scope.releaseTime = function(e){
       date = newDate;
       var rangeMin = new Date(date.getFullYear(), date.getMonth(),date.getDate(),date.getHours());
       var rangeMax = new Date(date.getFullYear(), date.getMonth(),date.getDate(),date.getHours()+1);
-      // Remove markers
+      // Remove all existing markers
       for (var i = 0; i < $scope.myMarkers.length; i++){
         $scope.myMarkers[i].setMap(null);
       }
@@ -156,10 +150,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.DEFAULT,
         position: google.maps.ControlPosition.TOP_RIGHT },
-
       scaleControl: false,
-      scaleControlOptions: {
-        position: google.maps.ControlPosition.BOTTOM_LEFT },
       streetViewControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable: true,
