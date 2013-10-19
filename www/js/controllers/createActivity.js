@@ -5,7 +5,7 @@ angular.module('meetMeApp.controller.createActivity', [])
       // $scope.createActivityUser = userData.getUser();
       // $scope.userID = $scope.createActivityUser._id;
       $scope.showDateTime = true;
-      $scope.latlon = googleMapLatLon.get();
+     //$scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
       var currentDate = new Date();
       $scope.date = (currentDate.getMonth()+1)  + "/" 
@@ -32,7 +32,7 @@ angular.module('meetMeApp.controller.createActivity', [])
         time: date + ' ' + time,
         photo: $scope.picData,
         //activity: $scope.activity,
-        location: $scope.latlon,
+        location: [lat, lng]//$scope.latlon,
         //userId: $scope.userID
       }, function(){
         $scope.$navigate.go('/map', 'slide');

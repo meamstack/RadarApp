@@ -163,14 +163,14 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
 
   $scope.createActivity = function () {
     console.log('creating activity');
-    var lat = $scope.myMap.getCenter().lat();
-    var lng = $scope.myMap.getCenter().lng();
+    lat = $scope.myMap.getCenter().lat();
+    lng = $scope.myMap.getCenter().lng();
     //console.log(lat, lng);
     // $timeout(function(){
-      googleMapLatLon.set(lat, lng);
-      if(lat){
+      // googleMapLatLon.set(lat, lng);
+      // if(lat){
         window.location.href = '#/createActivity';
-      }
+      // }
     // }, 2000);
   }
 
@@ -219,29 +219,32 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     console.log($scope);//$scope.currentMarkerTotal++;
   };
    
-
+    $scope.run = true;
     $scope.fetchEvents = function ($event) {
-      var request = {
-        location: $scope.mapOptions['center'],
-        date: {
-          year: 2013,
-          month: 10,
-          day: 06
-        },
-        maxD: 1
-      };
-      request = JSON.stringify(request);
-      var url = 'http://myradar.co/api';
-      $http.post(url + '/findEvents', request)
-      .success(function(data) {
-        $scope.newEvents = data;
-        $scope.addMarker($scope.newEvents);
-        //$scope.centerMarker = $scope.addCenterMarker();
-        console.log($scope.newEvents);
-      })
-      .error(function(error){
-        $scope.newEvents = error;
-      });
+      if ($scope.run) {
+        var request = {
+          location: $scope.mapOptions['center'],
+          date: {
+            year: 2013,
+            month: 10,
+            day: 06
+          },
+          maxD: 1
+        };
+        request = JSON.stringify(request);
+        var url = 'http://myradar.co/api';
+        $http.post(url + '/findEvents', request)
+        .success(function(data) {
+          $scope.newEvents = data;
+          $scope.addMarker($scope.newEvents);
+          //$scope.centerMarker = $scope.addCenterMarker();
+          console.log($scope.newEvents);
+        })
+        .error(function(error){
+          $scope.newEvents = error;
+        });
+      }
+      $scope.run = false;
     }
 
 }]);
