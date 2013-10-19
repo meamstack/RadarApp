@@ -136,10 +136,14 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     //   alert('this is the error',error)
     //   $scope.newEvents = error;
     // });
-
+    // alert(currentGeoPos.latitude);
+    // alert(currentGeoPos.longitude);
+    // alert('number');
     $scope.myMarkers = [];
+      var lati = currentGeoPos.latitude || 37.79;
+      var longi = currentGeoPos.longitude || -122.4;
     $scope.mapOptions = {
-      center: new google.maps.LatLng(37.79,-122.4),
+      center: new google.maps.LatLng(lati, longi),
       zoom: 13,
       navigationControl: false,
       navigationControlOptions: {
@@ -168,10 +172,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
         window.location.href = '#/createActivity';
       }
     // }, 2000);
-alert(typeof lat);
-alert('lat: ',lat);
-alert('long: ',lng);
-
   }
 
   $scope.addMarker = function (objs) {
