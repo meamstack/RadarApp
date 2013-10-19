@@ -1,16 +1,22 @@
-<div class="gridContainer clearfix" >
-  <div id='statusBar'></div>
-  <div id="LayoutDiv1">
-    <h1>Map View</h1>
-    9{{newEvents}}9
-    <a href='#/createActivity' ng-click="setLocation()">Create Activity</a>
-    <a ng-click="addMarker()">View data</a>
-
-    <div id="LayoutDiv2">
-      <div id="mapCanvas" ></div>
+<div class="gridContainer clearfix">
+  
+  <div id="LayoutDiv1" class="mapPage">
+    <!-- {{user}} -->
+    <!-- <p>Welcome {{user.name}}</p> -->
+    <!-- <a href='#/main'>Main (testing link)</a> -->
+    <div id="mapHeader">
+      <h1 id='headerLeft'>RADAR</h1>
+      <p id='headerRight'>San Francisco</p>
     </div>
-    <div id="hourSlider">"1 pm"</div>
-    <div id="daySlider">Today</div>
+    <div id='mapHeaderBottom'></div>
+    <div id="mapCanvas" ></div>
+    <div id="hourSlider" class="slider">
+        <div id="hourSliderText">{{hour}}:{{minute}}</div>
+    </div>
+    <div id="daySlider" class="slider">
+    <map-markers events="newEvents"></map-markers>
+      <button ng-click="addPerson()">hello</button>
+      <div id="daySliderText">Tuesday October 14, 2013<div>
+    </div>
   </div>
 </div>
-

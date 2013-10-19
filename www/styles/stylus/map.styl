@@ -1,26 +1,54 @@
 blue = #accecd
 pink = #bc6367
+off-white = #fafffc
+
+@import 'reset.css'
+@import url(http://fonts.googleapis.com/css?family=Josefin\+Sans:400,700)
 
 body
   height: 100%
   width: 100%
 
-.hero-unit
-  height: 100%
-  margin: 0px
-  float: left
-  width: 90%
+#LayoutDiv1
+  height:100%
+  display:block
 
-.map-page
-  padding: 0px
-  margin: 0px
-
-.map
-  width: 90%
-  height: 80%
+text
+  clear: both
 
 h1
   margin: 0px
+
+.mapPage
+  background: #e0e0e0
+
+#mapHeader
+  width: 100%
+  height: 40px
+  z-index:2
+  font-size: 25px
+  color: #333
+  box-shadow: 0px 3px 3px #888888
+  background: #e0e0e0
+
+#mapHeaderBottom
+  width: 100%
+  height: 3px
+  z-index:2
+  background: transparent
+
+#headerRight
+  float: right
+  padding: 0px 0px
+  margin: 14px 10px 0px 10px
+  font-size: 16px
+  color: #b0b0b0
+  
+#headerLeft
+  float: left
+  font-size: 20px
+  padding: 0px 0px
+  margin: 12px 10px 0px 10px
 
 #carrier-date-battery
   width: 100%
@@ -34,15 +62,96 @@ h1
 
 
 #mapCanvas
-  width: 100%
+  float: right
+  overlow: hidden
+  width: 90%
   height: 100%
-  min-width: 300px
-  min-height: 300px
+  min-width: 220px
+  min-height: 250px
   z-index: 0
+  box-shadow: 0px 3px 3px #888888
 
 #daySlider
-  bottom: 0
-  height: 20px
+  position: fixed
+  float:left
+  margin-left: 0
+  width: 100%
+  height: 6%
+  min-height: 15px
+  bottom:0
+  box-shadow: 0px 3px 3px #888888
+  margin-top: 3px
+
+#daySliderText
+  float: right
+  font-size: 20px
+  color: #F0F0F0
+  padding: 0px 0px 15px 0px
 
 #hourSlider, #daySlider
-  background: pink
+  background: blue
+  overflow: hidden
+
+#hourSlider 
+  float: left
+  margin-left: 0
+  width: 10%
+  height: 100%
+  z-index:1
+  box-shadow: 3px 0px 3px #888888
+  vertical-allign: middle
+  color: off-white
+
+#hourSliderText
+  font-weight: bold
+  margin-left: 1px
+  margin-top: 10px
+  color: #F0F0F0
+  font-size: 12px
+
+.focus
+  color: off-white
+
+.blur 
+   color: transparent
+   text-shadow: 0 0 5px rgba(0,0,0,0.5)
+
+.slider
+  overflow: auto
+  -webkit-overflow-scrolling:touch
+  position: absolute
+  
+.stitched 
+   padding: 20px
+   margin: 10px
+   background: #ff0030
+   color: #fff
+   font-size: 21px
+   font-weight: bold
+   line-height: 1.3em
+   border: 2px dashed #fff
+   border-radius: 10px
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
+   text-shadow: -1px -1px #aa3030
+   font-weight: normal
+
+#infoWindow
+  position: relative
+  overflow: hidden
+
+#description
+  margin: auto
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 20px
+  font-weight: 700
+
+button
+  float: right
+  right: 5px
+
+div img
+  width: 200px
+
+text
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 13
