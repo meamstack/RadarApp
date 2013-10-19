@@ -162,10 +162,15 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     var lat = $scope.myMap.getCenter().lat();
     var lng = $scope.myMap.getCenter().lng();
     //console.log(lat, lng);
-    $timeout(function(){
-      googleMapLatLon.set(lat, lng) ;
-      window.location.href = '#/createActivity';
-    }, 2000);
+    // $timeout(function(){
+      googleMapLatLon.set(lat, lng);
+      if(lat){
+        window.location.href = '#/createActivity';
+      }
+    // }, 2000);
+alert(typeof lat);
+alert('lat: ',lat);
+alert('long: ',lng);
 
   }
 
@@ -210,7 +215,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     });
   };
   $scope.currentMarkerAddPerson = function() {
-    debugger;
     console.log($scope);//$scope.currentMarkerTotal++;
   };
    
