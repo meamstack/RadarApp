@@ -1,6 +1,6 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
-  .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapLatLon) {
+  .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapLatLon', '$compile', '$q', function ($scope, userData, $http, googleMapLatLon, $compile, $q) {
     var date = new Date();
     var dates = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
@@ -89,13 +89,20 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     };
 
     $scope.createActivity = function () {
+      var deferred = $q.defer();
       console.log('creating activity');
-      var lat = $scope.myMap.getCenter().lat();
-      var lng = $scope.myMap.getCenter().lng();
-      googleMapLatLon.set(lat, lng) ;
-      window.location.href = '#/createActivity';
-    }
+      $scope.$apply(function(){
+        var lat = $scope.myMap.getCenter().lat();
+        var lng = $scope.myMap.getCenter().lng();
+      })
 
+      return deferred.promise;
+    }
+    var promise = $scope.createActivity();
+    promise.then(function (lat,lng) {
+      googleMapLatLon.set(lat, lng);
+      window.location.href = '#/createActivity';
+    });
     $scope.addMarker = function (objs) {
 
       angular.forEach(objs, function(obj) {

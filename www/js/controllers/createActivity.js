@@ -1,10 +1,9 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
-
     $scope.createActivityUser = userData.getUser();
     console.log($scope.createActivityUser);
     console.log(googleMapLatLon);
-    $scope.userID = $scope.createActivityUser._id;
+    //$scope.userID = $scope.createActivityUser._id;
     $scope.latlon = googleMapLatLon.get();
 
     $scope.$navigate = $navigate;
@@ -25,20 +24,20 @@ angular.module('meetMeApp.controller.createActivity', [])
       });
     };
 
-    var initializeInfo = function() {   // initialize information, called at bottom of page
-      $scope.activities = [ ['coffee','a.png'],
-                            ['park','b.png'],
-                            ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
-                            ['bar', 'c.png'],
-                            ['reading', 'd.png'],
-                            ['sports', 'e.png'],
-                            ['music', 'f.png'],
-                            ['...', 'more.png']];
-      $scope.picData = postToServer.getPic();
-      $scope.eventName = postToServer.getName();
-      $scope.description = postToServer.getDesc();
-      $scope.date = '10/12/13 12:10:20';
-    };
+    // var initializeInfo = function() {   // initialize information, called at bottom of page
+    //   $scope.activities = [ ['coffee','a.png'],
+    //                         ['park','b.png'],
+    //                         ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
+    //                         ['bar', 'c.png'],
+    //                         ['reading', 'd.png'],
+    //                         ['sports', 'e.png'],
+    //                         ['music', 'f.png'],
+    //                         ['...', 'more.png']];
+    //   $scope.picData = postToServer.getPic();
+    //   $scope.eventName = postToServer.getName();
+    //   $scope.description = postToServer.getDesc();
+    //   $scope.date = '10/12/13 12:10:20';
+    // };
 
     $scope.showOptions = function () {
       
@@ -67,6 +66,7 @@ angular.module('meetMeApp.controller.createActivity', [])
         time: date[0].value,
         photo: $scope.picData,
         activity: $scope.activity,
+        _id: $scope.userId || 123, 
         location: googleMapLatLon.get()
       });
       postToServer.savePic($scope.picData);
@@ -115,6 +115,6 @@ angular.module('meetMeApp.controller.createActivity', [])
       // alert('err', e);
     };
 
-    initializeInfo();
+    //initializeInfo();
 
   }]);
