@@ -255,23 +255,22 @@ var debug_el = $("#debug");
           text-shadow: -1px -1px 0 rgba(0,0,0,.2);
           color: #fff;
           margin: 16px 16px;
+          font-size: 18px;
         }
 
         #carousel li h4 {
           text-align: center;
           text-shadow: -1px -1px 0 rgba(0,0,0,.2);
           color: #fff;
-          margin: 8px 8px;
-          position: fixed;
-          bottom: 85px;
           z-index: 1;
-          left: 100px;
+          margin-bottom: 5px;
+          font-style: italic;
         }
 
-        #carousel li.pane1 { background: #43d692; }
-        #carousel li.pane2 { background: #4a86e7; }
-        #carousel li.pane3 { background: #d16b64; }
-        #carousel li.pane4 { background: #ce74e6; }
+        #carousel li.pane1 { background: #202020; }
+        #carousel li.pane2 { background: #0969A2; }
+        #carousel li.pane3 { background: #5C001F; }
+        #carousel li.pane4 { background: #015965; }
         #carousel li.pane5 { background: #90e1e7; }
 
         .discoverEvents {
@@ -280,14 +279,11 @@ var debug_el = $("#debug");
           margin: 0 auto;
         }
 
-        .fb-login {
-          /*margin: 0 auto;*/
-        }
-
         #fb {
-          position: absolute;
           left: 2%;
-          bottom: 40px;
+          margin-right: auto;
+          margin-left: auto;
+          display: block;
         }
 
         #quick-guide {
@@ -297,17 +293,28 @@ var debug_el = $("#debug");
             bottom: 73px;
         }
 
+        .lastPane {
+          margin-top: 90px !important;
+          margin-bottom: 80px !important;
+          font-size: 22px;
+        }
+
     </style>
 
     <div id="carousel">
         <ul>
             <li class="pane1">
-              <h1 id="radar-title">Radar</h1>
+              <div class='paneTitleBox'>
+                <img src='img/radarLogo.png' class='paneLogo'/>
+                <h1>Radar</h1>
+              </div>
               <img src="https://s3-us-west-2.amazonaws.com/helenimages/discoverEvents.png" class="discoverEvents">
               <!-- <h2>Discover events</h2> -->
-              <h3>Check out events going on around you and click to see more details</h3>
-              <h4>Swipe to continue</h4>
-              <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
+              <h3>Check out events around you and click to see details</h3>
+              <div class='fbBox'>
+                <h4>Swipe to continue</h4>
+                <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
+              </div>
             </li>
             <li class="pane2">
               <h2>Create your own event!</h2>
@@ -327,7 +334,7 @@ var debug_el = $("#debug");
               <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
             </li>
             <li class="pane4">
-              <h3>You can now view your new event and everything else going on around you.</h3>
+              <h3 class='lastPane'>You can now view your event and everything else happening around you!</h3>
               <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
             </li>
         </ul>
