@@ -1,60 +1,48 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
-    $scope.createActivityUser = userData.getUser();
-    console.log($scope.createActivityUser);
-    console.log(googleMapLatLon);
-    //$scope.userID = $scope.createActivityUser._id;
-    $scope.latlon = googleMapLatLon.get();
+// <<<<<<< HEAD
+//     $scope.createActivityUser = userData.getUser();
+//     console.log($scope.createActivityUser);
+//     console.log(googleMapLatLon);
+//     //$scope.userID = $scope.createActivityUser._id;
+//     $scope.latlon = googleMapLatLon.get();
+// =======
 
-    $scope.$navigate = $navigate;
-    //$scope.picData = $scope.createActivityUser.facebook.picture.data.url;
+    var init = function() {
+      // $scope.createActivityUser = userData.getUser();
+      // $scope.userID = $scope.createActivityUser._id;
+      $scope.showDateTime = true;
+     //$scope.latlon = googleMapLatLon.get();
+      $scope.$navigate = $navigate;
+      var currentDate = new Date();
+      $scope.date = (currentDate.getMonth()+1)  + "/" 
+                + currentDate.getDate() + "/"
+                + currentDate.getFullYear() + " @ "  
+                + currentDate.getHours() + ":"  
+                + currentDate.getMinutes() + ":" 
+                + currentDate.getSeconds(); 
+      $scope.picData = 'img/photoPlaceholder.png';
+      document.getElementById('eventDate').value = new Date().toISOString().substring(0, 10);
+      var hour = new Date().getHours();
+      var min = new Date().getMinutes();
+      document.getElementById('eventTime').value = hour+':'+min
+    };
+
+    init();
+
     $scope.submitForm = function () {
-      var date = angular.element('#eventDate');
+      var date = document.getElementById('eventDate').value;
+      var time = document.getElementById('eventTime').value;
       postToServer.send({
         name: $scope.eventName,
         description: $scope.description,
-        time: date[0].value,
-        total:1,
+        time: date + ' ' + time,
         photo: $scope.picData,
-        activity: $scope.activity,
-        location: $scope.latlon,
+        location: [lat, lng],//$scope.latlon,
         userId: $scope.userID || 123
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
-    };
-
-    // var initializeInfo = function() {   // initialize information, called at bottom of page
-    //   $scope.activities = [ ['coffee','a.png'],
-    //                         ['park','b.png'],
-    //                         ['holding baby','img/glyphicons/png/glyphicons_075_stroller.png'],
-    //                         ['bar', 'c.png'],
-    //                         ['reading', 'd.png'],
-    //                         ['sports', 'e.png'],
-    //                         ['music', 'f.png'],
-    //                         ['...', 'more.png']];
-    //   $scope.picData = postToServer.getPic();
-    //   $scope.eventName = postToServer.getName();
-    //   $scope.description = postToServer.getDesc();
-    //   $scope.date = '10/12/13 12:10:20';
-    // };
-
-    $scope.showOptions = function () {
-      
-    }
-
-    $scope.saveActivity = function(activity) {
-      $scope.activity = activity;
-    };
-
-    $scope.saveName = function() {
-      alert('save name');
-      postToServer.saveName($scope.eventName);
-    };
-
-    $scope.saveDesc = function() {
-      alert('saved desc');
-      postToServer.saveDesc($scope.description);
     };
 
     $scope.saveToServer = function() {
@@ -72,11 +60,12 @@ angular.module('meetMeApp.controller.createActivity', [])
       postToServer.savePic($scope.picData);
     };
 
-    $scope.saveDate = function() {
-      var date = angular.element('#eventDate');
-      console.log(date[0].value);
-      $scope.date = date[0].value;
+    $scope.showDate = function() {
+      $scope.showDateTime = false;
+      // angular.element('.dateTimeLocal').addClass('clear');
+      // angular.element('#eventDate').removeClass('clear');
     };
+
 
     $scope.takePic = function() {
       var options = {
@@ -88,8 +77,6 @@ angular.module('meetMeApp.controller.createActivity', [])
           mediaType: 0,        // 0: picture, 1: video, 2: all media,
           saveToPhotoAlbum: true
       };
-      // Take picture using device camera and retrieve image as base64-encoded string
-      console.log(navigator);
       navigator.camera.getPicture(onSuccess,onFail,options);
     };
 
@@ -97,12 +84,10 @@ angular.module('meetMeApp.controller.createActivity', [])
       var options = {
           quality: 14,
           destinationType: 0,
-          sourceType: 0,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+          sourceType: 0,
           allowEdit: true,
-          encodingType: 0     // 0=JPG 1=PNG
+          encodingType: 0
       };
-      // Take picture using device camera and retrieve image as base64-encoded string
-      console.log(navigator);
       navigator.camera.getPicture(onSuccess,onFail,options);
     };
 
@@ -112,9 +97,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     };
     var onFail = function(e) {
       console.log("On fail " + e);
-      // alert('err', e);
     };
 
-    //initializeInfo();
 
   }]);
