@@ -5,7 +5,6 @@
   <div id="LayoutDiv1" class="mapPage">
 
     <div id="mapHeader">
-
 	    <h2 id='headerLeft'>RADAR</h2>
 	    <p id='headerRight'>San Francisco</p>
     </div>
@@ -23,7 +22,7 @@
     </div>
     <div ui-map="myMap" 
       ui-options="mapOptions" 
-      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)', 'map-zoom_changed': 'preventDefault()'}" ui-options="mapOptions">
+      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)'}" ui-options="mapOptions">
     </div>
 
 
