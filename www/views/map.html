@@ -11,7 +11,6 @@
     </div>
     <div id='mapHeaderBottom'></div>
     <a ng-click="createActivity()" href="#/createActivity"><img id="centerMarker"src="http://library.csun.edu/images/google_maps/marker-blue.png"></img></a>
-
     <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
       ui-event="{'map-click': 'openMarkerInfo(marker)'}">
     </div>
@@ -24,14 +23,19 @@
     </div>
     <div ui-map="myMap" 
       ui-options="mapOptions" 
-      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'newEvents($event)', 'zoom_changed': 'preventDefault()'}" ui-options="mapOptions">
+      class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)', 'map-zoom_changed': 'preventDefault()'}" ui-options="mapOptions">
     </div>
 
 
     <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
-      <div id="hourSliderText">{{hourpm}}:{{minute}}{{ampm}}</div>
+      <div id="hourSliderText"> </div>
     </div>
-  	<div id="daySliderText">Tuesday October 14, 2013<div>
+    <div id='mapAndDay'>
+      <div id="mapCanvas" ></div>
+      <div id="daySliderText">{{hourpm}}:{{minute}}{{ampm}} {{day}} {{month}} {{date}} {{year}}</div>
+      <div id='daySlider' hammer-drag="changeDay($event)" hammer-release="releaseTime($event)">
+      </div>
+    </div>
 
   </div>
 </div>

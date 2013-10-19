@@ -1,38 +1,142 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapLatLon) {
-
-
     var date = new Date();
-    $scope.clockHour = date.getHours();
-    $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
-    
-    var map;
-    var newTime;
-    var origTime = date.getHours() * 60 + date.getMinutes();
-    var pixels = 960;// iphone 4 screen size - may need to change
+    var dates = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+    $scope.year = date.getFullYear();
+    $scope.month = months[date.getMonth()];
+    $scope.date = date.getDate();
+    $scope.day = dates[date.getDay()];
+    var newDate;
+    var pixelsY = 960;// iphone 4 screen size - may need to change
     var totalMinutes = 1440; // minutes in a day
-    $scope.minute = (0 + (origTime % 60).toString()).slice(-2);
-    $scope.hour = Math.floor(origTime / 60) % 24;
-    $scope.hourpm = $scope.hour % 12;
-    if ($scope.hour > 12){
-      $scope.ampm = 'PM';
-    } else $scope.ampm = 'AM';
+    $scope.minute = (0 + date.getMinutes().toString()).slice(-2);
+    
+    // Turn 24-hr into 12-hr format and replace 0 with 12 for hours output
+    var hourClean = function(hour){
+      if (hour > 12){
+        $scope.ampm = 'pm';
+      } else $scope.ampm = 'am';
+      hour = hour % 12;
+      if (hour === 0){
+        return 12;
+      }
+      return hour;
+    }
+    $scope.hourpm = hourClean(date.getHours());
+
+    $scope.changeDay = function(e){
+      // One day for every x pixels on line below
+      var deltaDays = Math.floor(e.gesture.deltaX / 70);
+      newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
+      $scope.year = newDate.getFullYear();
+      $scope.month = months[newDate.getMonth()];
+      $scope.date = newDate.getDate();
+      $scope.day = dates[newDate.getDay()];
+    };
 
     $scope.changeTime = function(e) {
-      var deltaMins = Math.floor((e.gesture.deltaY / pixels) * totalMinutes); // change in minutes
-      newTime = origTime + deltaMins;
-      $scope.minute = (0+(newTime % 60).toString()).slice(-2);
-      $scope.hour = Math.floor(newTime / 60) % 24;
-      $scope.hourpm = $scope.hour % 12;
-      if ($scope.hour > 12){
-        $scope.ampm = 'PM';
-      } else $scope.ampm = 'AM';
-      // $scope.addMarker(map);
+      var deltaMins = Math.floor((e.gesture.deltaY / pixelsY) * totalMinutes); // change in minutes
+      newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes()+deltaMins);
+      $scope.year = newDate.getFullYear();
+      $scope.month = months[newDate.getMonth()];
+      $scope.date = newDate.getDate();
+      $scope.day = dates[newDate.getDay()];
+      $scope.minute = (0+newDate.getMinutes().toString()).slice(-2);
+      $scope.hourpm = hourClean(newDate.getHours());
     };
-    $scope.release = function(e){
-      origTime = newTime;
+    $scope.releaseTime = function(e){
+      date = newDate;
+      var rangeMin = new Date(date.getFullYear(), date.getMonth(),date.getDate(),date.getHours());
+      var rangeMax = new Date(date.getFullYear(), date.getMonth(),date.getDate(),date.getHours()+1);
+      // Remove all existing markers
+      for (var i = 0; i < $scope.myMarkers.length; i++){
+        $scope.myMarkers[i].setMap(null);
+      }
+      // If inside the time range add marker
+      var newMarkers = [];
+      for (var i = 0; i < $scope.newEvents.length; i++){
+        var eventDate = new Date($scope.newEvents[i].time);
+        if (eventDate > rangeMin && eventDate < rangeMax){
+          newMarkers.push($scope.newEvents[i]);
+        } 
+      }
+      $scope.addMarker(newMarkers);
     };
+    // dummy data for $scope.newEvents
+    // $scope.newEvents = [
+    //     {
+    //       name: "Free pizza @ Hack reactor!",
+    //       description: 'awesomeness!',
+    //       location: [37.785427,-122.40572],
+    //       time: 'Thu Oct 17 2013 21:13:38 GMT-0700 (PDT)',
+    //       photo: 'img/fun.jpg',
+    //       activity: 'eat',
+    //       userId: '52589775e57d7f4011000001'
+    //     }, {
+    //       name: "Goo time!",
+    //       description: 'Who knows what!',
+    //       location: [37.789984,-122.40523],
+    //       time: 'Thu Oct 17 2013 22:13:38 GMT-0700 (PDT)',
+    //       photo: 'img/fun.jpg',
+    //       activity: 'party',
+    //       userId: '52589775e57d7f4011000001'
+    //     }, {
+    //       name: 'Thursday night footbal!!',
+    //       description: 'Chips and tacos',
+    //       location: [37.7836,-122.408904],
+    //       time: 'Thu Oct 17 2013 23:13:38 GMT-0700 (PDT)',
+    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
+    //       activity: 'pizza',
+    //       userId: '52589775e57d7f4011000001'
+    //     }, {
+    //       name: 'Thursday night footbal!!',
+    //       description: 'Chips and tacos',
+    //       location: [37.78365,-122.40891],
+    //       time: 'Thu Oct 17 2013 19:13:38 GMT-0700 (PDT)',
+    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
+    //       activity: 'pizza',
+    //       userId: '52589775e57d7f4011000001'
+    //     }, {
+    //       name: 'Thursday night footbal!!',
+    //       description: 'Chips and tacos',
+    //       location: [37.78565,-122.41891],
+    //       time: 'Thu Oct 17 2013 19:13:38 GMT-0700 (PDT)',
+    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
+    //       activity: 'pizza',
+    //       userId: '52589775e57d7f4011000001'
+    //     }
+    // ];
+
+    
+
+    // $scope.setLocation = function(){
+      // googleMapLatLon.set(37.705427,-122.39572);
+    // };
+
+    // var request = {
+    //   location: [37.800305,-122.409239],
+    //   date: {
+    //     year: 2013,
+    //     month: 10,
+    //     day: 06
+    //   },
+    //   maxD: 1
+    // };
+    // request = JSON.stringify(request);
+    // var url = 'http://myradar.co/api';
+
+    // $http.post(url + '/findEvents', request)
+    // .success(function(data) {
+    //   $scope.newEvents = data;
+    //   $scope.addMarker();
+    // })
+    // .error(function(error){
+    //   alert('this is the error',error)
+    //   $scope.newEvents = error;
+    // });
+
     $scope.myMarkers = [];
     $scope.mapOptions = {
       center: new google.maps.LatLng(37.79,-122.4),
@@ -45,10 +149,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.DEFAULT,
         position: google.maps.ControlPosition.TOP_RIGHT },
-
       scaleControl: false,
-      scaleControlOptions: {
-        position: google.maps.ControlPosition.BOTTOM_LEFT },
       streetViewControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable: true,
@@ -112,7 +213,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       }
     };
 
-    $scope.newEvents = function ($event) {
+    $scope.fetchEvents = function ($event) {
       var request = {
         location: $scope.mapOptions['center'],
         date: {
