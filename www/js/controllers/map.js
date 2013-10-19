@@ -1,38 +1,70 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapLatLon) {
-
-
     var date = new Date();
-    $scope.clockHour = date.getHours();
-    $scope.clockMinute = (0+date.getMinutes().toString()).slice(-2);
-    
-    var map;
-    var newTime;
-    var origTime = date.getHours() * 60 + date.getMinutes();
-    var pixels = 960;// iphone 4 screen size - may need to change
+    var dates = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+    $scope.year = date.getFullYear();
+    $scope.month = months[date.getMonth()];
+    $scope.date = date.getDate();
+    $scope.day = dates[date.getDay()];
+    var newDate;
+    var pixelsY = 960;// iphone 4 screen size - may need to change
     var totalMinutes = 1440; // minutes in a day
-    $scope.minute = (0 + (origTime % 60).toString()).slice(-2);
-    $scope.hour = Math.floor(origTime / 60) % 24;
-    $scope.hourpm = $scope.hour % 12;
-    if ($scope.hour > 12){
-      $scope.ampm = 'PM';
-    } else $scope.ampm = 'AM';
+    $scope.minute = (0 + date.getMinutes().toString()).slice(-2);
+    
+    // Turn 24-hr into 12-hr format and replace 0 with 12 for hours output
+    var hourClean = function(hour){
+      if (hour > 12){
+        $scope.ampm = 'pm';
+      } else $scope.ampm = 'am';
+      hour = hour % 12;
+      if (hour === 0){
+        return 12;
+      }
+      return hour;
+    }
+    $scope.hourpm = hourClean(date.getHours());
+
+    $scope.changeDay = function(e){
+      // One day for every x pixels on line below
+      var deltaDays = Math.floor(e.gesture.deltaX / 70);
+      newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
+      $scope.year = newDate.getFullYear();
+      $scope.month = months[newDate.getMonth()];
+      $scope.date = newDate.getDate();
+      $scope.day = dates[newDate.getDay()];
+    };
 
     $scope.changeTime = function(e) {
-      var deltaMins = Math.floor((e.gesture.deltaY / pixels) * totalMinutes); // change in minutes
-      newTime = origTime + deltaMins;
-      $scope.minute = (0+(newTime % 60).toString()).slice(-2);
-      $scope.hour = Math.floor(newTime / 60) % 24;
-      $scope.hourpm = $scope.hour % 12;
-      if ($scope.hour > 12){
-        $scope.ampm = 'PM';
-      } else $scope.ampm = 'AM';
-      // $scope.addMarker(map);
+      var deltaMins = Math.floor((e.gesture.deltaY / pixelsY) * totalMinutes); // change in minutes
+      newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes()+deltaMins);
+      $scope.year = newDate.getFullYear();
+      $scope.month = months[newDate.getMonth()];
+      $scope.date = newDate.getDate();
+      $scope.day = dates[newDate.getDay()];
+      $scope.minute = (0+newDate.getMinutes().toString()).slice(-2);
+      $scope.hourpm = hourClean(newDate.getHours());
     };
-    $scope.release = function(e){
-      origTime = newTime;
+    $scope.releaseTime = function(e){
+      date = newDate;
+      var rangeMin = new Date(date.getFullYear(), date.getMonth(),date.getDate(),date.getHours());
+      var rangeMax = new Date(date.getFullYear(), date.getMonth(),date.getDate(),date.getHours()+1);
+      // Remove all existing markers
+      for (var i = 0; i < $scope.myMarkers.length; i++){
+        $scope.myMarkers[i].setMap(null);
+      }
+      // If inside the time range add marker
+      var newMarkers = [];
+      for (var i = 0; i < $scope.newEvents.length; i++){
+        var eventDate = new Date($scope.newEvents[i].time);
+        if (eventDate > rangeMin && eventDate < rangeMax){
+          newMarkers.push($scope.newEvents[i]);
+        } 
+      }
+      $scope.addMarker(newMarkers);
     };
+
     $scope.myMarkers = [];
     $scope.mapOptions = {
       center: new google.maps.LatLng(37.79,-122.4),
@@ -45,10 +77,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.DEFAULT,
         position: google.maps.ControlPosition.TOP_RIGHT },
-
       scaleControl: false,
-      scaleControlOptions: {
-        position: google.maps.ControlPosition.BOTTOM_LEFT },
       streetViewControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable: true,
@@ -63,10 +92,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       console.log('creating activity');
       var lat = $scope.myMap.getCenter().lat();
       var lng = $scope.myMap.getCenter().lng();
-      //console.log(lat, lng);
       googleMapLatLon.set(lat, lng) ;
-      //console.log('lat is ' + $scope.myMap.getCenter().lat());
-      //$scope.myMap.set(lat, lng);
       window.location.href = '#/createActivity';
     }
 
@@ -114,30 +140,31 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
         })})
       }
     };
-
+    $scope.run = true;//don't fetch data if already loaded
     $scope.fetchEvents = function ($event) {
-      var request = {
-        location: $scope.mapOptions['center'],
-        date: {
-          year: 2013,
-          month: 10,
-          day: 06
-        },
-        maxD: 1
-      };
-      request = JSON.stringify(request);
-      var url = 'http://myradar.co/api';
-      $http.post(url + '/findEvents', request)
-      .success(function(data) {
-        $scope.newEvents = data;
-        $scope.addMarker($scope.newEvents);
-        //$scope.centerMarker = $scope.addCenterMarker();
-        console.log($scope.newEvents);
-      })
-      .error(function(error){
-        $scope.newEvents = error;
-      });
+      if ($scope.run) {
+        var request = {
+          location: $scope.mapOptions['center'],
+          date: {
+            year: 2013,
+            month: 10,
+            day: 06
+          },
+          maxD: 1
+        };
+        request = JSON.stringify(request);
+        var url = 'http://myradar.co/api';
+        $http.post(url + '/findEvents', request)
+        .success(function(data) {
+          $scope.newEvents = data;
+          $scope.addMarker($scope.newEvents);
+          console.log($scope.newEvents);
+        })
+        .error(function(error){
+          $scope.newEvents = error;
+        });
+      }
+      $scope.run = false;
     }
-    //function ()
 }]);
 

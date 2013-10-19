@@ -38,18 +38,18 @@ iPhoneApp.config(['$routeProvider',
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
   }
-])
-.run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
-    var promise = loginCheck();
-    promise.then(function(credential) {
-      console.log(credential);
-      if(credential === 'true') {
-        $location.path('/map');
-      } else {
-        $location.path('/');
-      }
-    });
-  }
+// ])
+// .run(['loginCheck', '$location', '$http', function(loginCheck, $location, $http) {
+//     var promise = loginCheck();
+//     promise.then(function(credential) {
+//       console.log(credential);
+//       if(credential === 'true') {
+//         $location.path('/map');
+//       } else {
+//         $location.path('/');
+//       }
+//     });
+//   }
 ]);
 
 

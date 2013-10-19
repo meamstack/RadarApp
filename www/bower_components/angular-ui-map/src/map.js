@@ -16,30 +16,6 @@
       });
     });
   }
-  // function fetchEvents (scope, googleObject) {
-  //   var request = {
-  //     location: $scope.mapOptions['center'],
-  //     date: {
-  //       year: 2013,
-  //       month: 10,
-  //       day: 06
-  //     },
-  //     maxD: 1
-  //   };
-  //   request = JSON.stringify(request);
-  //   var url = 'http://myradar.co/api';
-  //   $http.post(url + '/findEvents', request)
-  //   .success(function(data) {
-  //     newEvents = data;
-  //     addMarker(newEvents);
-  //     //$scope.centerMarker = $scope.addCenterMarker();
-  //     console.log(newEvents);
-  //   })
-  //   .error(function(error){
-  //     newEvents = error;
-  //   });
-  // }
-
 
   app.value('uiMapConfig', {}).directive('uiMap',
     ['uiMapConfig', '$parse', function (uiMapConfig, $parse) {
