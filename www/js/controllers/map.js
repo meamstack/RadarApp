@@ -53,6 +53,8 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable: true,
       disableDoubleClickZoom: false,
+      zoomControl: false,
+      disableDefaultUI:true,
       keyboardShortcuts: true
     };
 
@@ -85,7 +87,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       $scope.currentMarkerId = marker.obj['_id'];
       $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
       $scope.currentMarkerImg = marker.obj['photo'];
-      $scope.currentMarkerTotal = marker.obj['total'] || 1;
+      $scope.currentMarkerTotal = marker.obj['users'].length;
       $scope.myInfoWindow.open($scope.myMap, marker);
 
       // don't mess with this, EVER. Well if you are curious, this is unbinding the click event to angular-ui events. 
@@ -96,7 +98,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
           
           var request = {
             eventId : $scope.currentMarkerId,
-            userId: $scope.currentUserId
+            userId: $scope.currentUserId || 123
           };
           request = JSON.stringify(request);
           var url = 'http://myradar.co/api';
@@ -112,7 +114,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       }
     };
 
-    $scope.newEvents = function ($event) {
+    $scope.fetchEvents = function ($event) {
       var request = {
         location: $scope.mapOptions['center'],
         date: {
