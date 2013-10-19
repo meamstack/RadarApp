@@ -208,10 +208,11 @@ alert('long: ',lng);
     var url = 'https://s3-us-west-2.amazonaws.com/helenimages/eventImages/' + id + '.json';
     var headers = {'Content-Type':'application/json'};
     $http({method:'GET',url:url,headers:headers}).success(function(data){
+      // alert(data.pic)
       $scope.currentMarkerImg = data.pic;
       console.log(data.pic)
     }).error(function(data){
-      alert('error',data);
+      // alert('error',data);
     });
   };
   $scope.currentMarkerAddPerson = function() {
