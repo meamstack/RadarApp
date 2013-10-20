@@ -1,8 +1,9 @@
-<div class="gridContainer clearfix">
+<div class="gridContainer clearfix" >
   
   <div id="LayoutDiv1" class="mapPage">
 
     <div id="mapHeader">
+      <img class='radarLogo' src="img/radarLogo.png">
 	    <h2 id='headerLeft'>RADAR</h2>
 	    <p id='headerRight'>San Francisco</p>
     </div>
@@ -22,8 +23,6 @@
       ui-options="mapOptions" 
       class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)'}" ui-options="mapOptions">
     </div>
-
-
     <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
       <div id="hourSliderText"> </div>
     </div>
@@ -33,6 +32,5 @@
       <div id='daySlider' hammer-drag="changeDay($event)" hammer-release="releaseTime($event)">
       </div>
     </div>
-
   </div>
 </div>
