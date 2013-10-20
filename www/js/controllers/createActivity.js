@@ -26,6 +26,7 @@ angular.module('meetMeApp.controller.createActivity', [])
     $scope.submitForm = function () {
       var date = document.getElementById('eventDate').value;
       var time = document.getElementById('eventTime').value;
+      if($scope.picData === 'img/photoPlaceholder.png') return;
       postToServer.send({
         name: $scope.eventName,
         description: $scope.description,
