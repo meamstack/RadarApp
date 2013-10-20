@@ -1,6 +1,6 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
-  .controller('MapCtrl', ['$scope', '$compile', 'userData', '$http', 'googleMapLatLon', function ($scope, $compile, userData, $http, googleMapLatLon) {
+  .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapLatLon', '$compile', '$q', function ($scope, userData, $http, googleMapLatLon, $compile, $q) {
     var date = new Date();
     var dates = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
@@ -64,81 +64,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       }
       $scope.addMarker(newMarkers);
     };
-    // dummy data for $scope.newEvents
-    // $scope.newEvents = [
-    //     {
-    //       name: "Free pizza @ Hack reactor!",
-    //       description: 'awesomeness!',
-    //       location: [37.785427,-122.40572],
-    //       time: 'Thu Oct 17 2013 21:13:38 GMT-0700 (PDT)',
-    //       photo: 'img/fun.jpg',
-    //       activity: 'eat',
-    //       userId: '52589775e57d7f4011000001'
-    //     }, {
-    //       name: "Goo time!",
-    //       description: 'Who knows what!',
-    //       location: [37.789984,-122.40523],
-    //       time: 'Thu Oct 17 2013 22:13:38 GMT-0700 (PDT)',
-    //       photo: 'img/fun.jpg',
-    //       activity: 'party',
-    //       userId: '52589775e57d7f4011000001'
-    //     }, {
-    //       name: 'Thursday night footbal!!',
-    //       description: 'Chips and tacos',
-    //       location: [37.7836,-122.408904],
-    //       time: 'Thu Oct 17 2013 23:13:38 GMT-0700 (PDT)',
-    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
-    //       activity: 'pizza',
-    //       userId: '52589775e57d7f4011000001'
-    //     }, {
-    //       name: 'Thursday night footbal!!',
-    //       description: 'Chips and tacos',
-    //       location: [37.78365,-122.40891],
-    //       time: 'Thu Oct 17 2013 19:13:38 GMT-0700 (PDT)',
-    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
-    //       activity: 'pizza',
-    //       userId: '52589775e57d7f4011000001'
-    //     }, {
-    //       name: 'Thursday night footbal!!',
-    //       description: 'Chips and tacos',
-    //       location: [37.78565,-122.41891],
-    //       time: 'Thu Oct 17 2013 19:13:38 GMT-0700 (PDT)',
-    //       photo: 'http://i.imgur.com/QTITt2D.jpg',
-    //       activity: 'pizza',
-    //       userId: '52589775e57d7f4011000001'
-    //     }
-    // ];
 
-    
-
-    // $scope.setLocation = function(){
-      // googleMapLatLon.set(37.705427,-122.39572);
-    // };
-
-    // var request = {
-    //   location: [37.800305,-122.409239],
-    //   date: {
-    //     year: 2013,
-    //     month: 10,
-    //     day: 06
-    //   },
-    //   maxD: 1
-    // };
-    // request = JSON.stringify(request);
-    // var url = 'http://myradar.co/api';
-
-    // $http.post(url + '/findEvents', request)
-    // .success(function(data) {
-    //   $scope.newEvents = data;
-    //   $scope.addMarker();
-    // })
-    // .error(function(error){
-    //   alert('this is the error',error)
-    //   $scope.newEvents = error;
-    // });
-    // alert(currentGeoPos.latitude);
-    // alert(currentGeoPos.longitude);
-    // alert('number');
     $scope.myMarkers = [];
       var lati = currentGeoPos.latitude || 37.79;
       var longi = currentGeoPos.longitude || -122.4;
@@ -158,20 +84,49 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable: true,
       disableDoubleClickZoom: false,
+      zoomControl: false,
+      disableDefaultUI:true,
+      infoWindowOptions: {maxWidth:100},
       keyboardShortcuts: true
     };
 
+    // $scope.openMarkerInfo = function (marker) {
+
+    //   $scope.currentMarker = marker;
+    //   $scope.currentMarkerId = marker.obj['_id'];
+    //   $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
+    //   $scope.currentMarkerImg = marker.obj['photo'];
+    //   $scope.currentMarkerTotal = marker.obj['users'].length;
+    //   $scope.myInfoWindow.open($scope.myMap, marker);
+
+    //   // don't mess with this, EVER. Well if you are curious, this is unbinding the click event to angular-ui events. 
+    //   var a = $($scope.myInfoWindow.content).find('a');
+    //   if (!a.data('click-bound')) {
+    //     a.data('click-bound', true);
+    //     a.click(function() {$scope.$apply(function () {
+          
+    //       var request = {
+    //         eventId : $scope.currentMarkerId,
+    //         userId: $scope.currentUserId || 123
+    //       };
+    //       request = JSON.stringify(request);
+    //       var url = 'http://myradar.co/api';
+    //       $http.post(url + '/rsvp', request)
+    //       .success(function(data) {
+    //         $scope.currentMarkerTotal++;
+    //         alert('You are added to ' + $scope.currentMarkerDes['name'] + ' : '+ $scope.currentMarkerDes['description']);
+    //       })
+    //       .error(function(error){
+    //         $scope.addPerson = error;
+    //       });
+    //     })})
+    //   }
+    // };
   $scope.createActivity = function () {
     console.log('creating activity');
     lat = $scope.myMap.getCenter().lat();
     lng = $scope.myMap.getCenter().lng();
-    //console.log(lat, lng);
-    // $timeout(function(){
-      // googleMapLatLon.set(lat, lng);
-      // if(lat){
-        window.location.href = '#/createActivity';
-      // }
-    // }, 2000);
+    window.location.href = '#/createActivity';
   }
 
   $scope.addMarker = function (objs) {
@@ -208,7 +163,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     var url = 'https://s3-us-west-2.amazonaws.com/helenimages/eventImages/' + id + '.json';
     var headers = {'Content-Type':'application/json'};
     $http({method:'GET',url:url,headers:headers}).success(function(data){
-      // alert(data.pic)
       $scope.currentMarkerImg = data.pic;
       console.log(data.pic)
     }).error(function(data){
@@ -237,7 +191,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
         .success(function(data) {
           $scope.newEvents = data;
           $scope.addMarker($scope.newEvents);
-          //$scope.centerMarker = $scope.addCenterMarker();
           console.log($scope.newEvents);
         })
         .error(function(error){
@@ -246,5 +199,4 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       }
       $scope.run = false;
     }
-
 }]);

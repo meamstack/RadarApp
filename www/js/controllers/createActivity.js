@@ -1,11 +1,17 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
+// <<<<<<< HEAD
+//     $scope.createActivityUser = userData.getUser();
+//     console.log($scope.createActivityUser);
+//     console.log(googleMapLatLon);
+//     //$scope.userID = $scope.createActivityUser._id;
+//     $scope.latlon = googleMapLatLon.get();
+// =======
 
     var init = function() {
       // $scope.createActivityUser = userData.getUser();
       // $scope.userID = $scope.createActivityUser._id;
       $scope.showDateTime = true;
-     //$scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
       var currentDate = new Date();
       $scope.date = (currentDate.getMonth()+1)  + "/" 
@@ -31,14 +37,13 @@ angular.module('meetMeApp.controller.createActivity', [])
         description: $scope.description,
         time: date + ' ' + time,
         photo: $scope.picData,
-        //activity: $scope.activity,
         location: [lat, lng]//$scope.latlon,
-        //userId: $scope.userID
+        //userId: $scope.userID || 123
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
     };
- 
+
     $scope.saveToServer = function() {
       var date = angular.element('#eventDate');
       $scope.isDisabled = true;
@@ -48,6 +53,7 @@ angular.module('meetMeApp.controller.createActivity', [])
         time: date[0].value,
         photo: $scope.picData,
         activity: $scope.activity,
+        _id: $scope.userId || 123, 
         location: googleMapLatLon.get()
       });
       postToServer.savePic($scope.picData);
@@ -91,5 +97,6 @@ angular.module('meetMeApp.controller.createActivity', [])
     var onFail = function(e) {
       console.log("On fail " + e);
     };
+
 
   }]);
