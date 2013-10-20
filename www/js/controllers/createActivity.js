@@ -12,7 +12,6 @@ angular.module('meetMeApp.controller.createActivity', [])
       // $scope.createActivityUser = userData.getUser();
       // $scope.userID = $scope.createActivityUser._id;
       $scope.showDateTime = true;
-     //$scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
       var currentDate = new Date();
       $scope.date = (currentDate.getMonth()+1)  + "/" 
@@ -38,8 +37,8 @@ angular.module('meetMeApp.controller.createActivity', [])
         description: $scope.description,
         time: date + ' ' + time,
         photo: $scope.picData,
-        location: [lat, lng],//$scope.latlon,
-        userId: $scope.userID || 123
+        location: [lat, lng]//$scope.latlon,
+        //userId: $scope.userID || 123
       }, function(){
         $scope.$navigate.go('/map', 'slide');
       });
