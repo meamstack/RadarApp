@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="styles/css/main.css">
     </head>
     <body ng-app="meetMeApp">
-      <div id='statusBar'></div>
+    <div id='statusBar'></div>
 
     <!-- Add your site or application content here -->
-     <mobile-view ng-view=""></mobile-view>
+    <mobile-view ng-view=""></mobile-view>
     <!-- phonegap helper files -->
     <script src="lib/jquery-2.0.3.min.js"></script>
     <!-- libraries -->
@@ -75,6 +75,7 @@
       $(document).ready(function(){
         angular.bootstrap(document, ['meetMeApp']);
         app.initialize();
+        app.onDeviceReady();
       });
     };
     </script>

@@ -140,10 +140,8 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     // alert(currentGeoPos.longitude);
     // alert('number');
     $scope.myMarkers = [];
-    var lati = currentGeoPos.latitude || 37.79;
-    var longi = currentGeoPos.longitude || -122.4;
-    alert(currentGeoPos.latitude);
-    alert('latitude');
+    var lati = currentGeoPos.latitude;// || 37.79;
+    var longi = currentGeoPos.longitude;// || -122.4;
     $scope.mapOptions = {
       center: new google.maps.LatLng(lati, longi),
       zoom: 13,
@@ -210,11 +208,9 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     var url = 'https://s3-us-west-2.amazonaws.com/helenimages/eventImages/' + id + '.json';
     var headers = {'Content-Type':'application/json'};
     $http({method:'GET',url:url,headers:headers}).success(function(data){
-      // alert(data.pic)
       $scope.currentMarkerImg = data.pic;
       console.log(data.pic)
     }).error(function(data){
-      // alert('error',data);
     });
   };
   $scope.currentMarkerAddPerson = function() {
