@@ -2,22 +2,22 @@ angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
 
     var init = function() {
-      $scope.createActivityUser = userData.getUser();
-      $scope.userID = $scope.createActivityUser._id;
+      // $scope.createActivityUser = userData.getUser();
+      // $scope.userID = $scope.createActivityUser._id;
       $scope.showDateTime = true;
      //$scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
       var currentDate = new Date();
-      $scope.date = (currentDate.getMonth()+1)  + "/" 
-                + currentDate.getDate() + "/"
-                + currentDate.getFullYear() + " @ "  
-                + currentDate.getHours() + ":"  
-                + currentDate.getMinutes() + ":" 
-                + currentDate.getSeconds(); 
+      // $scope.date = (currentDate.getMonth()+1)  + "/" 
+      //           + currentDate.getDate() + "/"
+      //           + currentDate.getFullYear() + " @ "  
+      //           + currentDate.getHours() + ":"  
+      //           + currentDate.getMinutes() + ":" 
+      //           + currentDate.getSeconds(); 
       $scope.picData = 'img/photoPlaceholder.png';
-      document.getElementById('eventDate').value = new Date().toISOString().substring(0, 10);
-      var hour = new Date().getHours();
-      var min = new Date().getMinutes();
+      document.getElementById('eventDate').value = currentDate.toISOString().substring(0, 10);
+      var hour = currentDate.getHours();
+      var min = currentDate.getMinutes();
       document.getElementById('eventTime').value = hour+':'+min
     };
 
