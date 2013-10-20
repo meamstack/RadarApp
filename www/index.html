@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="lib/mobile-nav.css">
     <link rel="stylesheet" href="styles/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Titillium+Web:400,200,700' rel='stylesheet' type='text/css'>
     </head>
     <body ng-app="meetMeApp">
-      <div id='statusBar'></div>
+    <div id='statusBar'></div>
 
     <!-- Add your site or application content here -->
-     <mobile-view ng-view=""></mobile-view>
+    <mobile-view ng-view=""></mobile-view>
     <!-- phonegap helper files -->
     <script src="lib/jquery-2.0.3.min.js"></script>
     <!-- libraries -->
@@ -75,6 +76,7 @@
       $(document).ready(function(){
         angular.bootstrap(document, ['meetMeApp']);
         app.initialize();
+        app.onDeviceReady();
       });
     };
     </script>
