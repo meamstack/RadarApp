@@ -1,5 +1,3 @@
-<div class="gridContainer clearfix">
-
 <div class="gridContainer clearfix" >
   
   <div id="LayoutDiv1" class="mapPage">
@@ -24,8 +22,6 @@
       ui-options="mapOptions" 
       class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)'}" ui-options="mapOptions">
     </div>
-
-
     <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
       <div id="hourSliderText"> </div>
     </div>
@@ -35,6 +31,5 @@
       <div id='daySlider' hammer-drag="changeDay($event)" hammer-release="releaseTime($event)">
       </div>
     </div>
-
   </div>
 </div>
