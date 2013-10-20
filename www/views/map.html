@@ -24,12 +24,21 @@
       class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)'}" ui-options="mapOptions">
     </div>
     <div id="hourSlider" class="slider" hammer-drag="changeTime($event)" hammer-release="releaseTime($event)">
-      <div id="hourSliderText"> </div>
+      <div id="hourSliderText">
+        <i class="icon-chevron-sign-up chevron"></i><br><br>Change<br>Time<br><br>
+        <i class="icon-chevron-sign-down chevron">
+        </i>
+      </div>
     </div>
     <div id='mapAndDay'>
       <div id="mapCanvas" ></div>
-      <div id="daySliderText">{{hourpm}}:{{minute}}{{ampm}} {{day}} {{month}} {{date}} {{year}}</div>
+      <div id="dateTimeText">{{hourpm}}:{{minute}}{{ampm}} {{day}} {{month}} {{date}} {{year}}</div>
       <div id='daySlider' hammer-drag="changeDay($event)" hammer-release="releaseTime($event)">
+        <div class='daySliderText'>
+          <i class="icon-chevron-sign-left chevron"></i>
+          <span>Change Date</span>
+          <i class="icon-chevron-sign-right chevron"></i>
+        </div>
       </div>
     </div>
   </div>
