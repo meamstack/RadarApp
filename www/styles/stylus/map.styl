@@ -74,36 +74,47 @@ h1
   z-index: 0
   height: 100%
 
-#daySliderText
-  font-size: 20px
-  width: 100%
+#dateTimeText
+  font-size: 16px
+  width: 300px
   height: 40px
   position: absolute
   z-index: 1
-  margin-left: auto
-  margin-right: auto
+  right: 0
+  margin-right: 10px
   display: block
-  text-align: center
+  text-align: right
   padding-top: 5px
   color: #303030
   font-family: helvetica
   text-shadow: 1px 1px 3px #909090
 
 #daySlider
-  width: 100%
-  height: 50px
+  width: 85%
+  height: 40px
   position: absolute
   z-index: 2
-  background: blue
   overflow: hidden
   margin: 0
   padding: 0 0 0 0
+  right: 0
   bottom: 0px
+  color: black
 
+.daySliderText
+  color: white
+  z-index: 2
+  line-height: 40px
+  margin-left: auto
+  margin-right: auto
+  width: 140px
+  font-weight: bold
+  font-size: 14px
 
 #hourSlider, #daySlider
-  background: none
+  background: black
   overflow: hidden
+  opacity: 0.25
 
 #hourSlider 
   float: left
@@ -120,6 +131,8 @@ h1
   margin-top: 10px
   color: #F0F0F0
   font-size: 12px
+  text-align: center
+  opacity: 0.8
 
 .focus
   color: off-white
@@ -186,3 +199,8 @@ text
   float: left
   padding: 0px 0px
   margin: 6px 8px 0px 8px
+
+.chevron
+  padding: 0px 5px 0px 5px
+  margin: 0
+  color: white
