@@ -33,7 +33,7 @@ angular.module('meetMeApp.controller.createActivity', [])
           time: date + ' ' + time,
           photo: $scope.picData,
           //activity: $scope.activity,
-          location: [lat, lng]//$scope.latlon,
+          location: [lat, lng],//$scope.latlon,
           userId: $scope.userID
         }, function(){
           $scope.$navigate.go('/map', 'slide');
