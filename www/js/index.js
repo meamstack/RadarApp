@@ -46,7 +46,7 @@ var app = {
             currentGeoPos.longitude = position.coords.longitude;
         };
         var geolocationError = function(error) {
-            alert('error', error.message, error.code);
+            // alert('error', error.message, error.code);
             console.log('error: ' + error.code + ' ' + error.message);
         };
         navigator.geolocation.watchPosition(geolocationSuccess, geolocationError, options);

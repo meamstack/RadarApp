@@ -38,6 +38,7 @@
           model.assign(scope, map);
 
           bindMapEvents(scope, mapEvents, map, elm);
+          //fetchEvents(scope, map);
         }
       };
     }]);
@@ -85,6 +86,9 @@
    * it will hook up myMarker's events to the directive dom element.  Then
    * ui-event will be able to catch all of myMarker's events. Super simple.
    */
+
+
+
   function mapOverlayDirective(directiveName, events) {
     app.directive(directiveName, [function () {
       return {
