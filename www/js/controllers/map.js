@@ -175,12 +175,13 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $scope.run = true;
     $scope.fetchEvents = function ($event) {
       if ($scope.run) {
+        var todayDate = new Date();
         var request = {
           location: $scope.mapOptions['center'],
           date: {
-            year: 2013,
-            month: 10,
-            day: 06
+            year: todayDate.getYear()+1900,
+            month: todayDate.getMonth()+1,
+            day: todayDate.getDate()
           },
           maxD: 1
         };

@@ -49,7 +49,7 @@ var app = {
             console.log('error: ' + error.code + ' ' + error.message);
         };
         navigator.geolocation.watchPosition(geolocationSuccess, geolocationError, options);
-        app.receivedEvent('deviceready');
+        // app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
