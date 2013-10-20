@@ -2,8 +2,8 @@ angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
 
     var init = function() {
-      // $scope.createActivityUser = userData.getUser();
-      // $scope.userID = $scope.createActivityUser._id;
+      $scope.createActivityUser = userData.getUser();
+      $scope.userID = $scope.createActivityUser._id;
       $scope.showDateTime = true;
      //$scope.latlon = googleMapLatLon.get();
       $scope.$navigate = $navigate;
@@ -24,19 +24,23 @@ angular.module('meetMeApp.controller.createActivity', [])
     init();
 
     $scope.submitForm = function () {
-      var date = document.getElementById('eventDate').value;
-      var time = document.getElementById('eventTime').value;
-      postToServer.send({
-        name: $scope.eventName,
-        description: $scope.description,
-        time: date + ' ' + time,
-        photo: $scope.picData,
-        //activity: $scope.activity,
-        location: [lat, lng]//$scope.latlon,
-        //userId: $scope.userID
-      }, function(){
-        $scope.$navigate.go('/map', 'slide');
-      });
+      if($scope.picData !== 'img/photoPlaceholder.png') {
+        var date = document.getElementById('eventDate').value;
+        var time = document.getElementById('eventTime').value;
+        postToServer.send({
+          name: $scope.eventName,
+          description: $scope.description,
+          time: date + ' ' + time,
+          photo: $scope.picData,
+          //activity: $scope.activity,
+          location: [lat, lng]//$scope.latlon,
+          userId: $scope.userID
+        }, function(){
+          $scope.$navigate.go('/map', 'slide');
+        });
+      } else {
+        alert('Add a Photo');
+      }
     };
  
     $scope.saveToServer = function() {
