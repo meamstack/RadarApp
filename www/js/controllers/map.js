@@ -29,7 +29,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $scope.changeDay = function(e){
       // One day for every x pixels on line below
       var deltaDays = Math.floor(e.gesture.deltaX / 70);
-      newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
+      newDate = new Date(date.getinfoFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
       $scope.year = newDate.getFullYear();
       $scope.month = months[newDate.getMonth()];
       $scope.date = newDate.getDate();
@@ -86,42 +86,10 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       disableDoubleClickZoom: false,
       zoomControl: false,
       disableDefaultUI:true,
-      infoWindowOptions: {maxWidth:100},
+      zIndex:0,
       keyboardShortcuts: true
     };
 
-    // $scope.openMarkerInfo = function (marker) {
-
-    //   $scope.currentMarker = marker;
-    //   $scope.currentMarkerId = marker.obj['_id'];
-    //   $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
-    //   $scope.currentMarkerImg = marker.obj['photo'];
-    //   $scope.currentMarkerTotal = marker.obj['users'].length;
-    //   $scope.myInfoWindow.open($scope.myMap, marker);
-
-    //   // don't mess with this, EVER. Well if you are curious, this is unbinding the click event to angular-ui events. 
-    //   var a = $($scope.myInfoWindow.content).find('a');
-    //   if (!a.data('click-bound')) {
-    //     a.data('click-bound', true);
-    //     a.click(function() {$scope.$apply(function () {
-          
-    //       var request = {
-    //         eventId : $scope.currentMarkerId,
-    //         userId: $scope.currentUserId || 123
-    //       };
-    //       request = JSON.stringify(request);
-    //       var url = 'http://myradar.co/api';
-    //       $http.post(url + '/rsvp', request)
-    //       .success(function(data) {
-    //         $scope.currentMarkerTotal++;
-    //         alert('You are added to ' + $scope.currentMarkerDes['name'] + ' : '+ $scope.currentMarkerDes['description']);
-    //       })
-    //       .error(function(error){
-    //         $scope.addPerson = error;
-    //       });
-    //     })})
-    //   }
-    // };
   $scope.createActivity = function () {
     console.log('creating activity');
     lat = $scope.myMap.getCenter().lat();
@@ -144,10 +112,11 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
   $scope.openMarkerInfo = function (marker) {
     var pic = getS3Photo(marker.obj['_id']);
     $scope.currentMarker = marker;
-    $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name'] };
+    $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name']};
     // $scope.currentMarkerImg = marker.obj['photo'];
     $scope.currentMarkerTotal = marker.obj['total'] || 1;
     $scope.myInfoWindow.open($scope.myMap, marker);
+    $scope.myInfoWindow.setZIndex({'zIndex':3});
 
     // don't mess with this, EVER. Well if you are curious, this is unbinding the click event to angular-ui events. 
     var a = $($scope.myInfoWindow.content).find('a');
