@@ -1,12 +1,10 @@
 angular.module('meetMeApp.controller.createActivity', [])
   .controller('CreateActivityCtrl', ['$scope', 'googleMapLatLon', 'postToServer', '$location', 'userData', '$navigate', function ($scope, googleMapLatLon, postToServer, $location, userData, $navigate) {
-// <<<<<<< HEAD
 //     $scope.createActivityUser = userData.getUser();
 //     console.log($scope.createActivityUser);
 //     console.log(googleMapLatLon);
 //     //$scope.userID = $scope.createActivityUser._id;
 //     $scope.latlon = googleMapLatLon.get();
-// =======
 
     var init = function() {
       // $scope.createActivityUser = userData.getUser();
@@ -14,34 +12,39 @@ angular.module('meetMeApp.controller.createActivity', [])
       $scope.showDateTime = true;
       $scope.$navigate = $navigate;
       var currentDate = new Date();
-      $scope.date = (currentDate.getMonth()+1)  + "/" 
-                + currentDate.getDate() + "/"
-                + currentDate.getFullYear() + " @ "  
-                + currentDate.getHours() + ":"  
-                + currentDate.getMinutes() + ":" 
-                + currentDate.getSeconds(); 
+      // $scope.date = (currentDate.getMonth()+1)  + "/" 
+      //           + currentDate.getDate() + "/"
+      //           + currentDate.getFullYear() + " @ "  
+      //           + currentDate.getHours() + ":"  
+      //           + currentDate.getMinutes() + ":" 
+      //           + currentDate.getSeconds(); 
       $scope.picData = 'img/photoPlaceholder.png';
-      document.getElementById('eventDate').value = new Date().toISOString().substring(0, 10);
-      var hour = new Date().getHours();
-      var min = new Date().getMinutes();
+      document.getElementById('eventDate').value = currentDate.toISOString().substring(0, 10);
+      var hour = currentDate.getHours();
+      var min = currentDate.getMinutes();
       document.getElementById('eventTime').value = hour+':'+min
     };
 
     init();
 
     $scope.submitForm = function () {
-      var date = document.getElementById('eventDate').value;
-      var time = document.getElementById('eventTime').value;
-      postToServer.send({
-        name: $scope.eventName,
-        description: $scope.description,
-        time: date + ' ' + time,
-        photo: $scope.picData,
-        location: [lat, lng]//$scope.latlon,
-        //userId: $scope.userID || 123
-      }, function(){
-        $scope.$navigate.go('/map', 'slide');
-      });
+      if($scope.picData !== 'img/photoPlaceholder.png') {
+        var date = document.getElementById('eventDate').value;
+        var time = document.getElementById('eventTime').value;
+        postToServer.send({
+          name: $scope.eventName,
+          description: $scope.description,
+          time: date + ' ' + time,
+          photo: $scope.picData,
+          //activity: $scope.activity,
+          location: [lat, lng],//$scope.latlon,
+          userId: $scope.userID
+        }, function(){
+          $scope.$navigate.go('/map', 'slide');
+        });
+      } else {
+        alert('Add a Photo');
+      }
     };
 
     $scope.saveToServer = function() {

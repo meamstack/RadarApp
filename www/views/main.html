@@ -269,20 +269,13 @@ var debug_el = $("#debug");
 
          #carousel li.pane1 { background: #202020; }
          #carousel li.pane2 { background: #0969A2; }
-         #carousel li.pane3 { background: #5C001F; }
+         #carousel li.pane3 { background: #A34747; }
          #carousel li.pane4 { background: #015965; }
 
         .discoverEvents {
           width: 173px;
           height: 308px;
           margin: 0 auto;
-        }
-
-        #fb {
-          left: 2%;
-          margin-right: auto;
-          margin-left: auto;
-          display: block;
         }
 
         #quick-guide {
@@ -293,7 +286,7 @@ var debug_el = $("#debug");
         }
 
         .lastPane {
-          margin-top: 90px !important;
+          margin-top: 150px !important;
           margin-bottom: 80px !important;
           font-size: 22px;
         }
@@ -309,19 +302,24 @@ var debug_el = $("#debug");
               </div>
               <img src="https://s3-us-west-2.amazonaws.com/helenimages/discoverEvents.png" class="discoverEvents">
               <!-- <h2>Discover events</h2> -->
-              <h3>Check out events around you and click to see details</h3>
+              <h3>Discover and share the events in your world</h3>
               <div class='fbBox'>
-                <h4>Swipe to continue</h4>
-                <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
+                <h4>Swipe to learn more
+                  <i class="icon-chevron-sign-right"></i>
+                </h4>
+                <p><button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button></p>
               </div>
             </li>
             <li class="pane2">
               <h2>Create your own event!</h2>
               <img src="https://s3-us-west-2.amazonaws.com/helenimages/discoverEvents.png" class="discoverEvents">
-              <h3>Drag the blue pin and drop it on the location of your event.
-                  Click on the pin to create a new event.</h3>
-                  <h4>Swipe to continue</h4>
-              <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
+              <h3>Choose your location and tap the blue marker to create events</h3>
+              <div class='fbBox'>
+                <h4>Swipe to continue 
+                  <i class="icon-chevron-sign-right"></i>
+                </h4>
+                <p><button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button></p>
+              </div>
             </li>
             <li class="pane3">
               <h2>Fill in the details</h2>
@@ -329,12 +327,21 @@ var debug_el = $("#debug");
               <h3>Take a picture, fill out the details,
                   choose a date and click Create!
               </h3>
-              <h4>Swipe to continue</h4>
-              <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
+              <div class='fbBox'>
+                <h4>Swipe to continue 
+                  <i class="icon-chevron-sign-right"></i>
+                </h4>
+                <p><button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button></p>
+              </div>
             </li>
             <li class="pane4">
               <h3 class='lastPane'>You can now view your event and everything else happening around you!</h3>
-              <button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button>
+              <div class='fbBox'>
+                <h4>Get started! 
+                  <i class="icon-chevron-sign-down"></i>
+                </h4>
+                <p><button class='topcoat-button' id="fb" ng-click='login()'>Log in with Facebook</button></p>
+              </div>
             </li>
         </ul>
     </div>

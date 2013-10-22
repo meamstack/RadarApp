@@ -66,8 +66,8 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     };
 
     $scope.myMarkers = [];
-      var lati = currentGeoPos.latitude || 37.79;
-      var longi = currentGeoPos.longitude || -122.4;
+    var lati = currentGeoPos.latitude;// || 37.79;
+    var longi = currentGeoPos.longitude;// || -122.4;
     $scope.mapOptions = {
       center: new google.maps.LatLng(lati, longi),
       zoom: 13,
@@ -135,7 +135,6 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       $scope.currentMarkerImg = data.pic;
       console.log(data.pic)
     }).error(function(data){
-      // alert('error',data);
     });
   };
   $scope.currentMarkerAddPerson = function() {
