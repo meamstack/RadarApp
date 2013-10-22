@@ -29,7 +29,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
     $scope.changeDay = function(e){
       // One day for every x pixels on line below
       var deltaDays = Math.floor(e.gesture.deltaX / 70);
-      newDate = new Date(date.getinfoFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
+      newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + deltaDays, date.getHours(), date.getMinutes());
       $scope.year = newDate.getFullYear();
       $scope.month = months[newDate.getMonth()];
       $scope.date = newDate.getDate();
