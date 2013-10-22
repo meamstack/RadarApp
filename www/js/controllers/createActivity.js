@@ -19,7 +19,7 @@ angular.module('meetMeApp.controller.createActivity', [])
       //           + currentDate.getMinutes() + ":" 
       //           + currentDate.getSeconds(); 
       $scope.picData = 'img/photoPlaceholder.png';
-      document.getElementById('eventDate').value = currentDate.toISOString().substring(0, 10);
+      document.getElementById('eventDate').value = currentDate.getFullYear() + '-' + (currentDate.getMonth()+1) + '-' + currentDate.getDate();
       var hour = currentDate.getHours();
       var min = currentDate.getMinutes();
       document.getElementById('eventTime').value = hour+':'+min
