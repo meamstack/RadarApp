@@ -5,7 +5,7 @@ Radar is a mobile-first location-based social app where users can discover event
 
 
 
-![ScreenShot](http://farm6.staticflickr.com/5510/10299758175_4889ac6809_o.png)
+![ScreenShot](http://farm8.staticflickr.com/7375/10426054384_a9839c6cc7_o.png)
 
 ## Tech Stack ##
 * AngularJS
