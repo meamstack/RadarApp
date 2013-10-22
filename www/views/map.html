@@ -8,17 +8,18 @@
 	    <p id='headerRight'>San Francisco</p>
     </div>
     <div id='mapHeaderBottom'></div>
-    <a ng-click="createActivity()" href="#/createActivity"><img id="centerMarker"src="http://library.csun.edu/images/google_maps/marker-blue.png"></img></a>
+
     <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
       ui-event="{'map-click': 'openMarkerInfo(marker)'}">
     </div>
- 
+
     <div ui-map-info-window="myInfoWindow" id="infoWindow">
       <p id="description" ng-model="currentMarkerDes">{{currentMarkerDes.name}} : {{currentMarkerDes.description}}</p>
       <img ng-src="{{currentMarkerImg}}">
       <text ng-model="currentMarkerTotal">People attending: {{currentMarkerTotal}} </text>
       <a>+1</a>
     </div>
+      <a ng-click="createActivity()" href="#/createActivity"><img id="centerMarker"src="http://library.csun.edu/images/google_maps/marker-blue.png"></img></a>
     <div ui-map="myMap" 
       ui-options="mapOptions" 
       class="map-canvas" id="mapCanvas" ui-event="{'map-tilesloaded': 'fetchEvents($event)'}" ui-options="mapOptions">
