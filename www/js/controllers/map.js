@@ -1,6 +1,7 @@
 
 angular.module('meetMeApp.controller.map', ['ui.map'])
   .controller('MapCtrl', ['$scope', 'userData', '$http', 'googleMapLatLon', '$compile', '$q', function ($scope, userData, $http, googleMapLatLon, $compile, $q) {
+    $scope.isVisible = true;
     var date = new Date();
     var dates = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
@@ -90,8 +91,19 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
       keyboardShortcuts: true
     };
 
+  $scope.toggle = function () {
+    $scope.isVisible = false;
+  };
+
+  
+   $scope.show = function () {
+    console.log('show');
+    $scope.isVisible = true;
+  };
+
   $scope.createActivity = function () {
     console.log('creating activity');
+
     lat = $scope.myMap.getCenter().lat();
     lng = $scope.myMap.getCenter().lng();
     window.location.href = '#/createActivity';
@@ -110,6 +122,7 @@ angular.module('meetMeApp.controller.map', ['ui.map'])
   };
   
   $scope.openMarkerInfo = function (marker) {
+    $scope.toggle();
     var pic = getS3Photo(marker.obj['_id']);
     $scope.currentMarker = marker;
     $scope.currentMarkerDes = {'description':marker.obj['description'],'name':marker.obj['name']};
